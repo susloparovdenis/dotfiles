@@ -1,5 +1,5 @@
 # ~/.zshrc
-
+(cat ~/.cache/wal/sequences &)
 # not running interactively then bail
 [[ $- != *i* ]] && return
 
@@ -72,7 +72,6 @@ antigen bundles <<EOBUNDLES
     thefuck
     zsh-users/zsh-history-substring-search
     tarruda/zsh-autosuggestions
-    
     #==== completion
     bil-elmoussaoui/flatpak-zsh-completion
     srijanshetty/zsh-pip-completion
@@ -96,16 +95,8 @@ antigen bundles <<EOBUNDLES
     gangleri/pipenv
 EOBUNDLES
 
-POWERLEVEL9K_MODE="nerdfont-complete"
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline vcs)
-DEFAULT_USER='denis'
 
 POWERLEVEL9K_MODE="nerdfont-complete"
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline vcs)
 DEFAULT_USER='denis'
 
 antigen theme bhilburn/powerlevel9k powerlevel9k
