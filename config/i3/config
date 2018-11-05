@@ -5,39 +5,17 @@
 # it fails to get colors from Xresources.
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $bg_inact i3wm.color4 #f0f0f0
 
 # class                 border  backgr. text indicator child_border
 client.focused          $bg     $bg     $fg  $bg       $bg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg_inact     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 client.background       $bg
 
-
-
-# ArchLabs i3 config
-
-# # Xresources      var      value       fallback
-# set_from_resource $bg      background  #19043C
-# set_from_resource $fg      foreground  #F1F1F1
-# set_from_resource $black   color0      #19043C
-# set_from_resource $red     color1      #EE79A9
-# set_from_resource $green   color2      #8C9440
-# set_from_resource $yellow  color3      #DE935F
-# set_from_resource $blue    color4      #05C6F1
-# set_from_resource $purple  color5      #85678F
-# set_from_resource $cyan    color6      #5E8D87
-# set_from_resource $grey    color7      #969CD3
-
-# # class                 bd    bg  txt    ind   child_bd
-# client.focused          $grey $bg $fg    $blue $grey
-# client.unfocused        $grey $bg $black $bg   $bg
-# client.focused_inactive $grey $bg $black $bg   $bg
-# client.urgent           $red  $bg $red   $red  $red
-# client.placeholder      $grey $bg $bg    $bg   $bg
-# client.background       $bg
 
 # border & title.. Must be set to border pixel for gaps to work
 for_window [class="^.*"] border normal
@@ -49,15 +27,17 @@ gaps outer 5
 # font
 font pango:DejaVu Sans Mono 10
 
-# $Mod = Super or Alt?
-set $Mod Mod4
-#set $Mod Mod1
+# buttons
+set $Super Mod4
+set $Alt Mod1
+set $Tab 23
+#
 
 # direction keys
-set $up l
-set $down k
-set $left j
-set $right semicolon
+set $up k
+set $down j
+set $left h
+set $right l
 
 set $WS1 "1: "
 set $WS2 "2: "
@@ -77,17 +57,17 @@ set $Mon2 HDMI2
 #####################################################
 
 # run with reload
-exec_always --no-startup-id al-polybar-session
+exec --no-startup-id polybar --reload i3-bar
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xrdb -load ~/.Xresources
 
 # If you have a numpad you may want to enable this
-# exec_always --no-startup-id numlockx on
+exec_always --no-startup-id numlockx on
 
 # run once
 exec --no-startup-id xfsettingsd
 exec --no-startup-id al-compositor --start
-
+exec --no-startup-id greenclip daemon
 # polkit, required for authentication
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
@@ -103,28 +83,8 @@ exec --no-startup-id ksuperkey -e 'Super_R=Alt_L|F1'
 ###########################################################
 
 # kill focused window
-bindsym $Mod+Shift+q kill
-bindsym Mod1+q kill
-
-# launchers
-bindsym Mod1+space exec --no-startup-id rofr.sh -r
-
-# this is needed for super key to launch rofi
-bindsym Mod1+F1 exec --no-startup-id rofr.sh -r
-
-# core
-bindsym $Mod+e exec --no-startup-id geany
-bindsym $Mod+t exec exo-open --launch TerminalEmulator
-bindsym $Mod+w exec exo-open --launch WebBrowser
-bindsym $Mod+f exec exo-open --launch FileManager
-
-# logout script
-bindsym $Mod+x exec --no-startup-id rofr.sh -l
-
-# Screenshot
-bindsym Print exec --no-startup-id "scrot '%S.png' \
-            -e 'mv $f $$(xdg-user-dir PICTURES)/ArchLabs-%S-$wx$h.png \
-            ; gpicview $$(xdg-user-dir PICTURES)/ArchLabs-%S-$wx$h.png'"
+bindsym $Super+Shift+q kill
+bindsym $Alt+q kill
 
 # audio
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -154,94 +114,97 @@ workspace $WS7 output $Mon2
 workspace $WS8 output $Mon2
 
 # switch to workspace
-bindsym $Mod+1 workspace $WS1
-bindsym $Mod+2 workspace $WS2
-bindsym $Mod+3 workspace $WS3
-bindsym $Mod+4 workspace $WS4
-bindsym $Mod+5 workspace $WS5
-bindsym $Mod+6 workspace $WS6
-bindsym $Mod+7 workspace $WS7
-bindsym $Mod+8 workspace $WS8
+bindsym $Super+1 workspace $WS1
+bindsym $Super+2 workspace $WS2
+bindsym $Super+3 workspace $WS3
+bindsym $Super+4 workspace $WS4
+bindsym $Super+5 workspace $WS5
+bindsym $Super+6 workspace $WS6
+bindsym $Super+7 workspace $WS7
+bindsym $Super+8 workspace $WS8
 
 # move focused container to workspace
-bindsym $Mod+Shift+1 move container to workspace $WS1; workspace $WS1
-bindsym $Mod+Shift+2 move container to workspace $WS2; workspace $WS2
-bindsym $Mod+Shift+3 move container to workspace $WS3; workspace $WS3
-bindsym $Mod+Shift+4 move container to workspace $WS4; workspace $WS4
-bindsym $Mod+Shift+5 move container to workspace $WS5; workspace $WS5
-bindsym $Mod+Shift+6 move container to workspace $WS6; workspace $WS6
-bindsym $Mod+Shift+7 move container to workspace $WS7; workspace $WS7
-bindsym $Mod+Shift+8 move container to workspace $WS8; workspace $WS8
+bindsym $Super+Shift+1 move container to workspace $WS1; workspace $WS1
+bindsym $Super+Shift+2 move container to workspace $WS2; workspace $WS2
+bindsym $Super+Shift+3 move container to workspace $WS3; workspace $WS3
+bindsym $Super+Shift+4 move container to workspace $WS4; workspace $WS4
+bindsym $Super+Shift+5 move container to workspace $WS5; workspace $WS5
+bindsym $Super+Shift+6 move container to workspace $WS6; workspace $WS6
+bindsym $Super+Shift+7 move container to workspace $WS7; workspace $WS7
+bindsym $Super+Shift+8 move container to workspace $WS8; workspace $WS8
 
 ############################################################
 ##############     Reload configs           ################
 ############################################################
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $Mod+Shift+r restart
+bindsym $Super+Shift+r restart
 
 # reload the configuration file
-bindsym $Mod+Shift+c reload
+bindsym $Super+Shift+c reload
 
 ########################################################
 ############      Container/Window control  ############
 ########################################################
+# Switch
+bindsym $Super+$left  focus left
+bindsym $Super+$down  focus down
+bindsym $Super+$up    focus up
+bindsym $Super+$right focus right
 
-# Scratchpad, Floating
-bindsym $Mod+Shift+space floating toggle
-floating_modifier  Mod1
-
-bindsym $Mod+Shift+z move scratchpad
-bindsym $Mod+z scratchpad show
-
-# change focus
-bindsym $Mod+$left  focus left
-bindsym $Mod+$down  focus down
-bindsym $Mod+$up    focus up
-bindsym $Mod+$right focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $Mod+Left  focus left
-bindsym $Mod+Down  focus down
-bindsym $Mod+Up    focus up
-bindsym $Mod+Right focus right
-
-bindsym $Mod+p focus parent
-bindsym $Mod+c focus child
+# bindsym $Super+Left  focus left
+# bindsym $Super+Down  focus down
+# bindsym $Super+Up    focus up
+# bindsym $Super+Right focus right
 
 # move focused window
-bindsym $Mod+Shift+$left  move left  10px
-bindsym $Mod+Shift+$down  move down  10px
-bindsym $Mod+Shift+$up    move up    10px
-bindsym $Mod+Shift+$right move right 10px
+bindsym $Super+Shift+$left  move left  10px
+bindsym $Super+Shift+$down  move down  10px
+bindsym $Super+Shift+$up    move up    10px
+bindsym $Super+Shift+$right move right 10px
 
-# alternatively, you can use the cursor keys:
-bindsym $Mod+Shift+Up    move up    10px
-bindsym $Mod+Shift+Down  move down  10px
-bindsym $Mod+Shift+Left  move left  10px
-bindsym $Mod+Shift+Right move right 10px
+# bindsym $Super+Shift+Up    move up    10px
+# bindsym $Super+Shift+Down  move down  10px
+# bindsym $Super+Shift+Left  move left  10px
+# bindsym $Super+Shift+Right move right 10px
+
+# Scratchpad, Floating
+# bindsym $Super+Shift+space floating toggle !!!!
+floating_modifier  $Alt
+
+bindsym $Super+Shift+z move scratchpad
+bindsym $Super+z scratchpad show
+
+# Control
+# bindsym $Super+p focus parent
+# bindsym $Super+c focus child
+bindsym $Super+b split h
+bindsym $Super+v split v
+bindsym $Super+i focus parent
+bindsym $Super+shift+i focus child
+bindsym $Super+shift+space floating toggle
+bindsym $Super+space focus mode_toggle
+bindsym $Super+p layout tabbed
+bindsym $Super+shift+p layout stacking
+bindsym $Super+o layout toggle split
+
+
+
 
 # Size
-bindsym Mod1+Up    resize shrink height 10 px or 1 ppt
-bindsym Mod1+Down  resize grow   height 10 px or 1 ppt
-bindsym Mod1+Left  resize shrink width  10 px or 1 ppt
-bindsym Mod1+Right resize grow   width  10 px or 1 ppt
+bindsym $Alt+Up    resize shrink height 10 px or 1 ppt
+bindsym $Alt+Down  resize grow   height 10 px or 1 ppt
+bindsym $Alt+Left  resize shrink width  10 px or 1 ppt
+bindsym $Alt+Right resize grow   width  10 px or 1 ppt
 
 # layout toggle, keycode 23 is Tab
-bindcode Mod1+23 layout toggle tabbed split
-bindcode $Mod+23 layout toggle splitv splith
+bindcode $Alt+23 layout toggle tabbed split
+bindcode $Super+23 layout toggle splitv splith
 
 # switch to workspace with urgent window
 for_window [urgent="latest"] focus
 focus_on_window_activation   focus
 
-# container layout
-bindsym $Mod+h split h
-bindsym $Mod+v split v
-bindsym $Mod+Shift+t layout tabbed
-bindsym $Mod+Shift+s layout stacking
-bindsym $Mod+Shift+h layout toggle split
-default_orientation horizontal
 
 ######################################################
 ###############      Border & Gaps     ###############
@@ -251,22 +214,22 @@ new_window normal
 new_float normal
 hide_edge_borders both
 popup_during_fullscreen smart
-bindsym $Mod+shift+b border toggle
+bindsym $Super+shift+b border toggle
 
 # changing border style
-bindsym $Mod+n border normal
-bindsym $Mod+y border 1pixel
-bindsym $Mod+u border none
+bindsym $Super+n border normal
+bindsym $Super+y border 1pixel
+bindsym $Super+u border none
 
 # change gaps
-bindsym $Mod+plus        gaps inner current plus  5
-bindsym $Mod+minus       gaps inner current minus 5
-bindsym $Mod+Shift+plus  gaps outer current plus  5
-bindsym $Mod+Shift+minus gaps outer current minus 5
-bindsym $Mod+Control+plus        gaps inner all plus  5
-bindsym $Mod+Control+minus       gaps inner all minus 5
-bindsym $Mod+Control+Shift+plus  gaps outer all plus  5
-bindsym $Mod+Control+Shift+minus gaps outer all minus 5
+bindsym $Super+plus        gaps inner current plus  5
+bindsym $Super+minus       gaps inner current minus 5
+bindsym $Super+Shift+plus  gaps outer current plus  5
+bindsym $Super+Shift+minus gaps outer current minus 5
+bindsym $Super+Control+plus        gaps inner all plus  5
+bindsym $Super+Control+minus       gaps inner all minus 5
+bindsym $Super+Control+Shift+plus  gaps outer all plus  5
+bindsym $Super+Control+Shift+minus gaps outer all minus 5
 
 ###################################################
 ############    application settings   ############
@@ -292,7 +255,27 @@ for_window [window_role="(?i)(?:pop-up|setup)"] floating enable
 
 
 
+# launchers
+bindsym $Alt+space exec --no-startup-id rofr.sh -r
 
-# bindsym $mod+w exec python '~/.config/i3/i3-wm-scripts/nextfind.py' (chromium|firefox)4
-bindsym $Mod+g exec wmfocus
+# this is needed for super key to launch rofi
+bindsym $Alt+F1 exec --no-startup-id rofr.sh -r
+
+# Apps
+bindsym $Super+e exec --no-startup-id ranger
+bindsym $Super+t exec exo-open --launch TerminalEmulator
+bindsym $Super+w exec exo-open --launch WebBrowser
+bindsym $Super+f exec exo-open --launch FileManager
+bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
+# logout script
+bindsym $Super+x exec --no-startup-id rofr.sh -l
+
+
+# Helpers
+# bindsym $Super+w exec python '~/.config/i3/i3-wm-scripts/nextfind.py' (chromium|firefox)4
+bindsym $Super+g exec wmfocus
 bindsym --release button2 kill
+
+
+exec i3-msg workspace $WS1
