@@ -1,0 +1,4 @@
+config/polybar/sessions/sessionfile
+config/polybar/sessions/i3-sessionfile
+config/polybar/sessions/openbox-sessionfile
+config/polybar/sessions/bspwm-sessionfile
