@@ -9,5 +9,6 @@ makepkg -si
 cd ..
 rm -rf yay 
 
-yay -S zsh chromium telegram-desktop mpv code thefuck antigen ruby-colorls chromium-widevine ranger spotify rcm docker docker-compose antigen-git
+yay -S zsh chromium telegram-desktop mpv code thefuck antigen ruby-colorls chromium-widevine ranger spotify rcm docker docker-compose antigen-git trash-cli
 
+git config --global credential.helper libsecret
