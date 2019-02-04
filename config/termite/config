@@ -1,0 +1,92 @@
+[options]
+
+font = DejaVuSansMono Nerd Font 12
+
+[colors]
+
+# special
+foreground      = #dcf0f0
+foreground_bold = #dcf0f0
+cursor          = #dcf0f0
+background      = rgba(0,43,54,0.9)
+
+# black
+color0  = #073642
+color8  = #526160
+
+# red
+color1  = #dc322f
+color9  = #cb3b16
+
+# green
+color2  = #859900
+color10 = #569152
+
+# yellow
+color3  = #b58900
+color11 = #bfae3f
+
+# blue
+color4  = #268bd2
+color12 = #5dabb2
+
+# magenta
+color5  = #d33682
+color13 = #b176ba
+
+# cyan
+color6  = #2aa198
+color14 = #3bc3c3
+
+# white
+color7  = #eee8d5
+color15 = #fdf6e3
+[colors]
+# Base16 Default Dark
+# Author: Chris Kempson (http://chriskempson.com)
+
+foreground          = #d8d8d8
+foreground_bold     = #e8e8e8
+cursor              = #e8e8e8
+cursor_foreground   = #181818
+background          = rgba(24, 24, 24)
+
+# 16 color space
+
+# Black, Gray, Silver, White
+color0  = #181818
+color8  = #585858
+color7  = #d8d8d8
+color15 = #f8f8f8
+
+# Red
+color1  = #ab4642
+color9  = #ab4642
+
+# Green
+color2  = #a1b56c
+color10 = #a1b56c
+
+# Yellow
+color3  = #f7ca88
+color11 = #f7ca88
+
+# Blue
+color4  = #7cafc2
+color12 = #7cafc2
+
+# Purple
+color5  = #ba8baf
+color13 = #ba8baf
+
+# Teal
+color6  = #86c1b9
+color14 = #86c1b9
+
+# Extra colors
+color16 = #dc9656
+color17 = #a16946
+color18 = #282828
+color19 = #383838
+color20 = #b8b8b8
+color21 = #e8e8e8

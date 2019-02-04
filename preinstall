@@ -1,0 +1,13 @@
+#!/bin/bash
+
+##yay
+sudo pacman -Syu
+sudo pacman -S go base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ..
+rm -rf yay 
+
+yay -S zsh chromium telegram-desktop mpv code thefuck antigen ruby-colorls chromium-widevine ranger spotify rcm docker docker-compose antigen-git
+
