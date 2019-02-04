@@ -13,7 +13,7 @@
 	"answerclean": "no",
 	"answerdiff": "no",
 	"answeredit": "no",
-	"answerupgrade": "",
+	"answerupgrade": "yes",
 	"gitbin": "git",
 	"gpgbin": "gpg",
 	"gpgflags": "",
