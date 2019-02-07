@@ -1,18 +1,18 @@
 [colors]
-background = #DF04090F
-foreground = #576974
-active = #23527a
-inactive = #183853
-highlight = ${xrdb:color2:#2C6799}
-error = ${xrdb:color9:#576974}
+background = #A2030A0D
+foreground = #5A6962
+active = #1e4550
+inactive = #152f37
+highlight = ${xrdb:color2:#265765}
+error = ${xrdb:color9:#689580}
 
-red = 576974
-green = 2C6799
-yellow = 357AC5
-blue = 3D88B4
-magenta = 3A8CD4
-cyan = 4AA6E8
-white = aae6f5
+red = 5A6962
+green = 265765
+yellow = 2C6976
+blue = 8A7E6C
+magenta = 2F7787
+cyan = 497B87
+white = 93b9c0
 
 [bar/main]
 bottom = false
@@ -190,7 +190,7 @@ interval = 10
 exec = echo ""
 click-left = "jgmenu_run >/dev/null 2>&1 &"
 click-right = exo-open $HOME/.config/jgmenu/jgmenurc
-format-foreground = 3A8CD4
+format-foreground = 2F7787
 
 [module/xwindow]
 type = internal/xwindow

@@ -1,6 +1,7 @@
 {
     "wallpaper": "/home/denis/.config/wpg/wallpapers/New_York_USA_4752x3168.jpg",
     "alpha": "100",
+
     "special": {
         "background": "#100a0f",
         "foreground": "#e5dedf",

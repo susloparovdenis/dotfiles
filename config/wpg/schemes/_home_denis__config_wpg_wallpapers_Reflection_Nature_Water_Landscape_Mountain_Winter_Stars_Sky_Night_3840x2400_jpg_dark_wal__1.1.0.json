@@ -1,5 +1,5 @@
 {
-    "wallpaper": "Reflection_Nature_Water_Landscape_Mountain_Winter_Stars_Sky_Night_3840x2400.jpg",
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/Reflection_Nature_Water_Landscape_Mountain_Winter_Stars_Sky_Night_3840x2400.jpg",
     "alpha": "100",
 
     "special": {
@@ -9,19 +9,19 @@
     },
     "colors": {
         "color0": "#030A0D",
-        "color1": "#8A7E6C",
-        "color2": "#2C6976",
-        "color3": "#5A6962",
-        "color4": "#2F7787",
-        "color5": "#265765",
+        "color1": "#5A6962",
+        "color2": "#265765",
+        "color3": "#2C6976",
+        "color4": "#8A7E6C",
+        "color5": "#2F7787",
         "color6": "#497B87",
         "color7": "#93b9c0",
         "color8": "#08232f",
-        "color9": "#c3a67c",
-        "color10": "#2e8fa3",
-        "color11": "#689580",
-        "color12": "#31a2bb",
-        "color13": "#28768c",
+        "color9": "#689580",
+        "color10": "#28768c",
+        "color11": "#2e8fa3",
+        "color12": "#c3a67c",
+        "color13": "#31a2bb",
         "color14": "#51a8bd",
         "color15": "#c6faff"
     }

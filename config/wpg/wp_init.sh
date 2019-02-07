@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-wpg -rs 'Atlantis_Nebula__3_by_Starkiteckt_15200x9500.jpg' 'Atlantis_Nebula__3_by_Starkiteckt_15200x9500.jpg'
+wpg -rs 'Reflection_Nature_Water_Landscape_Mountain_Winter_Stars_Sky_Night_3840x2400.jpg' 'Reflection_Nature_Water_Landscape_Mountain_Winter_Stars_Sky_Night_3840x2400.jpg'
