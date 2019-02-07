@@ -3,9 +3,9 @@
 # from the generated scheme.
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color3 #f0f0f0
-set_from_resource $bg_inact i3wm.color1 #f0f0f0
+set_from_resource $fg i3wm.color15 #f0f0f0
+set_from_resource $bg i3wm.color11 #f0f0f0
+set_from_resource $bg_inact i3wm.color2 #f0f0f0
 
 # class                 border  backgr. text indicator child_border
 client.focused          $bg     $bg     $fg  $bg       $bg
@@ -13,7 +13,7 @@ client.focused_inactive $bg_inact     $bg_inact     $fg  $bg_inact       $bg_ina
 client.unfocused        $bg_inact     $bg_inact     $fg  $bg_inact       $bg_inact
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
-
+)
 client.background       $bg
 
 
@@ -178,11 +178,11 @@ bindsym $Super+z scratchpad show
 # Control
 # bindsym $Super+p focus parent
 # bindsym $Super+c focus child
-bindsym $Super+b split h
+bindsym $Super+Shift+v split h
 bindsym $Super+v split v
-bindsym $Super+i focus parent
-bindsym $Super+shift+i focus child
-bindsym $Super+shift+space floating toggle
+bindsym $Super+a focus parent
+bindsym $Super+d focus child
+bindsym $Super+shift+space floating togglev
 bindsym $Super+space focus mode_toggle
 bindsym $Super+p layout tabbed
 bindsym $Super+shift+p layout stacking

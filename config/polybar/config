@@ -1,23 +1,23 @@
 [colors]
-background = #A2030A0D
-foreground = #5A6962
-active = #1e4550
-inactive = #152f37
-highlight = ${xrdb:color2:#265765}
-error = ${xrdb:color9:#689580}
+background = #A2221c2e
+foreground = #dacfd4
+active = #586b8f
+inactive = #3d4962
+highlight = ${xrdb:color2:#6F86B3}
+error = ${xrdb:color9:#6379CF}
 
-red = 5A6962
-green = 265765
-yellow = 2C6976
-blue = 8A7E6C
-magenta = 2F7787
-cyan = 497B87
-white = 93b9c0
+red = 6379CF
+green = 6F86B3
+yellow = 558DEB
+blue = 6690E1
+magenta = 6995F1
+cyan = C08D83
+white = dacfd4
 
 [bar/main]
 bottom = false
 width = 100%
-height = 50NN
+height = 45NN
 offset-x = 0
 offset-y = 0
 background = ${colors.background}
@@ -27,13 +27,15 @@ overline-size = 2
 overline-color = #f00
 underline-size = 4
 
-spacing = 1
+spacing = 2
 padding-left = 1
 padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = "DejaVuSansMono Nerd Font:size=22:antialias=false;2"
+font-0 = "DejaVu Sans Condensed:size=14:antialias=true;2"
+font-1 = "DejaVuSansMono Nerd Font:size=23:antialias=true;2"
+
 ; font-1 = "Font Awesome 5 Brands:pixelsize=16;1"
 ; font-2 = "MaterialIcons:size=16:antialias=false;2"
 ; font-3 = "icomoon:size=16:antialias=false;2"
@@ -149,7 +151,7 @@ time = %H:%M
 time-alt = %H:%M %a
 format-prefix = " "
 format-prefix-foreground = ${colors.magenta}
-format-underline = ${colors.blue}
+format-underline = ${colors.magenta}
 label = %date% %time%
 
 [module/volume]
@@ -190,7 +192,7 @@ interval = 10
 exec = echo ""
 click-left = "jgmenu_run >/dev/null 2>&1 &"
 click-right = exo-open $HOME/.config/jgmenu/jgmenurc
-format-foreground = 2F7787
+format-foreground = 6995F1
 
 [module/xwindow]
 type = internal/xwindow
@@ -253,7 +255,7 @@ interval = 60
 [module/light]
 type = custom/text
 label-active-font = 3\2
-content = "x "
+content = ""
 click-left = l_touch
 click-right = l_slampher
 

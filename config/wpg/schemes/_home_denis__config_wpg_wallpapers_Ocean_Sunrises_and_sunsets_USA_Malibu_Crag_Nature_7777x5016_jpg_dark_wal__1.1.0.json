@@ -1,5 +1,5 @@
 {
-    "wallpaper": "Ocean_Sunrises_and_sunsets_USA_Malibu_Crag_Nature_7777x5016.jpg",
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/Ocean_Sunrises_and_sunsets_USA_Malibu_Crag_Nature_7777x5016.jpg",
     "alpha": "100",
 
     "special": {
@@ -9,19 +9,19 @@
     },
     "colors": {
         "color0": "#24140a",
-        "color1": "#668EAF",
-        "color2": "#547293",
-        "color3": "#F6C13E",
+        "color1": "#867D86",
+        "color2": "#F6C13E",
+        "color3": "#547293",
         "color4": "#36698E",
-        "color5": "#867D86",
+        "color5": "#668EAF",
         "color6": "#6CA0C3",
         "color7": "#c5c7cb",
         "color8": "#432512",
-        "color9": "#72baf5",
-        "color10": "#5e93ce",
-        "color11": "#ffff3c",
+        "color9": "#be91be",
+        "color10": "#ffff3c",
+        "color11": "#5e93ce",
         "color12": "#398ac5",
-        "color13": "#be91be",
+        "color13": "#72baf5",
         "color14": "#78d3ff",
         "color15": "#fbfdff"
     }
