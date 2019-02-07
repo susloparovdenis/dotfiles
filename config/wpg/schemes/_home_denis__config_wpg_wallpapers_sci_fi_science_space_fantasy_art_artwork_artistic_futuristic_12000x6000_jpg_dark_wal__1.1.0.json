@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/sci_fi_science_space_fantasy_art_artwork_artistic_futuristic_12000x6000.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#000101",
+        "foreground": "#dfe3e7",
+        "cursor": "#dfe3e7"
+    },
+    "colors": {
+        "color0": "#000101",
+        "color1": "#5C758C",
+        "color2": "#6D90A8",
+        "color3": "#76A9C4",
+        "color4": "#99A0A7",
+        "color5": "#9CB6C9",
+        "color6": "#B4C8D6",
+        "color7": "#dfe3e7",
+        "color8": "#9c9ea1",
+        "color9": "#5C758C",
+        "color10": "#6D90A8",
+        "color11": "#76A9C4",
+        "color12": "#99A0A7",
+        "color13": "#9CB6C9",
+        "color14": "#B4C8D6",
+        "color15": "#dfe3e7"
+    }
+}

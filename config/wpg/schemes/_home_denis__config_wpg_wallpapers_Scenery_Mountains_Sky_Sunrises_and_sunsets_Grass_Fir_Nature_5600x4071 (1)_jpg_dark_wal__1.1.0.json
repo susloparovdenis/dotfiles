@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/Scenery_Mountains_Sky_Sunrises_and_sunsets_Grass_Fir_Nature_5600x4071 (1).jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#14110e",
+        "foreground": "#a0c3e8",
+        "cursor": "#a0c3e8"
+    },
+    "colors": {
+        "color0": "#14110e",
+        "color1": "#DF9763",
+        "color2": "#2E4FA2",
+        "color3": "#5B649F",
+        "color4": "#3168C8",
+        "color5": "#9C7495",
+        "color6": "#3D8EEB",
+        "color7": "#a0c3e8",
+        "color8": "#7088a2",
+        "color9": "#DF9763",
+        "color10": "#2E4FA2",
+        "color11": "#5B649F",
+        "color12": "#3168C8",
+        "color13": "#9C7495",
+        "color14": "#3D8EEB",
+        "color15": "#a0c3e8"
+    }
+}

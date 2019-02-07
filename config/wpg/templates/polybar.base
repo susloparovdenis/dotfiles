@@ -1,0 +1,259 @@
+[colors]
+background = #DF<COLOR0>
+foreground = #<COLOR1>
+active = #<COLORACT>
+inactive = #<COLORIN>
+highlight = ${xrdb:color2:#<COLOR2>}
+error = ${xrdb:color9:#<COLOR9>}
+
+red = <COLOR1>
+green = <COLOR2>
+yellow = <COLOR3>
+blue = <COLOR4>
+magenta = <COLOR5>
+cyan = <COLOR6>
+white = <COLOR7>
+
+[bar/main]
+bottom = false
+width = 100%
+height = 50NN
+offset-x = 0
+offset-y = 0
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+overline-size = 2
+overline-color = #f00
+underline-size = 4
+
+spacing = 1
+padding-left = 1
+padding-right = 1
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = "DejaVuSansMono Nerd Font:size=22:antialias=false;2"
+; font-1 = "Font Awesome 5 Brands:pixelsize=16;1"
+; font-2 = "MaterialIcons:size=16:antialias=false;2"
+; font-3 = "icomoon:size=16:antialias=false;2"
+; font-4 = "Ubuntu Nerd Font:size=16:antialias=false;2"
+; font-5 = "UbuntuMono Nerd Font:size=16:antialias=false;2"
+
+; font-0 = <polybarfont>:antialias=false
+; font-1 = FontAwesome:size=20:antialias=false;0
+; font-2 = octicons:size=20:antialias=false;0
+; font-3 = icomoon:size=20:antialias=false;0
+; font-4 = Pomodoro:size=20:antialias=false;0
+
+modules-left = jgmenu i3 window_switch xwindow
+modules-center =    date
+modules-right =   light keyboard updates-arch-combined  wifi  volume
+; backlight battery
+tray-position = right
+tray-detached = false
+tray-maxsize = 22
+tray-padding = 5
+
+cursor-click = pointer
+separator = |
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+strip-wsnumbers = false
+pin-workspaces = true
+padding = 1
+label-value = %name% %icon%
+
+fuzzy-match = true
+
+label-mode = %mode%
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;黎
+ws-icon-9 = code;﬏
+
+# ws-icon-9 = X;
+
+ws-icon-default = ♟
+
+label-mode-padding = 1
+label-mode-foreground = ${colors.foreground}
+# label-mode-background = ${colors.highlight}
+
+label-focused-background = ${colors.active}
+label-focused-padding = 1
+
+label-unfocused-padding = 1
+label-unfocused-background = ${colors.background}
+
+# label-visible-background = ${colors.highlight}
+label-visible-padding = 1
+
+# label-urgent-background = ${colors.highlight}
+label-urgent-padding = 1
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.highlight}
+format-underline = ${colors.magenta}
+label = %percentage%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.magenta}
+format-underline = ${colors.blue}
+label = %percentage_used%%
+
+[module/wifi]
+type = custom/script
+interval = 30
+exec = "nmcli d show wlp4s0 | grep 'GENERAL.CONNECTION' | awk '{ print $2 }'"
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-underline = ${colors.magenta}
+click-left = networkmanager_dmenu
+
+[module/eth]
+type = internal/network
+interface = enp0s31f6
+interval = 3.0
+
+label-connected =  %ifname%
+label-disconnected =  %ifname% disconnected
+
+format-connected = <label-connected>
+format-connected-underline = ${colors.magenta}
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${colors.red}
+
+[module/date]
+type = internal/date
+interval = 5
+date = "%a %d %b"
+date-alt = "%d-%m-%Y, %U"
+time = %H:%M
+time-alt = %H:%M %a
+format-prefix = " "
+format-prefix-foreground = ${colors.magenta}
+format-underline = ${colors.blue}
+label = %date% %time%
+
+[module/volume]
+type = internal/pulseaudio
+
+
+label-volume = " %percentage%%"
+label-volume-foreground = ${root.foreground}
+format-volume = "<label-volume>"
+format-volume-underline= ${colors.green}
+
+label-muted = " %percentage%%"
+format-muted = "<label-muted>"
+format-muted-foreground = ${colors.magenta}
+format-muted-underline = ${colors.red}
+
+ 
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+compositing-border = over
+
+; vim:ft=dosini
+
+
+
+
+
+;;;;;;;;;;;;;;;
+;;   Jgmenu  ;;
+;;;;;;;;;;;;;;;
+[module/jgmenu]
+type = custom/script 
+label = %output%
+interval = 10
+exec = echo ""
+click-left = "jgmenu_run >/dev/null 2>&1 &"
+click-right = exo-open $HOME/.config/jgmenu/jgmenurc
+format-foreground = <COLOR5>
+
+[module/xwindow]
+type = internal/xwindow
+format-background = ${colors.background}
+format-padding = 1
+label = %title:0:25: ...%
+
+
+;;;;;;;;;;;;;;;;;;;
+;; Window Switch ;;
+;;;;;;;;;;;;;;;;;;;
+[module/window_switch]
+type = custom/script
+interval = 5
+label = %output%
+click-left = skippy-xd
+click-right = skippy-xd
+exec = echo "  "
+format = <label>
+
+
+;;;;;;;;;;;;;;;
+;; KEYBOARD ;;
+;;;;;;;;;;;;;;;
+[module/keyboard]
+type           = internal/xkeyboard
+blacklist-0    = scroll lock
+blacklist-1    = num lock
+format         = <label-layout> <label-indicator>
+format-spacing = 0
+label-layout   =  %layout%
+label-indicator = %name%
+label-indicator-padding = 2
+label-indicator-background = ${colors.magenta}
+
+[module/redshift]
+type = custom/script
+exec = toggle.sh -r
+label = %output%
+click-left = toggle.sh -r -tg  &
+click-right = redshift &
+
+[module/updates-arch-combined]
+type = custom/script
+exec = ~/.config/polybar/scripts/updates-arch-combined.sh
+interval = 600
+
+[module/spotify]
+type = custom/script
+interval = 5 
+format-prefix = "  "
+format = <label>
+exec = ~/.config/polybar/scripts/spotify.py
+
+[module/system-cpu-temppercore]
+type = custom/script
+exec = ~/.config/polybar/scripts/system-cpu-temppercore.sh
+interval = 60
+
+[module/light]
+type = custom/text
+label-active-font = 3\2
+content = "x "
+click-left = l_touch
+click-right = l_slampher
+

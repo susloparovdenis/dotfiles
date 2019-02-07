@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/New_York_USA_4752x3168.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#100a0f",
+        "foreground": "#e5dedf",
+        "cursor": "#e5dedf"
+    },
+    "colors": {
+        "color0": "#100a0f",
+        "color1": "#D4A062",
+        "color2": "#676893",
+        "color3": "#897990",
+        "color4": "#A99EA6",
+        "color5": "#D9C4AF",
+        "color6": "#B1B6CC",
+        "color7": "#e5dedf",
+        "color8": "#a09b9c",
+        "color9": "#D4A062",
+        "color10": "#676893",
+        "color11": "#897990",
+        "color12": "#A99EA6",
+        "color13": "#D9C4AF",
+        "color14": "#B1B6CC",
+        "color15": "#e5dedf"
+    }
+}

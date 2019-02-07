@@ -1,0 +1,28 @@
+{
+    "wallpaper": "sunset_winter_railway_3840x2400.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0e0d10",
+        "foreground": "#f8fdff",
+        "cursor": "#f8fdff"
+    },
+    "colors": {
+        "color0": "#0e0d10",
+        "color1": "#A2A097",
+        "color2": "#E1A561",
+        "color3": "#236893",
+        "color4": "#EED0A5",
+        "color5": "#638C97",
+        "color6": "#D1B695",
+        "color7": "#d0d4db",
+        "color8": "#211e26",
+        "color9": "#e6dcb0",
+        "color10": "#ffd769",
+        "color11": "#2189cb",
+        "color12": "#ffffb7",
+        "color13": "#70bfd4",
+        "color14": "#ffeeaa",
+        "color15": "#f8fdff"
+    }
+}

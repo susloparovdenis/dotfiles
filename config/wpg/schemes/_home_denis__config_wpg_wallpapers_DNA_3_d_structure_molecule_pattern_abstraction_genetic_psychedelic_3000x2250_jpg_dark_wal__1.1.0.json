@@ -1,0 +1,28 @@
+{
+    "wallpaper": "DNA_3_d_structure_molecule_pattern_abstraction_genetic_psychedelic_3000x2250.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#080E13",
+        "foreground": "#d3ffff",
+        "cursor": "#d3ffff"
+    },
+    "colors": {
+        "color0": "#080E13",
+        "color1": "#AF7371",
+        "color2": "#295D90",
+        "color3": "#649EBD",
+        "color4": "#3071AD",
+        "color5": "#4F68AC",
+        "color6": "#3A8AD1",
+        "color7": "#a2c6e3",
+        "color8": "#13222f",
+        "color9": "#f68480",
+        "color10": "#2979c7",
+        "color11": "#6fd3ff",
+        "color12": "#2f93ef",
+        "color13": "#567fef",
+        "color14": "#39b4ff",
+        "color15": "#d3ffff"
+    }
+}

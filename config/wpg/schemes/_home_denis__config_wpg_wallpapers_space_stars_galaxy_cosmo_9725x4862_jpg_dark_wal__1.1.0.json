@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/space_stars_galaxy_cosmo_9725x4862.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#130c21",
+        "foreground": "#b7c4d3",
+        "cursor": "#b7c4d3"
+    },
+    "colors": {
+        "color0": "#130c21",
+        "color1": "#954863",
+        "color2": "#333A8B",
+        "color3": "#37489B",
+        "color4": "#54459E",
+        "color5": "#5C519D",
+        "color6": "#945DA0",
+        "color7": "#b7c4d3",
+        "color8": "#808993",
+        "color9": "#954863",
+        "color10": "#333A8B",
+        "color11": "#37489B",
+        "color12": "#54459E",
+        "color13": "#5C519D",
+        "color14": "#945DA0",
+        "color15": "#b7c4d3"
+    }
+}

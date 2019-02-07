@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/VersaillesGhosts_EN-US13230111547_1920x1080.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0f0f0d",
+        "foreground": "#cbc8c5",
+        "cursor": "#cbc8c5"
+    },
+    "colors": {
+        "color0": "#0f0f0d",
+        "color1": "#6D644F",
+        "color2": "#7C7F7D",
+        "color3": "#84663A",
+        "color4": "#897760",
+        "color5": "#998A71",
+        "color6": "#B39C6D",
+        "color7": "#cbc8c5",
+        "color8": "#8e8c89",
+        "color9": "#6D644F",
+        "color10": "#7C7F7D",
+        "color11": "#84663A",
+        "color12": "#897760",
+        "color13": "#998A71",
+        "color14": "#B39C6D",
+        "color15": "#cbc8c5"
+    }
+}

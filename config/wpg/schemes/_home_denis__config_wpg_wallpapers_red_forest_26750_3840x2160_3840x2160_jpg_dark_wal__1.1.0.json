@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/red_forest_26750_3840x2160_3840x2160.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0b0b18",
+        "foreground": "#dba3a9",
+        "cursor": "#dba3a9"
+    },
+    "colors": {
+        "color0": "#0b0b18",
+        "color1": "#5E294F",
+        "color2": "#57465F",
+        "color3": "#9B0B2F",
+        "color4": "#DD162F",
+        "color5": "#9B2550",
+        "color6": "#DC284E",
+        "color7": "#dba3a9",
+        "color8": "#997276",
+        "color9": "#5E294F",
+        "color10": "#57465F",
+        "color11": "#9B0B2F",
+        "color12": "#DD162F",
+        "color13": "#9B2550",
+        "color14": "#DC284E",
+        "color15": "#dba3a9"
+    }
+}

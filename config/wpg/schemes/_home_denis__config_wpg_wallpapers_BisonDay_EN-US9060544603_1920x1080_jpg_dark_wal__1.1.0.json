@@ -1,0 +1,28 @@
+{
+    "wallpaper": "BisonDay_EN-US9060544603_1920x1080.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#130d0c",
+        "foreground": "#e1d4ca",
+        "cursor": "#e1d4ca"
+    },
+    "colors": {
+        "color0": "#130d0c",
+        "color1": "#B48559",
+        "color2": "#B48C6E",
+        "color3": "#C8986F",
+        "color4": "#877A84",
+        "color5": "#D1AD8F",
+        "color6": "#D6B59D",
+        "color7": "#e1d4ca",
+        "color8": "#9d948d",
+        "color9": "#B48559",
+        "color10": "#B48C6E",
+        "color11": "#C8986F",
+        "color12": "#877A84",
+        "color13": "#D1AD8F",
+        "color14": "#D6B59D",
+        "color15": "#e1d4ca"
+    }
+}

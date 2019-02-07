@@ -1,0 +1,52 @@
+#!/bin/sh
+#i3lock -c <COLOR1> \
+#       --veriftext="..." --wrongtext="×" \
+#       --timepos="x-90:h-ch-20" --datepos="x-90:h-ch+10" --indpos="x+290:h-120" \
+#       --insidecolor=<COLOR0>99 --ringcolor=<COLOR1>99 \
+#       --insidevercolor=<COLOR2>99 --ringvercolor=<COLOR3>99 \
+#       --insidewrongcolor=<COLOR3>99 --ringwrongcolor=<COLOR5>99 \
+#       --keyhlcolor=<COLOR6>99 --bshlcolor=<COLOR7>99 \
+#       --linecolor=<COLOR8>99 --separatorcolor=<COLOR9>99 \
+#       --radius 30 --ring-width 10 \
+#       --blur 6 \
+#       --clock --timestr="%H:%M" --timecolor="<COLOR10>ff" --datecolor="<COLOR12>ff"
+
+B='<COLOR1>dd'  # blank
+C='<COLOR2>dd'  # clear ish
+D='<COLOR3>dd'  # default
+T='<COLOR4>dd'  # text
+W='<COLOR5>dd'  # wrong
+V='<COLOR5>dd' # verifying
+
+i3lock -n \
+--blur 5 \
+--bar-indicator \
+--bar-position h \
+--bar-direction 1 \
+--bar-max-height 20 \
+--bar-base-width 20 \
+--bar-color <COLOR2>dd \
+--keyhlcolor <COLOR5>dd \
+--bar-periodic-step 50 \
+--bar-step 50 \
+--bar-width 250 \
+--redraw-thread \
+\
+--clock \
+--force-clock \
+--timepos 80:h-80 \
+--timecolor <COLOR1>dd \
+--datepos tx:ty-40 \
+--datecolor <COLOR12>ff \
+--date-align 1 \
+--time-align 1 \
+--ringvercolor <COLOR11>88 \
+--ringwrongcolor <COLOR10>88 \
+--statuspos 5:h-16 \
+--verif-align 1 \
+--wrong-align 1 \
+--verifcolor ffffffff \
+--wrongcolor ffffffff \
+--modifpos -50:-50 \
+\
+--screen 1

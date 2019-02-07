@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/DNA_3_d_structure_molecule_pattern_abstraction_genetic_psychedelic_4000x2793.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#011418",
+        "foreground": "#b3d8e2",
+        "cursor": "#b3d8e2"
+    },
+    "colors": {
+        "color0": "#011418",
+        "color1": "#49676E",
+        "color2": "#157987",
+        "color3": "#4A7B87",
+        "color4": "#278D9C",
+        "color5": "#50A0B1",
+        "color6": "#67B5C8",
+        "color7": "#b3d8e2",
+        "color8": "#7d979e",
+        "color9": "#49676E",
+        "color10": "#157987",
+        "color11": "#4A7B87",
+        "color12": "#278D9C",
+        "color13": "#50A0B1",
+        "color14": "#67B5C8",
+        "color15": "#b3d8e2"
+    }
+}

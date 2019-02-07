@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/CommonPipistrelle_EN-US7421359791_1920x1080.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#040403",
+        "foreground": "#b8b7b7",
+        "cursor": "#b8b7b7"
+    },
+    "colors": {
+        "color0": "#040403",
+        "color1": "#3E3D43",
+        "color2": "#564C4A",
+        "color3": "#68564D",
+        "color4": "#6E6667",
+        "color5": "#8B3F2C",
+        "color6": "#87736A",
+        "color7": "#b8b7b7",
+        "color8": "#808080",
+        "color9": "#3E3D43",
+        "color10": "#564C4A",
+        "color11": "#68564D",
+        "color12": "#6E6667",
+        "color13": "#8B3F2C",
+        "color14": "#87736A",
+        "color15": "#b8b7b7"
+    }
+}

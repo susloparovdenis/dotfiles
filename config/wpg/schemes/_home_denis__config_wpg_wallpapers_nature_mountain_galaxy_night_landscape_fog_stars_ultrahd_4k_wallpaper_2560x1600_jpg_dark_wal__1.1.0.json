@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/nature_mountain_galaxy_night_landscape_fog_stars_ultrahd_4k_wallpaper_2560x1600.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0c0f15",
+        "foreground": "#afbaca",
+        "cursor": "#afbaca"
+    },
+    "colors": {
+        "color0": "#0c0f15",
+        "color1": "#585867",
+        "color2": "#906738",
+        "color3": "#8B7870",
+        "color4": "#A38876",
+        "color5": "#DCA772",
+        "color6": "#526A8D",
+        "color7": "#afbaca",
+        "color8": "#7a828d",
+        "color9": "#585867",
+        "color10": "#906738",
+        "color11": "#8B7870",
+        "color12": "#A38876",
+        "color13": "#DCA772",
+        "color14": "#526A8D",
+        "color15": "#afbaca"
+    }
+}

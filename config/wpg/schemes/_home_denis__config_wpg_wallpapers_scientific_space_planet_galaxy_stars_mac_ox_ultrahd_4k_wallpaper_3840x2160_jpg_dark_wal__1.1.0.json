@@ -1,0 +1,28 @@
+{
+    "wallpaper": "scientific_space_planet_galaxy_stars_mac_ox_ultrahd_4k_wallpaper_3840x2160.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#091118",
+        "foreground": "#fcfffd",
+        "cursor": "#fcfffd"
+    },
+    "colors": {
+        "color0": "#091118",
+        "color1": "#677A89",
+        "color2": "#4C708D",
+        "color3": "#8F8F7C",
+        "color4": "#3C6483",
+        "color5": "#6A8AA0",
+        "color6": "#7BA4C2",
+        "color7": "#c6cac7",
+        "color8": "#132535",
+        "color9": "#76a0c1",
+        "color10": "#5493c5",
+        "color11": "#cbcb8f",
+        "color12": "#4183b6",
+        "color13": "#78b6e1",
+        "color14": "#8bd8ff",
+        "color15": "#fcfffd"
+    }
+}

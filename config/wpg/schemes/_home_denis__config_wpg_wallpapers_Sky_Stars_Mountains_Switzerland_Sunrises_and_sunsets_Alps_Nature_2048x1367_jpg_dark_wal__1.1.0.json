@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/Sky_Stars_Mountains_Switzerland_Sunrises_and_sunsets_Alps_Nature_2048x1367.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0c030d",
+        "foreground": "#aebdce",
+        "cursor": "#aebdce"
+    },
+    "colors": {
+        "color0": "#0c030d",
+        "color1": "#C06F6D",
+        "color2": "#F0A16D",
+        "color3": "#3A3486",
+        "color4": "#4D3885",
+        "color5": "#644D8C",
+        "color6": "#9B678E",
+        "color7": "#aebdce",
+        "color8": "#798490",
+        "color9": "#C06F6D",
+        "color10": "#F0A16D",
+        "color11": "#3A3486",
+        "color12": "#4D3885",
+        "color13": "#644D8C",
+        "color14": "#9B678E",
+        "color15": "#aebdce"
+    }
+}

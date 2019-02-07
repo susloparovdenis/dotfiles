@@ -1,18 +1,18 @@
 [colors]
-background = #DF030A0D
-foreground = #8A7E6C
-active = #23535e
-inactive = #183940
-highlight = ${xrdb:color2:#2C6976}
-error = ${xrdb:color9:#c3a67c}
+background = #DF04090F
+foreground = #576974
+active = #23527a
+inactive = #183853
+highlight = ${xrdb:color2:#2C6799}
+error = ${xrdb:color9:#576974}
 
-red = 8A7E6C
-green = 2C6976
-yellow = 5A6962
-blue = 2F7787
-magenta = 265765
-cyan = 497B87
-white = 93b9c0
+red = 576974
+green = 2C6799
+yellow = 357AC5
+blue = 3D88B4
+magenta = 3A8CD4
+cyan = 4AA6E8
+white = aae6f5
 
 [bar/main]
 bottom = false
@@ -33,12 +33,12 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = "DejaVu Sans Mono:size=16:antialias=false;2"
-font-1 = "Font Awesome 5 Brands:pixelsize=11;1"
-font-2 = "MaterialIcons:size=20:antialias=false;2"
-font-3 = "icomoon:size=20:antialias=false;2"
-font-4 = "Ubuntu Nerd Font:size=20:antialias=false;2"
-font-5 = "UbuntuMono Nerd Font:size=20:antialias=false;2"
+font-0 = "DejaVuSansMono Nerd Font:size=22:antialias=false;2"
+; font-1 = "Font Awesome 5 Brands:pixelsize=16;1"
+; font-2 = "MaterialIcons:size=16:antialias=false;2"
+; font-3 = "icomoon:size=16:antialias=false;2"
+; font-4 = "Ubuntu Nerd Font:size=16:antialias=false;2"
+; font-5 = "UbuntuMono Nerd Font:size=16:antialias=false;2"
 
 ; font-0 = Ubuntu:weight=bold:size=15;1:antialias=false
 ; font-1 = FontAwesome:size=20:antialias=false;0
@@ -71,11 +71,11 @@ label-value = %name% %icon%
 fuzzy-match = true
 
 label-mode = %mode%
-ws-icon-0 = 1;
+ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
-ws-icon-4 = 5;
+ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-6 = 7;
 ws-icon-7 = 8;
@@ -190,7 +190,7 @@ interval = 10
 exec = echo ""
 click-left = "jgmenu_run >/dev/null 2>&1 &"
 click-right = exo-open $HOME/.config/jgmenu/jgmenurc
-format-foreground = 265765
+format-foreground = 3A8CD4
 
 [module/xwindow]
 type = internal/xwindow

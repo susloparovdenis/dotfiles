@@ -1,0 +1,28 @@
+{
+    "wallpaper": "ChateauGaillard_EN-US11027430397_1920x1080.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#33301b",
+        "foreground": "#cacaca",
+        "cursor": "#cacaca"
+    },
+    "colors": {
+        "color0": "#33301b",
+        "color1": "#6F7B87",
+        "color2": "#798590",
+        "color3": "#7F91A0",
+        "color4": "#8D9297",
+        "color5": "#A2A19E",
+        "color6": "#979CA3",
+        "color7": "#cacaca",
+        "color8": "#8d8d8d",
+        "color9": "#6F7B87",
+        "color10": "#798590",
+        "color11": "#7F91A0",
+        "color12": "#8D9297",
+        "color13": "#A2A19E",
+        "color14": "#979CA3",
+        "color15": "#cacaca"
+    }
+}

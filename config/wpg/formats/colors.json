@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/Atlantis_Nebula__3_by_Starkiteckt_15200x9500.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#04090F",
+        "foreground": "#aae6f5",
+        "cursor": "#aae6f5"
+    },
+    "colors": {
+        "color0": "#04090F",
+        "color1": "#576974",
+        "color2": "#2C6799",
+        "color3": "#357AC5",
+        "color4": "#3D88B4",
+        "color5": "#3A8CD4",
+        "color6": "#4AA6E8",
+        "color7": "#aae6f5",
+        "color8": "#76a1ab",
+        "color9": "#576974",
+        "color10": "#2C6799",
+        "color11": "#357AC5",
+        "color12": "#3D88B4",
+        "color13": "#3A8CD4",
+        "color14": "#4AA6E8",
+        "color15": "#aae6f5"
+    }
+}

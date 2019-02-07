@@ -1,0 +1,21 @@
+set $wallpaper /home/denis/.config/wpg/wallpapers/Atlantis_Nebula__3_by_Starkiteckt_15200x9500.jpg
+
+set $background #04090F
+set $foreground #aae6f5
+
+set $color0 #04090F
+set $color1 #576974
+set $color2 #2C6799
+set $color3 #357AC5
+set $color4 #3D88B4
+set $color5 #3A8CD4
+set $color6 #4AA6E8
+set $color7 #aae6f5
+set $color8 #76a1ab
+set $color9 #576974
+set $color10 #2C6799
+set $color11 #357AC5
+set $color12 #3D88B4
+set $color13 #3A8CD4
+set $color14 #4AA6E8
+set $color15 #aae6f5

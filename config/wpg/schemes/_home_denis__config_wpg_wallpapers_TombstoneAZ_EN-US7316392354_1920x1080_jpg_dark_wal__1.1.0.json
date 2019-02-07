@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/TombstoneAZ_EN-US7316392354_1920x1080.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#020000",
+        "foreground": "#a9b8b8",
+        "cursor": "#a9b8b8"
+    },
+    "colors": {
+        "color0": "#020000",
+        "color1": "#6F6D57",
+        "color2": "#963E09",
+        "color3": "#8E4E06",
+        "color4": "#AC610C",
+        "color5": "#D46D08",
+        "color6": "#DC9D31",
+        "color7": "#a9b8b8",
+        "color8": "#768080",
+        "color9": "#6F6D57",
+        "color10": "#963E09",
+        "color11": "#8E4E06",
+        "color12": "#AC610C",
+        "color13": "#D46D08",
+        "color14": "#DC9D31",
+        "color15": "#a9b8b8"
+    }
+}

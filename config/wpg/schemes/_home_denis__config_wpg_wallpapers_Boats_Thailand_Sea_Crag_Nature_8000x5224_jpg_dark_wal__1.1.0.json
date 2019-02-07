@@ -1,0 +1,28 @@
+{
+    "wallpaper": "Boats_Thailand_Sea_Crag_Nature_8000x5224.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#071104",
+        "foreground": "#f5ffff",
+        "cursor": "#f5ffff"
+    },
+    "colors": {
+        "color0": "#071104",
+        "color1": "#D8E1D4",
+        "color2": "#D7DAA3",
+        "color3": "#B5C854",
+        "color4": "#ACE0E9",
+        "color5": "#ADB89B",
+        "color6": "#4EB0B1",
+        "color7": "#dfeef1",
+        "color8": "#13320a",
+        "color9": "#f2ffde",
+        "color10": "#ffffbb",
+        "color11": "#f7ff5a",
+        "color12": "#bfffff",
+        "color13": "#e6ffb3",
+        "color14": "#54f5f6",
+        "color15": "#f5ffff"
+    }
+}

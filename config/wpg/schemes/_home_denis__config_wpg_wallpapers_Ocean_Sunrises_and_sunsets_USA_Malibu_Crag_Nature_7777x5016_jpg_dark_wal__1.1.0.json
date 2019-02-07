@@ -1,0 +1,28 @@
+{
+    "wallpaper": "Ocean_Sunrises_and_sunsets_USA_Malibu_Crag_Nature_7777x5016.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#24140a",
+        "foreground": "#fbfdff",
+        "cursor": "#fbfdff"
+    },
+    "colors": {
+        "color0": "#24140a",
+        "color1": "#668EAF",
+        "color2": "#547293",
+        "color3": "#F6C13E",
+        "color4": "#36698E",
+        "color5": "#867D86",
+        "color6": "#6CA0C3",
+        "color7": "#c5c7cb",
+        "color8": "#432512",
+        "color9": "#72baf5",
+        "color10": "#5e93ce",
+        "color11": "#ffff3c",
+        "color12": "#398ac5",
+        "color13": "#be91be",
+        "color14": "#78d3ff",
+        "color15": "#fbfdff"
+    }
+}
