@@ -39,18 +39,18 @@ set $down j
 set $left h
 set $right l
 
-set $WS1 "1: "
-set $WS2 "2: "
-set $WS3 "3: "
-set $WS4 "4: "
-set $WS5 "5: "
-set $WS6 "6: "
-set $WS7 "7: "
-set $WS8 "8: "
+set $WS1 "1"
+set $WS2 "2"
+set $WS3 "3"
+set $WS4 "4"
+set $WS5 "5"
+set $WS6 "6"
+set $WS7 "7"
+set $WS8 "8"
 
 # monitors
-set $Mon1 HDMI1
-set $Mon2 HDMI2
+set $Mon1 HDMI-0
+set $Mon2 HDMI-0
 
 #####################################################
 ###############     Autostart      ##################
@@ -152,10 +152,10 @@ bindsym $Super+$down  focus down
 bindsym $Super+$up    focus up
 bindsym $Super+$right focus right
 
-# bindsym $Super+Left  focus left
-# bindsym $Super+Down  focus down
-# bindsym $Super+Up    focus up
-# bindsym $Super+Right focus right
+bindsym $Super+Left  focus left
+bindsym $Super+Down  focus down
+bindsym $Super+Up    focus up
+bindsym $Super+Right focus right
 
 # move focused window
 bindsym $Super+Shift+$left  move left  10px
@@ -163,10 +163,10 @@ bindsym $Super+Shift+$down  move down  10px
 bindsym $Super+Shift+$up    move up    10px
 bindsym $Super+Shift+$right move right 10px
 
-# bindsym $Super+Shift+Up    move up    10px
-# bindsym $Super+Shift+Down  move down  10px
-# bindsym $Super+Shift+Left  move left  10px
-# bindsym $Super+Shift+Right move right 10px
+bindsym $Super+Shift+Up    move up    10px
+bindsym $Super+Shift+Down  move down  10px
+bindsym $Super+Shift+Left  move left  10px
+bindsym $Super+Shift+Right move right 10px
 
 # Scratchpad, Floating
 # bindsym $Super+Shift+space floating toggle !!!!
@@ -256,10 +256,10 @@ for_window [window_role="(?i)(?:pop-up|setup)"] floating enable
 
 
 # launchers
-bindsym $Alt+space exec --no-startup-id rofr.sh -r
+bindsym $Alt+space exec --no-startup-id ~/.config/bin/rofr.sh -r
 
 # this is needed for super key to launch rofi
-bindsym $Alt+F1 exec --no-startup-id rofr.sh -r
+bindsym $Alt+F1 exec --no-startup-id ~/.local/bin/rofr.sh -r
 
 # Apps
 bindsym $Super+e exec --no-startup-id ranger
@@ -269,7 +269,7 @@ bindsym $Super+f exec exo-open --launch FileManager
 bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # logout script
-bindsym $Super+x exec --no-startup-id rofr.sh -l
+bindsym $Super+x exec --no-startup-id ~/.local/bin/rofr.sh -l
 
 
 # Helpers

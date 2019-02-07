@@ -25,6 +25,7 @@ antigen bundles <<EOBUNDLES
     thefuck
     systemd
     docker
+    kubectl
     docker-compose
     git
     fzf
