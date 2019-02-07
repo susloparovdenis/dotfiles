@@ -187,7 +187,7 @@ compositing-border = over
 type = custom/script 
 label = %output%
 interval = 10
-exec = echo ""
+exec = echo ""
 click-left = "jgmenu_run >/dev/null 2>&1 &"
 click-right = exo-open $HOME/.config/jgmenu/jgmenurc
 format-foreground = <COLOR5>
@@ -208,7 +208,7 @@ interval = 5
 label = %output%
 click-left = skippy-xd
 click-right = skippy-xd
-exec = echo "  "
+exec = echo "  "
 format = <label>
 
 
