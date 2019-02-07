@@ -126,3 +126,5 @@ export VSS_NUGET_EXTERNAL_FEED_ENDPOINTS='{"endpointCredentials": [{"endpoint":"
 export NUGET_CREDENTIALPROVIDER_SESSIONTOKENCACHE_ENABLED=true
 alias ll='colorls -lA --sd'
 
+source /opt/google-cloud-sdk/completion.zsh.inc          
+source /opt/google-cloud-sdk/path.zsh.inc                                        
