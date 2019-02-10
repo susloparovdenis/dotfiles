@@ -1,36 +1,36 @@
 # ArchLabs i3 config
 
 # Xresources      var      value       fallback
-set_from_resource $bg      background  #19043C
-set_from_resource $fg      foreground  #F1F1F1
-set_from_resource $black   color0      #19043C
-set_from_resource $red     color1      #EE79A9
-set_from_resource $green   color2      #8C9440
-set_from_resource $yellow  color3      #DE935F
-set_from_resource $blue    color4      #05C6F1
-set_from_resource $purple  color5      #85678F
-set_from_resource $cyan    color6      #5E8D87
-set_from_resource $grey    color7      #969CD3
+# set_from_resource $bg      background  #19043C
+# set_from_resource $fg      foreground  #F1F1F1
+# set_from_resource $black   color0      #19043C
+# set_from_resource $red     color1      #EE79A9
+# set_from_resource $green   color2      #8C9440
+# set_from_resource $yellow  color3      #DE935F
+# set_from_resource $blue    color4      #05C6F1
+# set_from_resource $purple  color5      #85678F
+# set_from_resource $cyan    color6      #5E8D87
+# set_from_resource $grey    color7      #969CD3
 
-# set_from_resource $fg i3wm.color15 #f0f0f0
-# set_from_resource $bg i3wm.color11 #f0f0f0
-# set_from_resource $bg_inact i3wm.color2 #f0f0f0
+set_from_resource $fg i3wm.color15 #f0f0f0
+set_from_resource $bg i3wm.color11 #f0f0f0
+set_from_resource $bg_inact i3wm.color2 #f0f0f0
 
-# # class                 border  backgr. text indicator child_border
-# client.focused          $bg     $bg     $fg  $bg       $bg
-# client.focused_inactive $bg_inact     $bg_inact     $fg  $bg_inact       $bg_inact
-# client.unfocused        $bg_inact     $bg_inact     $fg  $bg_inact       $bg_inact
-# client.urgent           $bg     $bg     $fg  $bg       $bg
-# client.placeholder      $bg     $bg     $fg  $bg       $bg
-# client.background       $bg
-
-# class                 bd    bg  txt    ind   child_bd
-client.focused          $grey $bg $fg    $blue $grey
-client.unfocused        $grey $bg $black $bg   $bg
-client.focused_inactive $grey $bg $black $bg   $bg
-client.urgent           $red  $bg $red   $red  $red
-client.placeholder      $grey $bg $bg    $bg   $bg
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg_inact     $bg_inact     $fg  $bg_inact       $bg_inact
+client.unfocused        $bg_inact     $bg_inact     $fg  $bg_inact       $bg_inact
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
+
+# # class                 bd    bg  txt    ind   child_bd
+# client.focused          $grey $bg $fg    $blue $grey
+# client.unfocused        $grey $bg $black $bg   $bg
+# client.focused_inactive $grey $bg $black $bg   $bg
+# client.urgent           $red  $bg $red   $red  $red
+# client.placeholder      $grey $bg $bg    $bg   $bg
+# client.background       $bg
 
 
 # border & title.. Must be set to border pixel for gaps to work
@@ -94,18 +94,18 @@ exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11
 # pressing super key alone simulates pressing Alt-F1
 exec --no-startup-id ksuperkey -e 'Super_L=Alt_L|F1'
 exec --no-startup-id ksuperkey -e 'Super_R=Alt_L|F1'
-
+exec --no-startup-id  $HOME/.config/wpg/wp-init.sh
 ###########################################################
 #############         Bindings           ##################
 ###########################################################
 
 # kill focused window
 bindsym $Super+Shift+q kill
-bindsym $Alt+q kill
+
 bindsym $Alt+F4 kill
 
 # launchers
-bindsym Control+space exec --no-startup-id rofi_run -r
+# bindsym Control+space exec --no-startup-id rofi_run -r
 
 # audio
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -217,7 +217,6 @@ bindsym $Super+p focus parent
 # bindsym $Super+c focus child
 
 
-bindsym $Super+shift+space floating togglev
 bindsym $Super+space focus mode_toggle
 bindsym $Super+s layout stacking
 bindsym $Super+shift+s layout tabbed

@@ -1,15 +1,15 @@
-# [options]
+[options]
 
-# font = DejaVuSansMono Nerd Font 12
+font = DejaVuSansMono Nerd Font 12
 
 [colors]
 
 # # special
 # foreground      = #dcf0f0
-foreground      = #951C20F3
+# foreground      = #951C20F3
 # foreground_bold = #dcf0f0
 # cursor          = #dcf0f0
-# background      = rgba(0,43,54,0.9)
+background      = rgba(0,43,54,0.9)
 
 # # black
 # color0  = #073642

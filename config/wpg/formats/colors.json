@@ -1,28 +1,28 @@
 {
-    "wallpaper": "/home/denis/.config/wpg/wallpapers/galaxy_stars__ht_5000x3905.jpg",
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/Wallpaper_8K_0_7680x4320.jpg",
     "alpha": "100",
 
     "special": {
-        "background": "#0b0c0d",
-        "foreground": "#b7b2bd",
-        "cursor": "#b7b2bd"
+        "background": "#0F140A",
+        "foreground": "#fcffe3",
+        "cursor": "#fcffe3"
     },
     "colors": {
-        "color0": "#0b0c0d",
-        "color1": "#51484F",
-        "color2": "#6D5253",
-        "color3": "#6A5E68",
-        "color4": "#AB5E51",
-        "color5": "#956A66",
-        "color6": "#BB8C76",
-        "color7": "#b7b2bd",
-        "color8": "#807c84",
-        "color9": "#51484F",
-        "color10": "#6D5253",
-        "color11": "#6A5E68",
-        "color12": "#AB5E51",
-        "color13": "#956A66",
-        "color14": "#BB8C76",
-        "color15": "#b7b2bd"
+        "color0": "#0F140A",
+        "color1": "#484F37",
+        "color2": "#4A9A32",
+        "color3": "#67925D",
+        "color4": "#5A664E",
+        "color5": "#536733",
+        "color6": "#516C4C",
+        "color7": "#bfcaac",
+        "color8": "#232f16",
+        "color9": "#616f3e",
+        "color10": "#59d533",
+        "color11": "#7ccd69",
+        "color12": "#759059",
+        "color13": "#6e8f38",
+        "color14": "#619856",
+        "color15": "#fcffe3"
     }
 }

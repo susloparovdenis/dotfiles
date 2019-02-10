@@ -32,9 +32,9 @@ inherit = bar/master
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
 monitor =
 
-modules-left   = jgmenu i3 
+modules-left   = jgmenu i3 window_switch
 modules-center = clock
-modules-right  = ${env:POLYBAR_MODULES: temperature memory pkg network volume}
+modules-right  = ${env:POLYBAR_MODULES: redshift temperature memory pkg network volume}
 
 
 ;=====================================================

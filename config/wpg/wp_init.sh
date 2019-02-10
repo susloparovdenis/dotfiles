@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-wpg -rs 'galaxy_stars__ht_5000x3905.jpg' 'galaxy_stars__ht_5000x3905.jpg'
+wpg -rs 'Wallpaper_8K_0_7680x4320.jpg' 'Wallpaper_8K_0_7680x4320.jpg'
