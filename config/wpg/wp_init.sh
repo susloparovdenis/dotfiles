@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-wpg -rs 'mood_Christmas_winter_snow_bokeh_4287x2847.jpg' 'mood_Christmas_winter_snow_bokeh_4287x2847.jpg'
+wpg -rs 'Croatia_Parks_Lake_Waterfall_Plitvice_Rays_of_light_Nature_garden_5250x3500.jpg' 'Croatia_Parks_Lake_Waterfall_Plitvice_Rays_of_light_Nature_garden_5250x3500.jpg'

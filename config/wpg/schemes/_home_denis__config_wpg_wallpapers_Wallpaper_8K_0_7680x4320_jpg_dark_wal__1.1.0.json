@@ -1,27 +1,28 @@
 {
     "wallpaper": "/home/denis/.config/wpg/wallpapers/Wallpaper_8K_0_7680x4320.jpg",
     "alpha": "100",
+
     "special": {
         "background": "#0F140A",
-        "foreground": "#bfcaac",
-        "cursor": "#bfcaac"
+        "foreground": "#fcffe3",
+        "cursor": "#fcffe3"
     },
     "colors": {
         "color0": "#0F140A",
         "color1": "#484F37",
-        "color2": "#536733",
-        "color3": "#5A664E",
-        "color4": "#516C4C",
-        "color5": "#4A9A32",
-        "color6": "#67925D",
+        "color2": "#4A9A32",
+        "color3": "#67925D",
+        "color4": "#5A664E",
+        "color5": "#536733",
+        "color6": "#516C4C",
         "color7": "#bfcaac",
-        "color8": "#858d78",
-        "color9": "#484F37",
-        "color10": "#536733",
-        "color11": "#5A664E",
-        "color12": "#516C4C",
-        "color13": "#4A9A32",
-        "color14": "#67925D",
-        "color15": "#bfcaac"
+        "color8": "#232f16",
+        "color9": "#616f3e",
+        "color10": "#59d533",
+        "color11": "#7ccd69",
+        "color12": "#759059",
+        "color13": "#6e8f38",
+        "color14": "#619856",
+        "color15": "#fcffe3"
     }
 }

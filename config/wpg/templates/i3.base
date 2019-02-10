@@ -1,31 +1,48 @@
-# Set colors from Xresources
-# Change 'color7' and 'color2' to whatever colors you want i3 to use 
-# from the generated scheme.
-# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
-# it fails to get colors from Xresources.
+# ArchLabs i3 config
+
+# Xresources      var      value       fallback
+# set_from_resource $bg      background  #19043C
+# set_from_resource $fg      foreground  #F1F1F1
+# set_from_resource $black   color0      #19043C
+# set_from_resource $red     color1      #EE79A9
+# set_from_resource $green   color2      #8C9440
+# set_from_resource $yellow  color3      #DE935F
+# set_from_resource $blue    color4      #05C6F1
+# set_from_resource $purple  color5      #85678F
+# set_from_resource $cyan    color6      #5E8D87
+# set_from_resource $grey    color7      #969CD3
+
 set_from_resource $fg i3wm.color15 #f0f0f0
 set_from_resource $bg i3wm.color11 #f0f0f0
 set_from_resource $bg_inact i3wm.color2 #f0f0f0
 
-# class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
-client.focused_inactive $bg_inact     $bg_inact     $fg  $bg_inact       $bg_inact
-client.unfocused        $bg_inact     $bg_inact     $fg  $bg_inact       $bg_inact
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
-)
+# # class                 border  backgr. text indicator child_border
+# client.focused          $bg     $bg     $fg  $bg       $bg
+# client.focused_inactive $bg_inact     $bg_inact     $fg  $bg_inact       $bg_inact
+# client.unfocused        $bg_inact     $bg_inact     $fg  $bg_inact       $bg_inact
+# client.urgent           $bg     $bg     $fg  $bg       $bg
+# client.placeholder      $bg     $bg     $fg  $bg       $bg
+# client.background       $bg
+
+# class                 bd    bg  txt    ind   child_bd
+client.focused          $grey $bg $fg    $blue $grey
+client.unfocused        $grey $bg $black $bg   $bg
+client.focused_inactive $grey $bg $black $bg   $bg
+client.urgent           $red  $bg $red   $red  $red
+client.placeholder      $grey $bg $bg    $bg   $bg
 client.background       $bg
 
 
 # border & title.. Must be set to border pixel for gaps to work
-for_window [class="^.*"] border normal
+# for_window [class="^.*"] border normal
+for_window [class="^.*"] border pixel 2, title_format "<b> %class >> %title </b>"
 
 # gaps
 gaps inner 15
 gaps outer 5
 
 # font
-font pango:DejaVu Sans Mono 10
+font pango:monospace 11
 
 # buttons
 set $Super Mod4
@@ -39,14 +56,14 @@ set $down j
 set $left h
 set $right l
 
-set $WS1 "1"
-set $WS2 "2"
-set $WS3 "3"
-set $WS4 "4"
-set $WS5 "5"
-set $WS6 "6"
-set $WS7 "7"
-set $WS8 "8"
+set $WS1 "1: "
+set $WS2 "2: "
+set $WS3 "3: "
+set $WS4 "4: "
+set $WS5 "5: "
+set $WS6 "6: "
+set $WS7 "7: "
+set $WS8 "8: "
 
 # monitors
 set $Mon1 HDMI-0
@@ -57,7 +74,7 @@ set $Mon2 HDMI-0
 #####################################################
 
 # run with reload
-exec --no-startup-id polybar --reload i3-bar
+exec_always --no-startup-id al-polybar-session
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xrdb -load ~/.Xresources
 
@@ -70,7 +87,7 @@ exec --no-startup-id al-compositor --start
 exec --no-startup-id greenclip daemon
 # polkit, required for authentication
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 # keyring for storing saved passwords
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11
 
@@ -85,6 +102,10 @@ exec --no-startup-id ksuperkey -e 'Super_R=Alt_L|F1'
 # kill focused window
 bindsym $Super+Shift+q kill
 bindsym $Alt+q kill
+bindsym $Alt+F4 kill
+
+# launchers
+bindsym Control+space exec --no-startup-id rofi_run -r
 
 # audio
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -133,6 +154,17 @@ bindsym $Super+Shift+6 move container to workspace $WS6; workspace $WS6
 bindsym $Super+Shift+7 move container to workspace $WS7; workspace $WS7
 bindsym $Super+Shift+8 move container to workspace $WS8; workspace $WS8
 
+# move focused container to workspace - numpad alternatives
+bindsym $Super+Shift+Mod2+KP_End move container to workspace $WS1; workspace $WS1
+bindsym $Super+Shift+Mod2+KP_Down move container to workspace $WS2; workspace $WS2
+bindsym $Super+Shift+Mod2+KP_Next move container to workspace $WS3; workspace $WS3
+bindsym $Super+Shift+Mod2+KP_Left move container to workspace $WS4; workspace $WS4
+bindsym $Super+Shift+Mod2+KP_Begin move container to workspace $WS5; workspace $WS5
+bindsym $Super+Shift+Mod2+KP_Right move container to workspace $WS6; workspace $WS7
+bindsym $Super+Shift+Mod2+KP_Home move container to workspace $WS7; workspace $WS7
+bindsym $Super+Shift+Mod2+KP_Up move container to workspace $WS8; workspace $WS8
+
+
 ############################################################
 ##############     Reload configs           ################
 ############################################################
@@ -180,8 +212,13 @@ bindsym $Super+z scratchpad show
 # bindsym $Super+c focus child
 bindsym $Super+Shift+v split h
 bindsym $Super+v split v
+
 bindsym $Super+a focus parent
 bindsym $Super+d focus child
+bindsym $Mod+p focus parent
+bindsym $Mod+c focus child
+
+
 bindsym $Super+shift+space floating togglev
 bindsym $Super+space focus mode_toggle
 bindsym $Super+p layout tabbed

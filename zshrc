@@ -108,8 +108,14 @@ POWERLINE9K_CODETALK_DEFAULT_FOREGROUND='red'
 # antigen theme bhilburn/powerlevel9k powerlevel9k
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 antigen apply
-alias vim=nvim
 
+alias vim=nvim
+alias ls='lsd'
+alias l='ls -l'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 
 autoload -Uz compinit && compinit -i
 autoload -Uz promptinit
@@ -124,7 +130,6 @@ neofetch
 
 export VSS_NUGET_EXTERNAL_FEED_ENDPOINTS='{"endpointCredentials": [{"endpoint":"https://pkgs.dev.azure.com/payvision-amsterdam/_packaging/tlm/nuget/v3/index.json", "username":"optional", "password":"3jiucrokdvjbrbzfr622ia4tdr26lxuw6nfz72fehgsfu4ljiiua"}]}'
 export NUGET_CREDENTIALPROVIDER_SESSIONTOKENCACHE_ENABLED=true
-alias ll='colorls -lA --sd'
 
 source /opt/google-cloud-sdk/completion.zsh.inc          
 source /opt/google-cloud-sdk/path.zsh.inc                                        
