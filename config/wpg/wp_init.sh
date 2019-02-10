@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-wpg -rs 'Croatia_Parks_Lake_Waterfall_Plitvice_Rays_of_light_Nature_garden_5250x3500.jpg' 'Croatia_Parks_Lake_Waterfall_Plitvice_Rays_of_light_Nature_garden_5250x3500.jpg'
+wpg -rs 'galaxy_stars__ht_5000x3905.jpg' 'galaxy_stars__ht_5000x3905.jpg'

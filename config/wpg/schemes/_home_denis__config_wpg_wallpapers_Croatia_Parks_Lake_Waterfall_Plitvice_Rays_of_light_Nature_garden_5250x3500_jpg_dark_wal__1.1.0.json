@@ -1,5 +1,5 @@
 {
-    "wallpaper": "Croatia_Parks_Lake_Waterfall_Plitvice_Rays_of_light_Nature_garden_5250x3500.jpg",
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/Croatia_Parks_Lake_Waterfall_Plitvice_Rays_of_light_Nature_garden_5250x3500.jpg",
     "alpha": "100",
 
     "special": {
@@ -9,20 +9,20 @@
     },
     "colors": {
         "color0": "#141309",
-        "color1": "#E9A853",
-        "color2": "#50A12F",
+        "color1": "#7ae4c1",
+        "color2": "#9A9F28",
         "color3": "#CAA834",
-        "color4": "#727886",
-        "color5": "#9A9F28",
-        "color6": "#7ae4c1",
+        "color4": "#E9A853",
+        "color5": "#50A12F",
+        "color6": "#727886",
         "color7": "#F3CB6C",
         "color8": "#302d14",
-        "color9": "#ffdd57",
-        "color10": "#62de2f",
+        "color9": "#87ffff",
+        "color10": "#d4db26",
         "color11": "#ffe333",
-        "color12": "#8495be",
-        "color13": "#d4db26",
-        "color14": "#87ffff",
+        "color12": "#ffdd57",
+        "color13": "#62de2f",
+        "color14": "#8495be",
         "color15": "#ffff90"
     }
 }

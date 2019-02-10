@@ -12,7 +12,7 @@ rm -rf yay
 yay -S zsh chromium telegram-desktop mpv code thefuck antigen ruby-colorls \
  chromium-widevine ranger spotify rcm docker docker-compose antigen-git trash-cli \
   xorg-xkill xorg-xprop
-yay -S neofetch nerd-fonts-dejavu-complete flameshot
+yay -S neofetch nerd-fonts-dejavu-complete flameshot fzf
 
 git config --global credential.helper libsecret
 
