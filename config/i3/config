@@ -13,7 +13,6 @@ client.focused_inactive $bg_inact     $bg_inact     $fg  $bg_inact       $bg_ina
 client.unfocused        $bg_inact     $bg_inact     $fg  $bg_inact       $bg_inact
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
-)
 client.background       $bg
 
 
