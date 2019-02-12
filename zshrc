@@ -133,4 +133,4 @@ export NUGET_CREDENTIALPROVIDER_SESSIONTOKENCACHE_ENABLED=true
 
 source /opt/google-cloud-sdk/completion.zsh.inc          
 source /opt/google-cloud-sdk/path.zsh.inc                                        
-(cat $HOME/.config/wpg/sequences &)
+# (cat $HOME/.config/wpg/sequences &)
