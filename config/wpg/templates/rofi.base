@@ -16,8 +16,8 @@ rofi.xoffset:                        none
 rofi.fixed-num-lines:                true
 rofi.terminal:                       rofi-sensible-terminal
 rofi.ssh-client:                     ssh
-rofi.ssh-command:                    {terminal} -e {ssh-client} {host}
-rofi.run-command:                    {cmd}
+rofi.ssh-command:                    {{terminal}} -e {{ssh-client}} {{host}}
+rofi.run-command:                    {{cmd}}
 rofi.parse-hosts:                    true
 rofi.matching:                       normal
 rofi.separator-style:                none
