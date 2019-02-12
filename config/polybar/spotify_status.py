@@ -1,1 +1,0 @@
-../../.dotfiles/i3/.config/polybar/spotify_status.py

@@ -19,7 +19,7 @@ monitor =
 
 modules-left   = jgmenu workspaces menu
 modules-center = window_switch clock
-modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg network volume}
+modules-right  = ${{env:POLYBAR_MODULES:coreuse temperature memory pkg network volume}}
 
 
 ;=====================================================
@@ -30,11 +30,11 @@ modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg network vo
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
+monitor = 
 
 modules-left   = jgmenu i3 window_switch
 modules-center = clock
-modules-right  = ${env:POLYBAR_MODULES: redshift temperature memory pkg network volume}
+modules-right  = ${{env:POLYBAR_MODULES: redshift temperature memory pkg network volume}}
 
 
 ;=====================================================
@@ -49,7 +49,7 @@ monitor =
 
 modules-left   = bspwm menu
 modules-center = clock
-modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg network volume}
+modules-right  = ${{env:POLYBAR_MODULES:coreuse temperature memory pkg network volume}}
 
 ;=====================================================
 ;     Openbox Bars
@@ -63,5 +63,5 @@ monitor =
 
 modules-left   = workspaces menu
 modules-center = clock
-modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg network volume}
+modules-right  = ${{env:POLYBAR_MODULES:coreuse temperature memory pkg network volume}}
 

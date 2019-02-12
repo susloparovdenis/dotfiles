@@ -1,4 +1,4 @@
-# ArchLabs i3 config
+ # ArchLabs i3 config
 
 # Xresources      var      value       fallback
 # set_from_resource $bg      background  #19043C
@@ -35,7 +35,7 @@ client.background       $bg
 
 # border & title.. Must be set to border pixel for gaps to work
 # for_window [class="^.*"] border normal
-for_window [class="^.*"] border pixel 2, title_format "<b> %class >> %title </b>"
+for_window [class="^.*"] border pixel 2, title_format "<b> %title </b>"
 
 # gaps
 gaps inner 15
@@ -56,18 +56,21 @@ set $down j
 set $left h
 set $right l
 
-set $WS1 "1: "
+set $WS1 "1:"
 set $WS2 "2: "
-set $WS3 "3: "
-set $WS4 "4: "
+set $WS3 "3: "
+set $WS4 "4: "
 set $WS5 "5: "
 set $WS6 "6: "
 set $WS7 "7: "
 set $WS8 "8: "
 
+exec --no-startup-id ~/.config/work.sh
+exec --no-startup-id ~/.config/wpg/wp-init.sh 
+
 # monitors
-set $Mon1 HDMI-0
-set $Mon2 HDMI-0
+set $Mon1 HDMI2
+set $Mon2 eDP1
 
 #####################################################
 ###############     Autostart      ##################
@@ -171,6 +174,8 @@ bindsym $Super+Shift+Mod2+KP_Up move container to workspace $WS8; workspace $WS8
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $Super+Shift+r restart
+bindsym $Super+Shift+p exec --no-startup-id al-polybar-session
+bindsym $Super+Shift+w exec --no-startup-id wpg -s $(wpg -c)
 
 # reload the configuration file
 bindsym $Super+Shift+c reload
@@ -201,7 +206,7 @@ bindsym $Super+Shift+Left  move left  10px
 bindsym $Super+Shift+Right move right 10px
 
 # Scratchpad, Floating
-# bindsym $Super+Shift+space floating toggle !!!!
+bindsym $Super+Shift+space float`ng toggle
 floating_modifier  $Alt
 
 bindsym $Super+Shift+z move scratchpad
