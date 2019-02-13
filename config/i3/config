@@ -1,37 +1,29 @@
  # ArchLabs i3 config
 
-# Xresources      var      value       fallback
-# set_from_resource $bg      background  #19043C
-# set_from_resource $fg      foreground  #F1F1F1
-# set_from_resource $black   color0      #19043C
-# set_from_resource $red     color1      #EE79A9
-# set_from_resource $green   color2      #8C9440
-# set_from_resource $yellow  color3      #DE935F
-# set_from_resource $blue    color4      #05C6F1
-# set_from_resource $purple  color5      #85678F
-# set_from_resource $cyan    color6      #5E8D87
-# set_from_resource $grey    color7      #969CD3
+set $coloract "#a0c5cb"
+set $colorin "#6e878c"
+set_from_resource $color15 i3wm.color15 "#feffff"
+set_from_resource $split i3wm.color10 "#fff298"
+set_from_resource $coloru i3wm.color2 "#deb887"
+set_from_resource $color0 i3wm.color0 "#252525"
+set_from_resource $color8 i3wm.color8 "#3e3e3e"
 
-set_from_resource $fg i3wm.color15 #f0f0f0
-set_from_resource $bg i3wm.color11 #f0f0f0
-set_from_resource $bg_inact i3wm.color2 #f0f0f0
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:monospace 8 
+gaps outer 10
+gaps inner 0
+new_window pixel 5
 
-# class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
-client.focused_inactive $bg_inact     $bg_inact     $fg  $bg_inact       $bg_inact
-client.unfocused        $bg_inact     $bg_inact     $fg  $bg_inact       $bg_inact
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
-client.background       $bg
-
-# # class                 bd    bg  txt    ind   child_bd
-# client.focused          $grey $bg $fg    $blue $grey
-# client.unfocused        $grey $bg $black $bg   $bg
-# client.focused_inactive $grey $bg $black $bg   $bg
-# client.urgent           $red  $bg $red   $red  $red
-# client.placeholder      $grey $bg $bg    $bg   $bg
-# client.background       $bg
-
+######### COLORS ##########
+#
+# class                 border    backgr    text    indicator child_border
+client.focused          $coloract $coloract $color15 $split  $coloract
+client.focused_inactive $coloract $coloract $color15 $split  $colorin
+client.unfocused        $colorin  $colorin  $color15 $split  $colorin
+client.urgent           $coloru   $coloru   $color15 $coloru $coloru
+client.placeholder      $color0   $color8   $color15 $color0 $color8
+client.background       $color0
 
 # border & title.. Must be set to border pixel for gaps to work
 # for_window [class="^.*"] border normal
@@ -57,14 +49,14 @@ set $left h
 set $right l
 
 set $WS1 "1:"
-set $WS2 "2: "
-set $WS3 "3: "
-set $WS4 "4: "
-set $WS5 "5: "
-set $WS6 "6: "
-set $WS7 "7: "
-set $WS8 "8: "
-
+set $WS2 "2:"
+set $WS3 "3:"
+set $WS4 "4:"
+set $WS5 "5:"
+set $WS6 "6:"
+set $WS7 "7:"
+set $WS8 "8:"
+set $WS9 "9:"
 exec --no-startup-id ~/.config/work.sh
 exec --no-startup-id ~/.config/wpg/wp-init.sh 
 
@@ -77,7 +69,8 @@ set $Mon2 eDP1
 #####################################################
 
 # run with reload
-exec_always --no-startup-id al-polybar-session
+# exec_always --no-startup-id al-polybar-session
+exec_always --no-startup-id polybar i3-bar
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xrdb -load ~/.Xresources
 
@@ -136,7 +129,7 @@ workspace $WS5 output $Mon2
 workspace $WS6 output $Mon2
 workspace $WS7 output $Mon2
 workspace $WS8 output $Mon2
-
+workspace $WS9 output $Mon2
 # switch to workspace
 bindsym $Super+1 workspace $WS1
 bindsym $Super+2 workspace $WS2
@@ -146,7 +139,7 @@ bindsym $Super+5 workspace $WS5
 bindsym $Super+6 workspace $WS6
 bindsym $Super+7 workspace $WS7
 bindsym $Super+8 workspace $WS8
-
+bindsym $Super+9 workspace $WS9
 # move focused container to workspace
 bindsym $Super+Shift+1 move container to workspace $WS1; workspace $WS1
 bindsym $Super+Shift+2 move container to workspace $WS2; workspace $WS2
@@ -156,7 +149,7 @@ bindsym $Super+Shift+5 move container to workspace $WS5; workspace $WS5
 bindsym $Super+Shift+6 move container to workspace $WS6; workspace $WS6
 bindsym $Super+Shift+7 move container to workspace $WS7; workspace $WS7
 bindsym $Super+Shift+8 move container to workspace $WS8; workspace $WS8
-
+bindsym $Super+Shift+9 move container to workspace $WS9; workspace $WS9
 # move focused container to workspace - numpad alternatives
 bindsym $Super+Shift+Mod2+KP_End move container to workspace $WS1; workspace $WS1
 bindsym $Super+Shift+Mod2+KP_Down move container to workspace $WS2; workspace $WS2

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-wpg -rs 'Atlantis_Nebula__3_by_Starkiteckt_15200x9500.jpg' 'Atlantis_Nebula__3_by_Starkiteckt_15200x9500.jpg'
+wpg -rs 'Wallpaper_8K_0_7680x4320.jpg' 'Wallpaper_8K_0_7680x4320.jpg'

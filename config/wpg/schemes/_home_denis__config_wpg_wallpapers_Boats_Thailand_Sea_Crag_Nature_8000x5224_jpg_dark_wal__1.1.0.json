@@ -1,5 +1,5 @@
 {
-    "wallpaper": "Boats_Thailand_Sea_Crag_Nature_8000x5224.jpg",
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/Boats_Thailand_Sea_Crag_Nature_8000x5224.jpg",
     "alpha": "100",
 
     "special": {
@@ -9,20 +9,20 @@
     },
     "colors": {
         "color0": "#071104",
-        "color1": "#D8E1D4",
-        "color2": "#D7DAA3",
-        "color3": "#B5C854",
-        "color4": "#ACE0E9",
-        "color5": "#ADB89B",
-        "color6": "#4EB0B1",
+        "color1": "#ACE0E9",
+        "color2": "#B5C854",
+        "color3": "#D7DAA3",
+        "color4": "#ADB89B",
+        "color5": "#4EB0B1",
+        "color6": "#D8E1D4",
         "color7": "#dfeef1",
-        "color8": "#13320a",
-        "color9": "#f2ffde",
-        "color10": "#ffffbb",
-        "color11": "#f7ff5a",
-        "color12": "#bfffff",
-        "color13": "#e6ffb3",
-        "color14": "#54f5f6",
+        "color8": "#163b0b",
+        "color9": "#bfffff",
+        "color10": "#f7ff5a",
+        "color11": "#ffffbb",
+        "color12": "#e6ffb3",
+        "color13": "#54f5f6",
+        "color14": "#f2ffde",
         "color15": "#f5ffff"
     }
 }
