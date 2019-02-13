@@ -1,7 +1,7 @@
  # ArchLabs i3 config
 
-set $coloract "#cb585b"
-set $colorin "#8c3d3e"
+set $coloract "#b0cb21"
+set $colorin "#798b17"
 set_from_resource $color15 i3wm.color15 "#feffff"
 set_from_resource $split i3wm.color10 "#fff298"
 set_from_resource $coloru i3wm.color2 "#deb887"
