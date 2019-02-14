@@ -6,8 +6,8 @@
 [colors]
 background = #DD3e3e3e
 foreground = #feffff
-active = #b0cb21
-inactive = #798b17
+active = #cbc179
+inactive = #8c8553
 highlight = #a6e22e
 error = #ff6f72
 moderate = #ebcb8b
