@@ -70,7 +70,7 @@ set $Mon2 eDP1
 
 # run with reload
 # exec_always --no-startup-id al-polybar-session
-exec_always --no-startup-id polybar i3-bar
+exec_always --no-startup-id MONITOR=$(polybar -m|tail -1|sed -e 's/:.*$//g') al-polybar-session
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xrdb -load ~/.Xresources
 
@@ -167,7 +167,7 @@ bindsym $Super+Shift+Mod2+KP_Up move container to workspace $WS8; workspace $WS8
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $Super+Shift+r restart
-bindsym $Super+Shift+p exec --no-startup-id al-polybar-session
+bindsym $Super+Shift+p exec --no-startup-id MONITOR=$(polybar -m|tail -1|sed -e 's/:.*$//g') al-polybar-session
 bindsym $Super+Shift+w exec --no-startup-id wpg -s $(wpg -c)
 
 # reload the configuration file
