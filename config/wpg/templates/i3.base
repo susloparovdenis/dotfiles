@@ -57,7 +57,7 @@ set $WS6 "6:"
 set $WS7 "7:"
 set $WS8 "8:"
 set $WS9 "9:"
-exec --no-startup-id ~/.config/work.sh
+# exec --no-startup-id ~/.config/work.sh
 exec --no-startup-id ~/.config/wpg/wp-init.sh 
 
 # monitors
