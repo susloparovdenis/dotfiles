@@ -199,7 +199,7 @@ bindsym $Super+Shift+Left  move left  10px
 bindsym $Super+Shift+Right move right 10px
 
 # Scratchpad, Floating
-bindsym $Super+Shift+space float`ng toggle
+bindsym $Super+Shift+space floating toggle
 floating_modifier  $Alt
 
 bindsym $Super+Shift+z move scratchpad
@@ -281,10 +281,6 @@ assign [class="(?i)(?:thunar)"] → $WS3
 # focus, floating, & sticky
 for_window [title="(?i)(?:copying|deleting|moving)"] floating enable
 for_window [window_role="(?i)(?:pop-up|setup)"] floating enable
-
-
-
-
 
 
 # launchers

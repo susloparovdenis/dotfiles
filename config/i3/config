@@ -1,12 +1,12 @@
  # ArchLabs i3 config
 
-set $coloract "#cbc179"
-set $colorin "#8c8553"
-set_from_resource $color15 i3wm.color15 "#feffff"
-set_from_resource $split i3wm.color10 "#fff298"
-set_from_resource $coloru i3wm.color2 "#deb887"
-set_from_resource $color0 i3wm.color0 "#252525"
-set_from_resource $color8 i3wm.color8 "#3e3e3e"
+set $coloract "#236ba8"
+set $colorin "#184973"
+set_from_resource $color15 i3wm.color15 "#d0ffff"
+set_from_resource $split i3wm.color10 "#638ba3"
+set_from_resource $coloru i3wm.color2 "#576974"
+set_from_resource $color0 i3wm.color0 "#04090F"
+set_from_resource $color8 i3wm.color8 "#0b1b2f"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -199,7 +199,7 @@ bindsym $Super+Shift+Left  move left  10px
 bindsym $Super+Shift+Right move right 10px
 
 # Scratchpad, Floating
-bindsym $Super+Shift+space float`ng toggle
+bindsym $Super+Shift+space floating toggle
 floating_modifier  $Alt
 
 bindsym $Super+Shift+z move scratchpad
@@ -281,10 +281,6 @@ assign [class="(?i)(?:thunar)"] → $WS3
 # focus, floating, & sticky
 for_window [title="(?i)(?:copying|deleting|moving)"] floating enable
 for_window [window_role="(?i)(?:pop-up|setup)"] floating enable
-
-
-
-
 
 
 # launchers
