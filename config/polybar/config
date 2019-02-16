@@ -4,12 +4,12 @@
 ;=====================================================
 
 [colors]
-background = #DD3e3e3e
-foreground = #feffff
-active = #cb9d10
-inactive = #8b6c0b
-highlight = #a6e22e
-error = #ff6f72
+background = #DD858d78
+foreground = #bfcaac
+active = #40563c
+inactive = #2c3b29
+highlight = #5A664E
+error = #484F37
 moderate = #ebcb8b
 urgent = #bf616a
 trim = #919ba0
