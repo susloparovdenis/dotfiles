@@ -1,0 +1,30 @@
+# rofi.combi-modi:                     window,drun,run
+# rofi.modi:			     					 combi
+# rofi.width:			     					 40
+# rofi.columns:                        2
+# rofi.lines:									 30
+# rofi.font:                           <uifont> <rofifontsize>
+# rofi.color-normal:                   #00<COLOR0>, #<COLOR15>, #00<COLOR0>, #44<COLORACT>, #<COLOR15>
+# rofi.color-urgent:                   #00<COLOR0>, #d6b48d, #0022231D, #44d6b48d, #<COLOR15>
+# rofi.color-active:                   #A0<COLOR0>, #<COLOR14>, #00<COLOR0>, #44<COLOR14>, #<COLOR0>
+# rofi.color-window:                   #A0<COLOR0>, #<COLORACT>, #00<COLORIN>
+# rofi.bw:                             0
+
+# rofi.padding:                        0
+# rofi.yoffset:                        0
+# rofi.xoffset:                        none
+# rofi.fixed-num-lines:                true
+# rofi.terminal:                       rofi-sensible-terminal
+# rofi.ssh-client:                     ssh
+# rofi.ssh-command:                    {terminal} -e {ssh-client} {host}
+# rofi.run-command:                    {cmd}
+# rofi.parse-hosts:                    true
+# rofi.matching:                       normal
+# rofi.separator-style:                none
+# rofi.scrollbar-width:                0
+# rofi.kb-mode-next:                   Shift+Right,Control+Tab,Alt+l
+# rofi.kb-mode-previous:               Shift+Left,Control+Shift+Tab,Alt+h
+# rofi.kb-row-up:                      Up,Control+p,Shift+Tab,Shift+ISO_Left_Tab,Alt+k
+# rofi.kb-row-down:                    Down,Control+n,Alt+j
+# rofi.show-icons:                     true
+# rofi.drun-icon-theme:                <icontheme>

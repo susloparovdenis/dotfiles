@@ -214,7 +214,6 @@ bindsym $Super+Shift+v split h
 bindsym $Super+v split v
 
 bindsym $Super+a focus parent
-bindsym $Super+d focus child
 bindsym $Super+p focus parent
 # bindsym $Super+c focus child
 
@@ -305,7 +304,7 @@ bindsym $Super+w exec exo-open --launch WebBrowser
 bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{{cmd}}'
 bindsym $alt+F2  exec rofi -show run
 bindsym $mod+Return   exec exo-open --launch TerminalEmulator
-bindsym $Super+d exec --no-startup-id "rofi -show drun -font \\"DejaVu 9\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
+bindsym $Super+d exec --no-startup-id "rofi -show drun -font \\"DejaVu 9\\" -run-shell-command '{{terminal}} -e \\" {{cmd}}; read -n 1 -s\\"'"
 
 # logout script
 bindsym $Super+x exec --no-startup-id rofi_run -l
