@@ -45,19 +45,16 @@ antigen bundles <<EOBUNDLES
     wfxr/forgit
     zlsun/solarized-man
     joel-porquet/zsh-dircolors-solarized
-    iboyperson/zsh-pipenv
     MichaelAquilina/zsh-you-should-use
     djui/alias-tips
-    #zpm-zsh/autoenv
     unixorn/autoupdate-antigen.zshplugin
-    gangleri/pipenv
     fzf
-    upa/z
     leophys/zsh-plugin-fzf-finder
     ytet5uy4/fzf-widgets
     wfxr/formarks
     changyuheng/fz
     zsh-users/zaw
+    aperezdc/zsh-fzy
 EOBUNDLES
 
 
@@ -72,14 +69,13 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-alias cat='bat'
+#alias cat='bat'
 autoload -Uz compinit && compinit -i
 autoload -Uz promptinit
 promptinit
 # prompt spaceship
 
 autoload -U +X bashcompinit && bashcompinit
-source /usr/local/etc/bash_completion.d/az
 
 
 source /opt/google-cloud-sdk/completion.zsh.inc          
@@ -129,3 +125,4 @@ eval "$(pyenv init -)"
 TRAPWINCH() {
   zle && { zle reset-prompt; zle -R }
 }
+neofetch
