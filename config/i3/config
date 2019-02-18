@@ -1,17 +1,24 @@
  # ArchLabs i3 config
 set $mod Mod4
 set $alt Mod1
-set $coloract "{active}"
-set $colorin "{inactive}"
-set $color_border "{active}"
+set $coloract "#40563c"
+set $colorin "#2c3b29"
+set $color_border "#40563c"
 
+set $coloract "#236ba8"
+set $colorin "#184973"
+set_from_resource $color15 i3wm.color15 "#d0ffff"
+set_from_resource $split i3wm.color10 "#638ba3"
+set_from_resource $coloru i3wm.color2 "#576974"
+set_from_resource $color0 i3wm.color0 "#04090F"
+set_from_resource $color8 i3wm.color8 "#0b1b2f"
 
 set $terminal urxvtc
-set_from_resource $color15 i3wm.color15 "{color15}"
-set_from_resource $split i3wm.color10 "{color10}"
-set_from_resource $coloru i3wm.color2 "{color2}"
-set_from_resource $color0 i3wm.color0 "{color0}"
-set_from_resource $color8 i3wm.color8 "{color8}"
+set_from_resource $color15 i3wm.color15 "#bfcaac"
+set_from_resource $split i3wm.color10 "#536733"
+set_from_resource $coloru i3wm.color2 "#536733"
+set_from_resource $color0 i3wm.color0 "#0F140A"
+set_from_resource $color8 i3wm.color8 "#858d78"
 
 
 ######### COLORS ##########
@@ -298,7 +305,7 @@ bindsym $Super+e exec --no-startup-id ranger
 bindsym $Super+t exec exo-open --launch TerminalEmulator
 bindsym $Super+w exec exo-open --launch WebBrowser
 bindsym $Super+f exec exo-open --launch FileManager
-bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{{cmd}}'
+bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $alt+F2  exec rofi -show run
 bindsym $mod+Return   exec exo-open --launch TerminalEmulator
 

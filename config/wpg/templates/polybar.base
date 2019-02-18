@@ -110,7 +110,7 @@ modules-right  = ${{env:POLYBAR_MODULES:coreuse temperature memory pkg network v
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = 
+monitor = ${{env:MONITOR1}}
 
 modules-left   = jgmenu i3 window_switch
 modules-center = clock
