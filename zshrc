@@ -49,6 +49,7 @@ antigen bundles <<EOBUNDLES
     djui/alias-tips
     unixorn/autoupdate-antigen.zshplugin
     fzf
+    Vifon/deer
     leophys/zsh-plugin-fzf-finder
     ytet5uy4/fzf-widgets
     wfxr/formarks

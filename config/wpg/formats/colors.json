@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "wallpaper": "/home/denis/.config/wpg/wallpapers/Waterfalls_USA_Crag_Trees_Hocking_Hills_State_Park_Ohio_Nature_10929x5553.jpg",
     "alpha": "100",
 
@@ -25,32 +24,5 @@
         "color13": "#94986A",
         "color14": "#73948A",
         "color15": "#dad9cb"
-=======
-    "wallpaper": "/home/denis/.config/wpg/wallpapers/trees_forest_4000x2656.jpg",
-    "alpha": "100",
-
-    "special": {
-        "background": "#0d0b05",
-        "foreground": "#e9f7ff",
-        "cursor": "#e9f7ff"
-    },
-    "colors": {
-        "color0": "#0d0b05",
-        "color1": "#906A2B",
-        "color2": "#A49328",
-        "color3": "#D1B746",
-        "color4": "#62699B",
-        "color5": "#A7915D",
-        "color6": "#8E7451",
-        "color7": "#b2bdd1",
-        "color8": "#322a11",
-        "color9": "#c78c2b",
-        "color10": "#e2c826",
-        "color11": "#fff948",
-        "color12": "#6e7cd9",
-        "color13": "#e9c368",
-        "color14": "#c7985a",
-        "color15": "#e9f7ff"
->>>>>>> 459f2268c64fded0357897f433b5703b12d8d8bc
     }
 }

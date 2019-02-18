@@ -1,0 +1,316 @@
+ # ArchLabs i3 config
+set $mod Mod4
+set $alt Mod1
+set $coloract "#5c766e"
+set $colorin "#3f514b"
+set $color_border "#5c766e"
+
+
+set $terminal urxvtc
+set_from_resource $color15 i3wm.color15 "#dad9cb"
+set_from_resource $split i3wm.color10 "#9E754D"
+set_from_resource $coloru i3wm.color2 "#9E754D"
+set_from_resource $color0 i3wm.color0 "#0D0703"
+set_from_resource $color8 i3wm.color8 "#98978e"
+
+
+######### COLORS ##########
+#
+# class                 border    backgr    text    indicator child_border
+client.focused          $color_border $coloract $color15 $split  $coloract
+client.focused_inactive $color_border $coloract $color15 $split  $colorin
+client.unfocused        $color_border  $colorin  $color15 $split  $colorin
+client.urgent           $color_border   $coloru   $color15 $coloru $coloru
+client.placeholder      $color_border   $color8   $color15 $color0 $color8
+client.background       $color_border
+# border & title.. Must be set to border pixel for gaps to work
+# for_window [class="^.*"] border normal
+for_window [class="^.*"] border pixel 2, title_format "<b> %title </b>"
+title_align left
+
+# gaps
+gaps inner 15
+gaps outer 5
+
+# font
+font pango:monospace 8 
+gaps outer 10
+gaps inner 0
+new_window pixel 5
+
+
+# buttons
+set $Super Mod4
+set $Alt Mod1
+set $Tab 23
+#
+
+# direction keys
+set $up k
+set $down j
+set $left h
+set $right l
+
+set $WS1 "1:"
+set $WS2 "2:"
+set $WS3 "3:"
+set $WS4 "4:"
+set $WS5 "5:"
+set $WS6 "6:"
+set $WS7 "7:"
+set $WS8 "8:"
+set $WS9 "9:"
+# exec --no-startup-id ~/.config/work.sh
+exec --no-startup-id ~/.config/wpg/wp-init.sh 
+
+# monitors
+set $Mon1 HDMI2
+set $Mon2 eDP1
+
+#####################################################
+###############     Autostart      ##################
+#####################################################
+
+# run with reload
+# exec_always --no-startup-id al-polybar-session
+exec_always --no-startup-id al-polybar-session
+exec_always --no-startup-id sleep 100 && al-polybar-session
+exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id xrdb -load ~/.Xresources
+
+# If you have a numpad you may want to enable this
+exec_always --no-startup-id numlockx on
+
+# run once
+exec --no-startup-id xfsettingsd
+exec --no-startup-id al-compositor --start
+exec --no-startup-id greenclip daemon
+# polkit, required for authentication
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+# keyring for storing saved passwords
+exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11
+
+# pressing super key alone simulates pressing Alt-F1
+exec --no-startup-id ksuperkey -e 'Super_L=Alt_L|F1'
+exec --no-startup-id ksuperkey -e 'Super_R=Alt_L|F1'
+exec --no-startup-id  $HOME/.config/wpg/wp-init.sh
+###########################################################
+#############         Bindings           ##################
+###########################################################
+
+# kill focused window
+bindsym $Super+Shift+q kill
+
+bindsym $Alt+F4 kill
+
+# launchers
+# bindsym Control+space exec --no-startup-id rofi_run -r
+
+# audio
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioStop exec --no-startup-id playerctl stop
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 2
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 2
+bindsym XF86AudioMute exec --no-startup-id pamixer -t
+
+# backlight
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
+
+################################################################
+###########          Workspace Bindings          ###############
+################################################################
+
+# workspace assignment
+workspace $WS1 output $Mon1
+workspace $WS2 output $Mon1
+workspace $WS3 output $Mon1
+workspace $WS4 output $Mon1
+workspace $WS5 output $Mon2
+workspace $WS6 output $Mon2
+workspace $WS7 output $Mon2
+workspace $WS8 output $Mon2
+workspace $WS9 output $Mon2
+# switch to workspace
+bindsym $Super+1 workspace $WS1
+bindsym $Super+2 workspace $WS2
+bindsym $Super+3 workspace $WS3
+bindsym $Super+4 workspace $WS4
+bindsym $Super+5 workspace $WS5
+bindsym $Super+6 workspace $WS6
+bindsym $Super+7 workspace $WS7
+bindsym $Super+8 workspace $WS8
+bindsym $Super+9 workspace $WS9
+# move focused container to workspace
+bindsym $Super+Shift+1 move container to workspace $WS1; workspace $WS1
+bindsym $Super+Shift+2 move container to workspace $WS2; workspace $WS2
+bindsym $Super+Shift+3 move container to workspace $WS3; workspace $WS3
+bindsym $Super+Shift+4 move container to workspace $WS4; workspace $WS4
+bindsym $Super+Shift+5 move container to workspace $WS5; workspace $WS5
+bindsym $Super+Shift+6 move container to workspace $WS6; workspace $WS6
+bindsym $Super+Shift+7 move container to workspace $WS7; workspace $WS7
+bindsym $Super+Shift+8 move container to workspace $WS8; workspace $WS8
+bindsym $Super+Shift+9 move container to workspace $WS9; workspace $WS9
+# move focused container to workspace - numpad alternatives
+bindsym $Super+Shift+Mod2+KP_End move container to workspace $WS1; workspace $WS1
+bindsym $Super+Shift+Mod2+KP_Down move container to workspace $WS2; workspace $WS2
+bindsym $Super+Shift+Mod2+KP_Next move container to workspace $WS3; workspace $WS3
+bindsym $Super+Shift+Mod2+KP_Left move container to workspace $WS4; workspace $WS4
+bindsym $Super+Shift+Mod2+KP_Begin move container to workspace $WS5; workspace $WS5
+bindsym $Super+Shift+Mod2+KP_Right move container to workspace $WS6; workspace $WS7
+bindsym $Super+Shift+Mod2+KP_Home move container to workspace $WS7; workspace $WS7
+bindsym $Super+Shift+Mod2+KP_Up move container to workspace $WS8; workspace $WS8
+
+
+############################################################
+##############     Reload configs           ################
+############################################################
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $Super+Shift+r restart
+bindsym $Super+Shift+p exec --no-startup-id MONITOR=$(polybar -m|tail -1|sed -e 's/:.*$//g') al-polybar-session
+bindsym $Super+Shift+w exec --no-startup-id wpg -s $(wpg -c)
+
+# reload the configuration file
+bindsym $Super+Shift+c reload
+
+########################################################
+############      Container/Window control  ############
+########################################################
+# Switch
+bindsym $Super+$left  focus left
+bindsym $Super+$down  focus down
+bindsym $Super+$up    focus up
+bindsym $Super+$right focus right
+
+bindsym $Super+Left  focus left
+bindsym $Super+Down  focus down
+bindsym $Super+Up    focus up
+bindsym $Super+Right focus right
+
+# move focused window
+bindsym $Super+Shift+$left  move left  10px
+bindsym $Super+Shift+$down  move down  10px
+bindsym $Super+Shift+$up    move up    10px
+bindsym $Super+Shift+$right move right 10px
+
+bindsym $Super+Shift+Up    move up    10px
+bindsym $Super+Shift+Down  move down  10px
+bindsym $Super+Shift+Left  move left  10px
+bindsym $Super+Shift+Right move right 10px
+
+# Scratchpad, Floating
+bindsym $Super+Shift+space floating toggle
+floating_modifier  $Alt
+
+bindsym $Super+Shift+z move scratchpad
+bindsym $Super+z scratchpad show
+
+# Control
+bindsym $Super+Shift+v split h
+bindsym $Super+v split v
+
+bindsym $Super+a focus parent
+bindsym $Super+d focus child
+bindsym $Super+p focus parent
+# bindsym $Super+c focus child
+
+
+bindsym $Super+space focus mode_toggle
+bindsym $Super+s layout stacking
+bindsym $Super+shift+s layout tabbed
+bindsym $Super+o layout toggle split
+
+
+
+
+# Size
+bindsym $Alt+Up    resize shrink height 10 px or 1 ppt
+bindsym $Alt+Down  resize grow   height 10 px or 1 ppt
+bindsym $Alt+Left  resize shrink width  10 px or 1 ppt
+bindsym $Alt+Right resize grow   width  10 px or 1 ppt
+
+# layout toggle, keycode 23 is Tab
+bindcode $Alt+23 layout toggle tabbed split
+bindcode $Super+23 workspace next
+bindcode $Super+shift+23 workspace previous
+
+
+
+
+# switch to w+shiftorkspace with urgent window
+for_window [urgent="latest"] focus
+focus_on_window_activation   focus
+
+
+######################################################
+###############      Border & Gaps     ###############
+######################################################
+
+new_window normal 1px
+new_float normal
+hide_edge_borders none
+popup_during_fullscreen smart
+bindsym $Super+shift+b border toggle
+
+# changing border style
+bindsym $Super+n border normal
+bindsym $Super+y border 1pixel
+bindsym $Super+u border none
+
+# change gaps
+bindsym $Super+plus        gaps inner current plus  5
+bindsym $Super+minus       gaps inner current minus 5
+bindsym $Super+Shift+plus  gaps outer current plus  5
+bindsym $Super+Shift+minus gaps outer current minus 5
+bindsym $Super+Control+plus        gaps inner all plus  5
+bindsym $Super+Control+minus       gaps inner all minus 5
+bindsym $Super+Control+Shift+plus  gaps outer all plus  5
+bindsym $Super+Control+Shift+minus gaps outer all minus 5
+
+###################################################
+############    application settings   ############
+###################################################
+
+for_window [class="(?i)(?:qt5ct|pinentry)"] floating enable, focus
+for_window [class="(?i)(?:termite|thunar)"] focus
+for_window [class="(?i)(?:geany|firefox)"] focus
+for_window [class="(?i)(?:bitwarden|telegram)"] floating enable
+
+# Assign Applications to specific workspace
+# get class with xprop
+assign [class="(?i)(?:firefox)"] → $WS1
+assign [class="(?i)(?:geany)"] → $WS2
+assign [class="(?i)(?:thunar)"] → $WS3
+
+# focus, floating, & sticky
+for_window [title="(?i)(?:copying|deleting|moving)"] floating enable
+for_window [window_role="(?i)(?:pop-up|setup)"] floating enable
+
+
+# launchers
+bindsym $Alt+space exec --no-startup-id rofi_run -r
+
+# this is needed for super key to launch rofi
+bindsym $Alt+F1 exec --no-startup-id rofi_run -r
+
+# Apps
+bindsym $Super+e exec --no-startup-id ranger
+bindsym $Super+t exec exo-open --launch TerminalEmulator
+bindsym $Super+w exec exo-open --launch WebBrowser
+bindsym $Super+f exec exo-open --launch FileManager
+bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+bindsym $alt+F2  exec rofi -show run
+bindsym $mod+Return   exec exo-open --launch TerminalEmulator
+
+# logout script
+bindsym $Super+x exec --no-startup-id rofi_run -l
+
+bindsym --release button2 kill
+
+
+exec i3-msg workspace $WS1
+focus_follows_mouse no

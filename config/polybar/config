@@ -111,7 +111,7 @@ modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg network vo
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = 
+monitor = HDMI2
 
 modules-left   = jgmenu i3 window_switch 
 modules-center = clock
