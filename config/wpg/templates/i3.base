@@ -25,7 +25,7 @@ client.placeholder      $color_border   $color8   $color15 $color0 $color8
 client.background       $color_border
 # border & title.. Must be set to border pixel for gaps to work
 # for_window [class="^.*"] border normal
-for_window [class="^.*"] border pixel 2, title_format "<b> %title </b>"
+for_window [class="^.*"] border pixel 3, title_format "<b> %title </b>"
 title_align left
 
 # gaps
@@ -33,7 +33,7 @@ gaps inner 15
 gaps outer 5
 
 # font
-font pango:monospace 8 
+font pango:monospace 12 
 gaps outer 10
 gaps inner 0
 new_window pixel 5
@@ -234,9 +234,10 @@ bindsym $Alt+Left  resize shrink width  10 px or 1 ppt
 bindsym $Alt+Right resize grow   width  10 px or 1 ppt
 
 # layout toggle, keycode 23 is Tab
-bindcode $Alt+23 layout toggle tabbed split
 bindcode $Super+23 workspace next
-bindcode $Super+shift+23 workspace previous
+bindcode $Super+Shift+23 workspace prev
+#bindcode $Super+23 exec skippy-xd
+bindcode $Super+f fullscreen toggle 
 
 
 
@@ -250,7 +251,7 @@ focus_on_window_activation   focus
 ###############      Border & Gaps     ###############
 ######################################################
 
-new_window normal 1px
+new_window normal 2px
 new_float normal
 hide_edge_borders none
 popup_during_fullscreen smart
@@ -298,13 +299,13 @@ bindsym $Alt+space exec --no-startup-id rofi_run -r
 bindsym $Alt+F1 exec --no-startup-id rofi_run -r
 
 # Apps
-bindsym $Super+e exec --no-startup-id ranger
+bindsym $Super+e exec --no-startup-id termite -e ranger
 bindsym $Super+t exec exo-open --launch TerminalEmulator
 bindsym $Super+w exec exo-open --launch WebBrowser
-bindsym $Super+f exec exo-open --launch FileManager
 bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{{cmd}}'
 bindsym $alt+F2  exec rofi -show run
 bindsym $mod+Return   exec exo-open --launch TerminalEmulator
+bindsym $Super+d exec --no-startup-id "rofi -show drun -font \\"DejaVu 9\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
 
 # logout script
 bindsym $Super+x exec --no-startup-id rofi_run -l

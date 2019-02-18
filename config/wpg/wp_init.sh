@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-wpg -rs 'Waterfalls_USA_Crag_Trees_Hocking_Hills_State_Park_Ohio_Nature_10929x5553.jpg' 'Waterfalls_USA_Crag_Trees_Hocking_Hills_State_Park_Ohio_Nature_10929x5553.jpg'
