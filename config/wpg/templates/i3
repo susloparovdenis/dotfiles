@@ -1,9 +1,9 @@
  # ArchLabs i3 config
 set $mod Mod4
 set $alt Mod1
-set $coloract "#5c766e"
-set $colorin "#3f514b"
-set $color_border "#5c766e"
+set $coloract "#7e5d3d"
+set $colorin "#56402a"
+set $color_border "#7e5d3d"
 
 
 set $terminal urxvtc
