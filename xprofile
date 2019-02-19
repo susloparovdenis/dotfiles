@@ -27,4 +27,4 @@ xset dpms 1200 1300 1400
 # keyboard repeat rate
 xset r rate 350 60
 export EDITOR=/usr/bin/nvim
-setxkbmap -model pc105 -layout us,ru -variant euro, -option  grp:shift_caps_switch grp:alt_shift_toggle numpad:microsoft eurosign:5 terminate:ctrl_alt_bksp
+setxkbmap -model pc105 -layout us,ru -variant euro, -option  grp:shift_caps_switch grp:alt_shift_toggle numpad:microsoft eurosign:5 terminate:ctrl_alt_bksp grp:shift_caps_toggle

@@ -110,11 +110,11 @@ modules-right  = ${{env:POLYBAR_MODULES:coreuse temperature memory pkg network v
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = ${{env:MONITOR1}}
+monitor = ${{env:MONITOR}}
 
 modules-left   = jgmenu i3 window_switch
 modules-center = clock
-modules-right  = ${{env:POLYBAR_MODULES: redshift temperature memory pkg network volume}}
+modules-right  = ${{env:POLYBAR_MODULES: keyboard redshift temperature memory pkg network volume}}
 
 
 ;=====================================================
