@@ -314,3 +314,4 @@ bindsym --release button2 kill
 
 exec i3-msg workspace $WS1
 focus_follows_mouse no
+new_window normal

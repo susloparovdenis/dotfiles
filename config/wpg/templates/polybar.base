@@ -4,12 +4,13 @@
 ;=====================================================
 
 [colors]
-background = #DD{color8.strip}
+background = #BB{background.strip}
 foreground = {color15}
 active = {active}
 inactive = {inactive}
-highlight = {color3}
+highlight = {color2}
 error = {color9}
+
 moderate = #ebcb8b
 urgent = #bf616a
 trim = #919ba0
@@ -110,7 +111,7 @@ modules-right  = ${{env:POLYBAR_MODULES:coreuse temperature memory pkg network v
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = ${{env:MONITOR}}
+monitor = ${{env:MONITOR:HDMI-1}}
 
 modules-left   = jgmenu i3 window_switch
 modules-center = clock

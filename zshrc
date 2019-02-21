@@ -6,9 +6,10 @@ EDITOR='/usr/bin/nvim'
 VISUAL='code.exe'
 SUDO_EDITOR='nvim'
 
+
 PATH+=:~/.gem/ruby/2.5.0/bin
 PATH+=:~/.local/bin
-PATH+=:~/.npm/bin
+PATH+=:~/.npm/packages/bin
 PATH+=:~/go/bin
 PATH+=:~/.dotnet/tools
 
@@ -82,7 +83,6 @@ autoload -U +X bashcompinit && bashcompinit
 source /opt/google-cloud-sdk/completion.zsh.inc          
 source /opt/google-cloud-sdk/path.zsh.inc                                        
 (cat $HOME/.config/wpg/sequences &)
-eval "$(pyenv init -)"
 
 
 
