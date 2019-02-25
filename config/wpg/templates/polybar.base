@@ -115,7 +115,7 @@ monitor = ${{env:MONITOR:HDMI-1}}
 
 modules-left   = jgmenu i3 window_switch
 modules-center = clock
-modules-right  = ${{env:POLYBAR_MODULES: keyboard redshift temperature memory pkg network volume}}
+modules-right  = ${{env:POLYBAR_MODULES: battery keyboard redshift temperature memory pkg network volume}}
 
 
 ;=====================================================

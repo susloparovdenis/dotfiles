@@ -25,7 +25,7 @@ client.placeholder      $color_border   $color8   $color15 $color0 $color8
 client.background       $color_border
 # border & title.. Must be set to border pixel for gaps to work
 # for_window [class="^.*"] border normal
-# for_window [class="^.*"] border pixel 3, title_format "<b> %title </b>"
+for_window [class="^.*"] border pixel 3, title_format "<b> %title </b>"
 title_align left
 
 # gaps
@@ -36,7 +36,7 @@ gaps outer 5
 font pango:monospace 10 
 gaps outer 10
 gaps inner 0
-new_window pixel 5
+new_window pixel 12
 
 
 # buttons

@@ -4,12 +4,13 @@
 ;=====================================================
 
 [colors]
-background = #DD312a22
-foreground = #d0fdff
-active = #27539f
-inactive = #1b396d
-highlight = #DF9763
-error = #2e60e0
+background = #BB0D0703
+foreground = #fffff5
+active = #af7843
+inactive = #78532e
+highlight = #9E754D
+error = #d07b22
+
 moderate = #ebcb8b
 urgent = #bf616a
 trim = #919ba0
@@ -110,11 +111,11 @@ modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg network vo
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = ${env:MONITOR}
+monitor = ${env:MONITOR:HDMI-1}
 
 modules-left   = jgmenu i3 window_switch
 modules-center = clock
-modules-right  = ${env:POLYBAR_MODULES: keyboard redshift temperature memory pkg network volume}
+modules-right  = ${env:POLYBAR_MODULES: battery keyboard redshift temperature memory pkg network volume}
 
 
 ;=====================================================
