@@ -62,7 +62,7 @@ foreground = ${colors.foreground}
 module-margin = 0
 padding-right = 0
 padding-left = 0
-separator = │
+separator = ☸️
 
 ; shows which modules have click actions
 cursor-click = pointer

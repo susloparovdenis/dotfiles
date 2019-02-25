@@ -127,3 +127,5 @@ TRAPWINCH() {
   zle && { zle reset-prompt; zle -R }
 }
 neofetch
+alias copy='xsel -ib'
+#bindkey -v
