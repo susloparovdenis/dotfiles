@@ -1,28 +1,28 @@
 {
-    "wallpaper": "/home/denis/.config/wpg/wallpapers/Scenery_Mountains_Sky_Sunrises_and_sunsets_Grass_Fir_Nature_5600x4071.jpg",
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/Waterfalls_USA_Crag_Trees_Hocking_Hills_State_Park_Ohio_Nature_10929x5553.jpg",
     "alpha": "100",
 
     "special": {
-        "background": "#14110e",
-        "foreground": "#d0fdff",
-        "cursor": "#d0fdff"
+        "background": "#0D0703",
+        "foreground": "#fffff5",
+        "cursor": "#fffff5"
     },
     "colors": {
-        "color0": "#14110e",
-        "color1": "#2E4FA2",
-        "color2": "#5B649F",
-        "color3": "#DF9763",
-        "color4": "#3168C8",
-        "color5": "#9C7495",
-        "color6": "#3D8EEB",
-        "color7": "#a0c3e8",
-        "color8": "#312a22",
-        "color9": "#2e60e0",
-        "color10": "#6676de",
-        "color11": "#ffc06b",
-        "color12": "#2f82ff",
-        "color13": "#dc85cd",
-        "color14": "#3bb7ff",
-        "color15": "#d0fdff"
+        "color0": "#0D0703",
+        "color1": "#975F24",
+        "color2": "#9E754D",
+        "color3": "#728D45",
+        "color4": "#B6AB48",
+        "color5": "#94986A",
+        "color6": "#73948A",
+        "color7": "#dad9cb",
+        "color8": "#371c0a",
+        "color9": "#d07b22",
+        "color10": "#dc9754",
+        "color11": "#97c44c",
+        "color12": "#fdeb4d",
+        "color13": "#ced679",
+        "color14": "#84d1ba",
+        "color15": "#fffff5"
     }
 }
