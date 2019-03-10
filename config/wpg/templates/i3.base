@@ -18,10 +18,10 @@ set_from_resource $color8 i3wm.color8 "{color8}"
 #
 # class                 border    backgr    text    indicator child_border
 client.focused          $color_border $coloract $color15 $split  $coloract
-client.focused_inactive $color_border $coloract $color15 $split  $colorin
-client.unfocused        $color_border  $colorin  $color15 $split  $colorin
-client.urgent           $color_border   $coloru   $color15 $coloru $coloru
-client.placeholder      $color_border   $color8   $color15 $color0 $color8
+client.focused_inactive $color_border $colorin  $color7 $split  $colorin
+client.unfocused        $color_border  $colorin  $color7 $split  $colorin
+client.urgent           $color_border   $coloru   $color7 $coloru $coloru
+client.placeholder      $color_border   $color8   $color7 $color0 $color8
 client.background       $color_border
 # border & title.. Must be set to border pixel for gaps to work
 # for_window [class="^.*"] border normal
@@ -306,7 +306,7 @@ bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -ru
 bindsym $alt+F2  exec rofi -show run
 bindsym $mod+Return   exec exo-open --launch TerminalEmulator
 bindsym $Super+d exec --no-startup-id "rofi -show drun -font \\"DejaVu 9\\" -run-shell-command '{{terminal}} -e \\" {{cmd}}; read -n 1 -s\\"'"
-
+bindsym Print exec flameshot gui
 # logout script
 bindsym $Super+x exec --no-startup-id rofi_run -l
 

@@ -1,12 +1,3 @@
-Xft.dpi: 140
-Xft.autohint: 0
-Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintfull
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb
-
-
 ! Base colors
 *.foreground:  #E1E1E1
 *.background:  #1c2023
@@ -57,7 +48,7 @@ URxvt*saveline: 15000
 URxvt*termName: rxvt-256color
 URxvt*iso14755: false
 URxvt*depth: 32
-URxvt*background: [85]#1C2023
+URxvt*background: [95]#1C2023
 URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*internalBorder: 0
@@ -67,8 +58,8 @@ URxvt.font: xft:monospace:size=11
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
-URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.m-c: perl:clipboard:copy
+URxvt.keysym.m-v: perl:clipboard:paste
 URxvt.urlLauncher: exo-open
 URxvt.underlineURLs: true
 URxvt.urlButton: 1
@@ -96,3 +87,4 @@ UXTerm*rightScrollBar: false
 UXTerm*jumpScroll: true
 UXTerm*multiScroll: true
 UXTerm*toolBar: false
+

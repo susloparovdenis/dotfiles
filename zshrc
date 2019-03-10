@@ -129,3 +129,4 @@ TRAPWINCH() {
 neofetch
 alias copy='xsel -ib'
 #bindkey -v
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
