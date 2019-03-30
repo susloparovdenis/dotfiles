@@ -78,6 +78,8 @@ cursor-click = pointer
 double-click-middle = skippy-xd --activate-window-picker
 double-click-right = pavucontrol &
 
+tray-position = right
+tray-maxsize = 16tray-detached = false
 
 
 ;=====================================================
