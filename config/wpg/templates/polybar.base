@@ -4,7 +4,7 @@
 ;=====================================================
 
 [colors]
-background = #BB{background.strip}
+background = #54{color2.strip}
 foreground = {color15}
 active = {active}
 inactive = {inactive}
@@ -81,7 +81,7 @@ double-click-right = pavucontrol &
 tray-position = right
 tray-maxsize = 16tray-detached = false
 
-
+tray-background = ${root.background}
 ;=====================================================
 ;     File Includes
 ;=====================================================
