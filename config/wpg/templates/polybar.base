@@ -4,7 +4,7 @@
 ;=====================================================
 
 [colors]
-background = #54{color2.strip}
+background = #BB{background.strip}
 foreground = {color15}
 active = {active}
 inactive = {inactive}

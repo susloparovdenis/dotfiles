@@ -17,15 +17,16 @@ set_from_resource $color8 i3wm.color8 "{color8}"
 ######### COLORS ##########
 #
 # class                 border    backgr    text    indicator child_border
-client.focused          $color_border $coloract $color15 $split  $coloract
-client.focused_inactive $color_border $colorin  $color7 $split  $colorin
-client.unfocused        $color_border  $colorin  $color7 $split  $colorin
-client.urgent           $color_border   $coloru   $color7 $coloru $coloru
-client.placeholder      $color_border   $color8   $color7 $color0 $color8
-client.background       $color_border
+client.focused          $coloract $coloract $color15 $split  $coloract
+client.focused_inactive $coloract $coloract $color15 $split  $colorin
+client.unfocused        $colorin  $colorin  $color15 $split  $colorin
+client.urgent           $coloru   $coloru   $color15 $coloru $coloru
+client.placeholder      $color0   $color8   $color15 $color0 $color8
+client.background       $color0
 # border & title.. Must be set to border pixel for gaps to work
-# for_window [class="^.*"] border normal
-for_window [class="^.*"] border pixel 3, title_format "<b> %title </b>"
+# for_window [class="^.*"] border pixel 3, title_format "<b> %title </b>"
+for_window [class="^.*"] border normal, title_format " %class <span foreground='$coloru'>%title</span>"
+
 title_align left
 
 # gaps
@@ -299,7 +300,7 @@ bindsym $Alt+space exec --no-startup-id rofi_run -r
 bindsym $Alt+F1 exec --no-startup-id rofi_run -r
 
 # Apps
-bindsym $Super+e exec --no-startup-id termite -e ranger
+bindsym $Super+e exec --no-startup-id kitty -e ranger
 bindsym $Super+t exec exo-open --launch TerminalEmulator
 bindsym $Super+w exec exo-open --launch WebBrowser
 bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{{cmd}}'
