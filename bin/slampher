@@ -1,0 +1,2 @@
+#!/bin/bash
+mosquitto_pub -t sonoff/slampher/cmnd/power -m $1
