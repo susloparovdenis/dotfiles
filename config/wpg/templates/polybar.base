@@ -1,10 +1,10 @@
 
 ;=====================================================
-;     Colors & Settings
+;     Colors & Settings1
 ;=====================================================
 
 [colors]
-background = #BB{background.strip}
+background = #{background.strip}
 foreground = {color15}
 active = {active}
 inactive = {inactive}
@@ -38,32 +38,47 @@ format-background = ${{colors.background}}
 
 [bar/master]
 width = 100%
-height = 44
-border-size = 0
-border-top-size = 0
-border-bottom-size = 1
-radius = 0
-bottom = false
-line-size = 2
+height = 35 
+offset-x = 0
+offset-y = -1 
+
+
+;bottom = true
 
 ; monospace is an aliased font name, see ~/.config/fontconfig/fonts.conf
-font-0 = "DejaVuSansMono Nerd Font:size=20:antialias=false;2"
-font-1 = "monospace:size=20:antialias=false;2"
-font-2 = "MaterialIcons:size=20:antialias=false;2"
-font-3 = "icomoon:size=20:antialias=false;2"
-font-4 = "Font Awesome 5 Brands:pixelsize=22;1"
+# font-0 = "DejaVuSansMono Nerd Font:size=20:antialias=false;2"
+# font-1 = "monospace:size=20:antialias=false;2"
+# font-2 = "MaterialIcons:size=20:antialias=false;2"
+# font-3 = "icomoon:size=20:antialias=false;2"
+# font-4 = "Font Awesome 5 Brands:pixelsize=22;1"
 
 
-offset-x = 0
-offset-y = 0
-fixed-center = true
-border-color = ${{colors.border}}
-background = ${{colors.background}}
-foreground = ${{colors.foreground}}
-module-margin = 0
-padding-right = 0
+# offset-x = 0
+# offset-y = 0
+# fixed-center = true
+# border-color = ${{colors.border}}
+# background = ${{colors.background}}
+# foreground = ${{colors.foreground}}
+# module-margin = 0
+# padding-right = 0
+# padding-left = 0
+# separator = │
+
+background = #5a000000
+foreground = #eee
+
+underline-size = 2
+underline-color = #eee
+
+spacing = 1
 padding-left = 0
-separator = │
+padding-right = 0
+module-margin-left = 0 
+module-margin-right = 0
+
+font-0 = Noto Sans:pixelsize=13;0
+font-1 = FontAwesome:size=10;-2
+font-2 = siji:pixelsize=10;0
 
 ; shows which modules have click actions
 cursor-click = pointer
@@ -116,8 +131,9 @@ inherit = bar/master
 monitor = ${{env:MONITOR:HDMI-1}}
 
 modules-left   = jgmenu i3 window_switch
-modules-center = clock
-modules-right  = ${{env:POLYBAR_MODULES: battery keyboard redshift temperature memory pkg network volume}}
+# modules-center = clock
+# modules-right  = ${{env:POLYBAR_MODULES: xwindow pmd spotify battery keyboard redshift temperature memory pkg network volume}}
+modules-right  = mpd spotify battery keyboard redshift temperature memory pkg network volume
 
 
 ;=====================================================
@@ -132,7 +148,7 @@ monitor =
 
 modules-left   = bspwm menu
 modules-center = clock
-modules-right  = ${{env:POLYBAR_MODULES:coreuse temperature memory pkg network volume}}
+modules-right  = ${{env:POLYBAR_MODULES:coreuse temperature memory pkg spotify network volume powermenu}}
 
 ;=====================================================
 ;     Openbox Bars

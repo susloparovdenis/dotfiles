@@ -24,20 +24,18 @@ client.urgent           $coloru   $coloru   $color15 $coloru $coloru
 client.placeholder      $color0   $color8   $color15 $color0 $color8
 client.background       $color0
 # border & title.. Must be set to border pixel for gaps to work
-# for_window [class="^.*"] border pixel 3, title_format "<b> %title </b>"
-for_window [class="^.*"] border normal, title_format " %class <span foreground='$coloru'>%title</span>"
-
+for_window [class="^.*"] border pixel 1, title_format "<b> %title </b>"
+# for_window [class="^.*"] border normal, title_format "<span foreground='{color15}'>%class</span> <b><span foreground='{color5}'>%title</span></b>"
+# for_window [class="^.*"] border normal, title_format "<span foreground='{color0}'>0</span><span foreground='{color1}'>1</span><span foreground='{color2}'>2</span><span foreground='{color3}'>3</span><span foreground='{color4}'>4</span><span foreground='{color5}'>5</span><span foreground='{color6}'>6</span><span foreground='{color7}'>7</span><span foreground='{color8}'>8</span><span foreground='{color9}'>9</span><span foreground='{color10}'>10</span><span foreground='{color11}'>11</span><span foreground='{color12}'>12</span><span foreground='{color13}'>13</span><span foreground='{color14}'>14</span>"
 title_align left
 
 # gaps
 gaps inner 15
-gaps outer 5
+gaps outer 15
 
 # font
 font pango:monospace 10 
-gaps outer 10
-gaps inner 0
-new_window pixel 12
+# new_window pixel 12
 
 
 # buttons
@@ -165,6 +163,8 @@ bindsym $Super+Shift+Mod2+KP_Home move container to workspace $WS7; workspace $W
 bindsym $Super+Shift+Mod2+KP_Up move container to workspace $WS8; workspace $WS8
 
 
+bindsym $Super+w workspace next
+bindsym $Super+q workspace prev
 ############################################################
 ##############     Reload configs           ################
 ############################################################
@@ -173,7 +173,7 @@ bindsym $Super+Shift+Mod2+KP_Up move container to workspace $WS8; workspace $WS8
 bindsym $Super+Shift+r restart
 bindsym $Super+Shift+p exec --no-startup-id ~/.config/polybar/launch_polybar.sh
 bindsym $Super+Shift+w exec --no-startup-id wpg -s $(wpg -c)
-
+bindsym $Super+Shift+m exec --no-startup-id wpg -m
 # reload the configuration file
 bindsym $Super+Shift+c reload
 
@@ -277,7 +277,7 @@ bindsym $Super+Control+Shift+minus gaps outer all minus 5
 ############    application settings   ############
 ###################################################
 
-for_window [class="(?i)(?:qt5ct|pinentry)"] floating enable, focus
+for_window [class="(?i)(?:qt5ct|pinentry|Bluetooth)"] floating enable, focus
 for_window [class="(?i)(?:termite|thunar)"] focus
 for_window [class="(?i)(?:geany|firefox)"] focus
 for_window [class="(?i)(?:bitwarden|telegram)"] floating enable
@@ -302,7 +302,7 @@ bindsym $Alt+F1 exec --no-startup-id rofi_run -r
 # Apps
 bindsym $Super+e exec --no-startup-id kitty -e ranger
 bindsym $Super+t exec exo-open --launch TerminalEmulator
-bindsym $Super+w exec exo-open --launch WebBrowser
+# bindsym $Super+w exec exo-open --launch WebBrowser
 bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{{cmd}}'
 bindsym $alt+F2  exec rofi -show run
 bindsym $mod+Return   exec exo-open --launch TerminalEmulator
