@@ -4,11 +4,7 @@
 ;=====================================================
 
 [colors]
-<<<<<<< HEAD
-background = #{background.strip}
-=======
 background = {background}
->>>>>>> misc
 foreground = {color15}
 active = {active}
 inactive = {inactive}
@@ -45,7 +41,6 @@ width = 100%
 height = 35 
 offset-x = 0
 offset-y = -1 
-<<<<<<< HEAD
 
 
 ;bottom = true
@@ -86,62 +81,6 @@ font-1 = FontAwesome:size=10;-2
 font-2 = siji:pixelsize=10;0
 
 ; shows which modules have click actions
-=======
-
-
-;bottom = true
-
-; monospace is an aliased font name, see ~/.config/fontconfig/fonts.conf
-# font-0 = "DejaVuSansMono Nerd Font:size=20:antialias=false;2"
-# font-1 = "monospace:size=20:antialias=false;2"
-# font-2 = "MaterialIcons:size=20:antialias=false;2"
-# font-3 = "icomoon:size=20:antialias=false;2"
-# font-4 = "Font Awesome 5 Brands:pixelsize=22;1"
-
-
-# offset-x = 0
-# offset-y = 0
-# fixed-center = true
-# border-color = ${{colors.border}}
-# background = ${{colors.background}}
-# foreground = ${{colors.foreground}}
-# module-margin = 0
-# padding-right = 0
-# padding-left = 0
-# separator = │
-
-background = #5a000000
-foreground = #eee
-
-underline-size = 2
-underline-color = #eee
-
-spacing = 1
-padding-left = 0
-padding-right = 0
-module-margin-left = 0 
-module-margin-right = 0
-
-# font-8 = octicons:size=18;0
-# font-1 = "DejaVuSansMono Nerd Font:size=20:antialias=false;2"
-# font-2 = "MaterialIcons:size=20:antialias=false;2"
-# font-3 = "icomoon:size=20:antialias=false;2"
-# font-4 = "Font Awesome 5 Brands:pixelsize=22;1"
-# font-5 = "FontAwesome5Free:style=Solid:pixelsize=18:antialias=false;3"
-# font-6 = FontAwesome5Brands:style=Solid:pixelsize=18:antialias=false;3"
-# font-7 = siji:size=10;0
-# font-0 = FontAwesome:size=10;0
-font-0 = "DejaVuSansMono Nerd Font:size=20:antialias=false;2"
-font-1 = "monospace:size=20:antialias=false;2"
-font-2 = "MaterialIcons:size=20:antialias=false;2"
-font-3 = "icomoon:size=20:antialias=false;2"
-font-4 = "Font Awesome 5 Brands:pixelsize=22;1"
-font-5 = "FontAwesome5Free:style=Solid:pixelsize=18:antialias=false;3"
-font-6 = FontAwesome5Brands:style=Solid:pixelsize=18:antialias=false;3"
-
-; sho
-ws which modules have click actions
->>>>>>> misc
 cursor-click = pointer
 
 ; with cursor-click = pointer' these cause the entire bar to have click actions
@@ -192,15 +131,9 @@ inherit = bar/master
 monitor = ${{env:MONITOR:HDMI-0}}
 
 modules-left   = jgmenu i3 window_switch
-<<<<<<< HEAD
-# modules-center = clock
-# modules-right  = ${{env:POLYBAR_MODULES: xwindow pmd spotify battery keyboard redshift temperature memory pkg network volume}}
-modules-right  = mpd spotify battery keyboard redshift temperature memory pkg network volume
-=======
 modules-center = clock
 # modules-right  = ${{env:POLYBAR_MODULES: xwindow pmd spotify battery keyboard redshift temperature memory pkg network volume}}
 modules-right  = mpd spotify keyboard redshift temperature memory pkg network volume
->>>>>>> misc
 
 
 ;=====================================================

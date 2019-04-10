@@ -1,7 +1,6 @@
  # ArchLabs i3 config
 set $mod Mod4
 set $alt Mod1
-<<<<<<< HEAD
 set $coloract "#3cafcb"
 set $colorin "#2a788c"
 set $color_border "#3cafcb"
@@ -13,19 +12,6 @@ set_from_resource $split i3wm.color10 "#638ba3"
 set_from_resource $coloru i3wm.color2 "#576974"
 set_from_resource $color0 i3wm.color0 "#04090F"
 set_from_resource $color8 i3wm.color8 "#0b1b2f"
-=======
-set $coloract "#9f6f22"
-set $colorin "#6d4c17"
-set $color_border "#9f6f22"
-
-
-set $terminal urxvtc
-set_from_resource $color15 i3wm.color15 "#e9f7ff"
-set_from_resource $split i3wm.color10 "#e2c826"
-set_from_resource $coloru i3wm.color2 "#A49328"
-set_from_resource $color0 i3wm.color0 "#0d0b05"
-set_from_resource $color8 i3wm.color8 "#322a11"
->>>>>>> misc
 
 
 ######### COLORS ##########
@@ -39,13 +25,8 @@ client.placeholder      $color0   $color8   $color15 $color0 $color8
 client.background       $color0
 # border & title.. Must be set to border pixel for gaps to work
 for_window [class="^.*"] border pixel 1, title_format "<b> %title </b>"
-<<<<<<< HEAD
 # for_window [class="^.*"] border normal, title_format "<span foreground='#d0ffff'>%class</span> <b><span foreground='#3D88B4'>%title</span></b>"
 # for_window [class="^.*"] border normal, title_format "<span foreground='#04090F'>0</span><span foreground='#4AA6E8'>1</span><span foreground='#576974'>2</span><span foreground='#2C6799'>3</span><span foreground='#357AC5'>4</span><span foreground='#3D88B4'>5</span><span foreground='#3A8CD4'>6</span><span foreground='#aae6f5'>7</span><span foreground='#0b1b2f'>8</span><span foreground='#4cdbff'>9</span><span foreground='#638ba3'>10</span><span foreground='#2c86d3'>11</span><span foreground='#349dff'>12</span><span foreground='#3fb4f9'>13</span><span foreground='#39b7ff'>14</span>"
-=======
-# for_window [class="^.*"] border normal, title_format "<span foreground='#e9f7ff'>%class</span> <b><span foreground='#A7915D'>%title</span></b>"
-# for_window [class="^.*"] border normal, title_format "<span foreground='#0d0b05'>0</span><span foreground='#906A2B'>1</span><span foreground='#A49328'>2</span><span foreground='#D1B746'>3</span><span foreground='#62699B'>4</span><span foreground='#A7915D'>5</span><span foreground='#8E7451'>6</span><span foreground='#b2bdd1'>7</span><span foreground='#322a11'>8</span><span foreground='#c78c2b'>9</span><span foreground='#e2c826'>10</span><span foreground='#fff948'>11</span><span foreground='#6e7cd9'>12</span><span foreground='#e9c368'>13</span><span foreground='#c7985a'>14</span>"
->>>>>>> misc
 title_align left
 
 # gaps
