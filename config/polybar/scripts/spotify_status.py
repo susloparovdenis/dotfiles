@@ -1,0 +1,1 @@
+/home/denis/.dotfiles/dotfiles/config/polybar/scripts/spotify_status.py

@@ -1,4 +1,5 @@
 " Special
+<<<<<<< HEAD
 let wallpaper  = "/home/denis/.config/wpg/wallpapers/Atlantis_Nebula__3_by_Starkiteckt_15200x9500.jpg"
 let background = "#04090F"
 let foreground = "#d0ffff"
@@ -21,3 +22,27 @@ let color12 = "#349dff"
 let color13 = "#3fb4f9"
 let color14 = "#39b7ff"
 let color15 = "#d0ffff"
+=======
+let wallpaper  = "/home/denis/.config/wpg/wallpapers/trees_forest_4000x2656.jpg"
+let background = "#0d0b05"
+let foreground = "#e9f7ff"
+let cursor     = "#e9f7ff"
+
+" Colors
+let color0  = "#0d0b05"
+let color1  = "#906A2B"
+let color2  = "#A49328"
+let color3  = "#D1B746"
+let color4  = "#62699B"
+let color5  = "#A7915D"
+let color6  = "#8E7451"
+let color7  = "#b2bdd1"
+let color8  = "#322a11"
+let color9  = "#c78c2b"
+let color10 = "#e2c826"
+let color11 = "#fff948"
+let color12 = "#6e7cd9"
+let color13 = "#e9c368"
+let color14 = "#c7985a"
+let color15 = "#e9f7ff"
+>>>>>>> misc

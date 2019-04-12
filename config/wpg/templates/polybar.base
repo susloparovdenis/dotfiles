@@ -4,7 +4,11 @@
 ;=====================================================
 
 [colors]
+<<<<<<< HEAD
 background = #{background.strip}
+=======
+background = {background}
+>>>>>>> misc
 foreground = {color15}
 active = {active}
 inactive = {inactive}
@@ -41,6 +45,7 @@ width = 100%
 height = 35 
 offset-x = 0
 offset-y = -1 
+<<<<<<< HEAD
 
 
 ;bottom = true
@@ -81,6 +86,62 @@ font-1 = FontAwesome:size=10;-2
 font-2 = siji:pixelsize=10;0
 
 ; shows which modules have click actions
+=======
+
+
+;bottom = true
+
+; monospace is an aliased font name, see ~/.config/fontconfig/fonts.conf
+# font-0 = "DejaVuSansMono Nerd Font:size=20:antialias=false;2"
+# font-1 = "monospace:size=20:antialias=false;2"
+# font-2 = "MaterialIcons:size=20:antialias=false;2"
+# font-3 = "icomoon:size=20:antialias=false;2"
+# font-4 = "Font Awesome 5 Brands:pixelsize=22;1"
+
+
+# offset-x = 0
+# offset-y = 0
+# fixed-center = true
+# border-color = ${{colors.border}}
+# background = ${{colors.background}}
+# foreground = ${{colors.foreground}}
+# module-margin = 0
+# padding-right = 0
+# padding-left = 0
+# separator = │
+
+background = #5a000000
+foreground = #eee
+
+underline-size = 2
+underline-color = #eee
+
+spacing = 1
+padding-left = 0
+padding-right = 0
+module-margin-left = 0 
+module-margin-right = 0
+
+# font-8 = octicons:size=18;0
+# font-1 = "DejaVuSansMono Nerd Font:size=20:antialias=false;2"
+# font-2 = "MaterialIcons:size=20:antialias=false;2"
+# font-3 = "icomoon:size=20:antialias=false;2"
+# font-4 = "Font Awesome 5 Brands:pixelsize=22;1"
+# font-5 = "FontAwesome5Free:style=Solid:pixelsize=18:antialias=false;3"
+# font-6 = FontAwesome5Brands:style=Solid:pixelsize=18:antialias=false;3"
+# font-7 = siji:size=10;0
+# font-0 = FontAwesome:size=10;0
+font-0 = "DejaVuSansMono Nerd Font:size=20:antialias=false;2"
+font-1 = "monospace:size=20:antialias=false;2"
+font-2 = "MaterialIcons:size=20:antialias=false;2"
+font-3 = "icomoon:size=20:antialias=false;2"
+font-4 = "Font Awesome 5 Brands:pixelsize=22;1"
+font-5 = "FontAwesome5Free:style=Solid:pixelsize=18:antialias=false;3"
+font-6 = FontAwesome5Brands:style=Solid:pixelsize=18:antialias=false;3"
+
+; sho
+ws which modules have click actions
+>>>>>>> misc
 cursor-click = pointer
 
 ; with cursor-click = pointer' these cause the entire bar to have click actions
@@ -96,7 +157,7 @@ double-click-right = pavucontrol &
 tray-position = right
 tray-maxsize = 16tray-detached = false
 
-tray-background = ${root.background}
+# tray-background = ${{clbackground}}
 ;=====================================================
 ;     File Includes
 ;=====================================================
@@ -128,12 +189,18 @@ modules-right  = ${{env:POLYBAR_MODULES:coreuse temperature memory pkg network v
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = ${{env:MONITOR:HDMI-1}}
+monitor = ${{env:MONITOR:HDMI-0}}
 
 modules-left   = jgmenu i3 window_switch
+<<<<<<< HEAD
 # modules-center = clock
 # modules-right  = ${{env:POLYBAR_MODULES: xwindow pmd spotify battery keyboard redshift temperature memory pkg network volume}}
 modules-right  = mpd spotify battery keyboard redshift temperature memory pkg network volume
+=======
+modules-center = clock
+# modules-right  = ${{env:POLYBAR_MODULES: xwindow pmd spotify battery keyboard redshift temperature memory pkg network volume}}
+modules-right  = mpd spotify keyboard redshift temperature memory pkg network volume
+>>>>>>> misc
 
 
 ;=====================================================
@@ -163,3 +230,184 @@ monitor =
 modules-left   = workspaces menu
 modules-center = clock
 modules-right  = ${{env:POLYBAR_MODULES:coreuse temperature memory pkg network volume}}
+
+
+
+
+
+
+
+
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:120:...%
+label-padding = 4
+
+[module/date]
+type = internal/date
+
+; Seconds to sleep between updates
+interval = 1.0
+
+; See "man date" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{{...}}
+date = %a %b %d, 
+
+; Optional time format
+time = %H:%M
+
+; if `date-alt` or `time-alt` is defined, clicking
+; the module will toggle between formats
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
+
+label = %date% %time%
+format =    <label>
+;format-background = #ddffffff
+format-background = #88000000
+;format-foreground = #333
+format-padding = 3
+
+[module/padding]
+type = custom/text
+content = 	 
+content-foreground = #00000000
+content-background = #55000000
+
+[module/battery]
+type = internal/battery
+
+full-at = 99
+
+battery = BAT0
+adapter = AC0
+
+poll-interval = 5
+
+format-charging = <animation-charging>  <label-charging>
+format-discharging = <ramp-capacity>  <label-discharging>
+format-full = <ramp-capacity>  <label-full>
+label-charging = %percentage%
+label-discharging = %percentage%
+label-full = %percentage%
+format-charging-padding = 3
+format-discharging-padding = 3
+format-full-padding = 3
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+[module/backlight]
+type = internal/backlight
+
+card = intel_backlight
+enable-scroll = true
+
+format = <ramp> <label>
+label = %percentage%
+
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume>  <label-volume>
+format-muted = <label-muted>
+label-volume = %percentage%
+label-muted =   muted
+label-muted-foreground = #aaa
+format-volume-padding = 3
+format-muted-padding = 3
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-headphones-0 = 
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python /home/denis/.dotfiles/config/polybar/scripts/spotify_status.py -f '{{artist}}: {{song}}'
+format-underline = #1db954
+
+[module/powermenu]
+type = custom/menu
+
+label-open =   
+;label-open-background = #dd0000
+;label-open-foreground = #fff
+label-close = cancel
+;label-close-background = #dd0000
+;label-close-foreground = #fff
+label-open-padding = 4 
+label-close-padding = 3 
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+menu-0-0-padding = 3
+menu-0-1-padding = 3
+
+menu-1-0 = reboot?  
+menu-1-0-exec = sudo reboot
+menu-1-0-padding = 3
+
+menu-2-0 = power off?  
+menu-2-0-exec = sudo poweroff
+menu-2-0-padding = 3
+
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port = 6600
+password = 
+
+; Seconds to sleep between progressbar/song timer sync
+; Default: 1
+interval = 2
+
+; Available tags:
+;   <label-song> (default)
+;   <label-time>
+;   <bar-progress>
+;   <toggle> - gets replaced with <icon-(pause|play)>
+;   <toggle-stop> - gets replaced with <icon-(stop|play)>
+;   <icon-random>
+;   <icon-repeat>
+;   <icon-repeatone>
+;   <icon-prev>
+;   <icon-stop>
+;   <icon-play>
+;   <icon-pause>
+;   <icon-next>
+;   <icon-seekb>
+;   <icon-seekf>
+format-online =    <label-song>
+
+; Available tokens:
+;   %artist%
+;   %album%
+;   %date%
+;   %title%
+; Default: %artist% - %title%
+label-song = %title%
+format-online-padding = 3
