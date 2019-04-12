@@ -1,5 +1,6 @@
 * {
 <<<<<<< HEAD
+<<<<<<< HEAD
     active-background: #576974;
     active-foreground: @foreground;
     normal-background: @background;
@@ -12,6 +13,13 @@
     normal-foreground: @foreground;
     urgent-background: #906A2B;
 >>>>>>> misc
+=======
+    active-background: #5B649F;
+    active-foreground: @foreground;
+    normal-background: @background;
+    normal-foreground: @foreground;
+    urgent-background: #2E4FA2;
+>>>>>>> polybar
     urgent-foreground: @foreground;
 
     alternate-active-background: @background;
@@ -21,6 +29,7 @@
     alternate-urgent-background: @background;
     alternate-urgent-foreground: @foreground;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     selected-active-background: #4AA6E8;
     selected-active-foreground: @foreground;
@@ -34,16 +43,24 @@
     foreground: #04090F;
 =======
     selected-active-background: #906A2B;
+=======
+    selected-active-background: #2E4FA2;
+>>>>>>> polybar
     selected-active-foreground: @foreground;
-    selected-normal-background: #A49328;
+    selected-normal-background: #5B649F;
     selected-normal-foreground: @foreground;
-    selected-urgent-background: #D1B746;
+    selected-urgent-background: #DF9763;
     selected-urgent-foreground: @foreground;
 
     background-color: @background;
+<<<<<<< HEAD
     background: #e9f7ff;
     foreground: #0d0b05;
 >>>>>>> misc
+=======
+    background: #d0fdff;
+    foreground: #14110e;
+>>>>>>> polybar
     border-color: @background;
     spacing: 2;
 }

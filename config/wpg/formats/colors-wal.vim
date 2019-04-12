@@ -1,5 +1,6 @@
 " Special
 <<<<<<< HEAD
+<<<<<<< HEAD
 let wallpaper  = "/home/denis/.config/wpg/wallpapers/Atlantis_Nebula__3_by_Starkiteckt_15200x9500.jpg"
 let background = "#04090F"
 let foreground = "#d0ffff"
@@ -46,3 +47,27 @@ let color13 = "#e9c368"
 let color14 = "#c7985a"
 let color15 = "#e9f7ff"
 >>>>>>> misc
+=======
+let wallpaper  = "/home/denis/.config/wpg/wallpapers/Scenery_Mountains_Sky_Sunrises_and_sunsets_Grass_Fir_Nature_5600x4071.jpg"
+let background = "#14110e"
+let foreground = "#d0fdff"
+let cursor     = "#d0fdff"
+
+" Colors
+let color0  = "#14110e"
+let color1  = "#2E4FA2"
+let color2  = "#5B649F"
+let color3  = "#DF9763"
+let color4  = "#3168C8"
+let color5  = "#9C7495"
+let color6  = "#3D8EEB"
+let color7  = "#a0c3e8"
+let color8  = "#312a22"
+let color9  = "#2e60e0"
+let color10 = "#6676de"
+let color11 = "#ffc06b"
+let color12 = "#2f82ff"
+let color13 = "#dc85cd"
+let color14 = "#3bb7ff"
+let color15 = "#d0fdff"
+>>>>>>> polybar

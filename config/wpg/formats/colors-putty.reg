@@ -2,6 +2,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\wal]
 <<<<<<< HEAD
+<<<<<<< HEAD
 "Colour0"="208,255,255"  ; Default Foreground
 "Colour1"="208,255,255"  ; Default Bold Foreground
 "Colour2"="4,9,15"  ; Default Background
@@ -48,4 +49,28 @@ Windows Registry Editor Version 5.00
 "Colour20"="178,189,209"  ; ANSI White
 "Colour21"="233,247,255"  ; ANSI White Bold
 >>>>>>> misc
+=======
+"Colour0"="208,253,255"  ; Default Foreground
+"Colour1"="208,253,255"  ; Default Bold Foreground
+"Colour2"="20,17,14"  ; Default Background
+"Colour3"="20,17,14"  ; Default Bold Background
+"Colour4"="20,17,14"  ; Cursor Text
+"Colour5"="208,253,255"  ; Cursor Color
+"Colour6"="20,17,14"  ; ANSI Black
+"Colour7"="49,42,34"  ; ANSI Black Bold
+"Colour8"="46,79,162"  ; ANSI Red
+"Colour9"="46,96,224"  ; ANSI Red Bold
+"Colour10"="91,100,159"  ; ANSI Green
+"Colour11"="102,118,222"  ; ANSI Green Bold
+"Colour12"="223,151,99"  ; ANSI Yellow
+"Colour13"="255,192,107"  ; ANSI Yellow Bold
+"Colour14"="49,104,200"  ; ANSI Blue
+"Colour15"="47,130,255"  ; ANSI Blue Bold
+"Colour16"="156,116,149"  ; ANSI Magenta
+"Colour17"="220,133,205"  ; ANSI Magenta Bold
+"Colour18"="61,142,235"  ; ANSI Cyan
+"Colour19"="59,183,255"  ; ANSI Cyan Bold
+"Colour20"="160,195,232"  ; ANSI White
+"Colour21"="208,253,255"  ; ANSI White Bold
+>>>>>>> polybar
 

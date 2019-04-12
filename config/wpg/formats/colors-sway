@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 set $wallpaper /home/denis/.config/wpg/wallpapers/Atlantis_Nebula__3_by_Starkiteckt_15200x9500.jpg
 
 set $background #04090F
@@ -22,10 +23,14 @@ set $color14 #39b7ff
 set $color15 #d0ffff
 =======
 set $wallpaper /home/denis/.config/wpg/wallpapers/trees_forest_4000x2656.jpg
+=======
+set $wallpaper /home/denis/.config/wpg/wallpapers/Scenery_Mountains_Sky_Sunrises_and_sunsets_Grass_Fir_Nature_5600x4071.jpg
+>>>>>>> polybar
 
-set $background #0d0b05
-set $foreground #e9f7ff
+set $background #14110e
+set $foreground #d0fdff
 
+<<<<<<< HEAD
 set $color0 #0d0b05
 set $color1 #906A2B
 set $color2 #A49328
@@ -43,3 +48,21 @@ set $color13 #e9c368
 set $color14 #c7985a
 set $color15 #e9f7ff
 >>>>>>> misc
+=======
+set $color0 #14110e
+set $color1 #2E4FA2
+set $color2 #5B649F
+set $color3 #DF9763
+set $color4 #3168C8
+set $color5 #9C7495
+set $color6 #3D8EEB
+set $color7 #a0c3e8
+set $color8 #312a22
+set $color9 #2e60e0
+set $color10 #6676de
+set $color11 #ffc06b
+set $color12 #2f82ff
+set $color13 #dc85cd
+set $color14 #3bb7ff
+set $color15 #d0fdff
+>>>>>>> polybar

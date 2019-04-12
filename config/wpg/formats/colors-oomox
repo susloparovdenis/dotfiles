@@ -1,5 +1,6 @@
 NAME=wal
 <<<<<<< HEAD
+<<<<<<< HEAD
 BG=04090F
 FG=d0ffff
 MENU_BG=04090F
@@ -26,6 +27,20 @@ BTN_FG=e9f7ff
 HDR_BTN_BG=D1B746
 HDR_BTN_FG=e9f7ff
 >>>>>>> misc
+=======
+BG=14110e
+FG=d0fdff
+MENU_BG=14110e
+MENU_FG=d0fdff
+SEL_BG=2E4FA2
+SEL_FG=14110e
+TXT_BG=14110e
+TXT_FG=d0fdff
+BTN_BG=5B649F
+BTN_FG=d0fdff
+HDR_BTN_BG=DF9763
+HDR_BTN_FG=d0fdff
+>>>>>>> polybar
 GTK3_GENERATE_DARK=True
 ROUNDNESS=0
 SPACING=3
