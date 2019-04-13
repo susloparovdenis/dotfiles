@@ -82,7 +82,7 @@ autoload -U +X bashcompinit && bashcompinit
 
 source /opt/google-cloud-sdk/completion.zsh.inc          
 source /opt/google-cloud-sdk/path.zsh.inc                                        
-(cat $HOME/.config/wpg/sequences &)
+[ -f $HOME/.config/wpg/sequences ] && (cat $HOME/.config/wpg/sequences &)
 
 
 
@@ -126,7 +126,7 @@ source /opt/google-cloud-sdk/path.zsh.inc
 TRAPWINCH() {
   zle && { zle reset-prompt; zle -R }
 }
-neofetch
+#neofetch
 alias copy='xsel -ib'
 #bindkey -v
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
