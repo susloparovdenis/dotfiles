@@ -1,68 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-set $wallpaper /home/denis/.config/wpg/wallpapers/Atlantis_Nebula__3_by_Starkiteckt_15200x9500.jpg
+set $wallpaper /home/denis/.config/wpg/wallpapers/mountains_landscapes_nature_snow_night_lights_stars_valleys_Europe_Switzerland_3840x2400.jpg
 
-set $background #04090F
-set $foreground #d0ffff
+set $background #04060D
+set $foreground #9fb1b9
 
-set $color0 #04090F
-set $color1 #4AA6E8
-set $color2 #576974
-set $color3 #2C6799
-set $color4 #357AC5
-set $color5 #3D88B4
-set $color6 #3A8CD4
-set $color7 #aae6f5
-set $color8 #0b1b2f
-set $color9 #4cdbff
-set $color10 #638ba3
-set $color11 #2c86d3
-set $color12 #349dff
-set $color13 #3fb4f9
-set $color14 #39b7ff
-set $color15 #d0ffff
-=======
-set $wallpaper /home/denis/.config/wpg/wallpapers/trees_forest_4000x2656.jpg
-=======
-set $wallpaper /home/denis/.config/wpg/wallpapers/Scenery_Mountains_Sky_Sunrises_and_sunsets_Grass_Fir_Nature_5600x4071.jpg
->>>>>>> polybar
-
-set $background #14110e
-set $foreground #d0fdff
-
-<<<<<<< HEAD
-set $color0 #0d0b05
-set $color1 #906A2B
-set $color2 #A49328
-set $color3 #D1B746
-set $color4 #62699B
-set $color5 #A7915D
-set $color6 #8E7451
-set $color7 #b2bdd1
-set $color8 #322a11
-set $color9 #c78c2b
-set $color10 #e2c826
-set $color11 #fff948
-set $color12 #6e7cd9
-set $color13 #e9c368
-set $color14 #c7985a
-set $color15 #e9f7ff
->>>>>>> misc
-=======
-set $color0 #14110e
-set $color1 #2E4FA2
-set $color2 #5B649F
-set $color3 #DF9763
-set $color4 #3168C8
-set $color5 #9C7495
-set $color6 #3D8EEB
-set $color7 #a0c3e8
-set $color8 #312a22
-set $color9 #2e60e0
-set $color10 #6676de
-set $color11 #ffc06b
-set $color12 #2f82ff
-set $color13 #dc85cd
-set $color14 #3bb7ff
-set $color15 #d0fdff
->>>>>>> polybar
+set $color0 #04060D
+set $color1 #2A455B
+set $color2 #315269
+set $color3 #3A6176
+set $color4 #4B6775
+set $color5 #818475
+set $color6 #3E6A81
+set $color7 #9fb1b9
+set $color8 #6f7b81
+set $color9 #2A455B
+set $color10 #315269
+set $color11 #3A6176
+set $color12 #4B6775
+set $color13 #818475
+set $color14 #3E6A81
+set $color15 #9fb1b9

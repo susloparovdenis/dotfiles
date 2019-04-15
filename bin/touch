@@ -1,2 +1,0 @@
-#!/bin/bash
-mosquitto_pub -t sonoff/touch/cmnd/power -m $1

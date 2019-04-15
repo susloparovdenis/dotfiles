@@ -1,25 +1,9 @@
 * {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    active-background: #576974;
+    active-background: #315269;
     active-foreground: @foreground;
     normal-background: @background;
     normal-foreground: @foreground;
-    urgent-background: #4AA6E8;
-=======
-    active-background: #A49328;
-    active-foreground: @foreground;
-    normal-background: @background;
-    normal-foreground: @foreground;
-    urgent-background: #906A2B;
->>>>>>> misc
-=======
-    active-background: #5B649F;
-    active-foreground: @foreground;
-    normal-background: @background;
-    normal-foreground: @foreground;
-    urgent-background: #2E4FA2;
->>>>>>> polybar
+    urgent-background: #2A455B;
     urgent-foreground: @foreground;
 
     alternate-active-background: @background;
@@ -29,38 +13,16 @@
     alternate-urgent-background: @background;
     alternate-urgent-foreground: @foreground;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    selected-active-background: #4AA6E8;
+    selected-active-background: #2A455B;
     selected-active-foreground: @foreground;
-    selected-normal-background: #576974;
+    selected-normal-background: #315269;
     selected-normal-foreground: @foreground;
-    selected-urgent-background: #2C6799;
+    selected-urgent-background: #3A6176;
     selected-urgent-foreground: @foreground;
 
     background-color: @background;
-    background: #04090F;
-    foreground: #d0ffff;
-=======
-    selected-active-background: #906A2B;
-=======
-    selected-active-background: #2E4FA2;
->>>>>>> polybar
-    selected-active-foreground: @foreground;
-    selected-normal-background: #5B649F;
-    selected-normal-foreground: @foreground;
-    selected-urgent-background: #DF9763;
-    selected-urgent-foreground: @foreground;
-
-    background-color: @background;
-<<<<<<< HEAD
-    background: #0d0b05;
-    foreground: #e9f7ff;
->>>>>>> misc
-=======
-    background: #14110e;
-    foreground: #d0fdff;
->>>>>>> polybar
+    background: #04060D;
+    foreground: #9fb1b9;
     border-color: @background;
     spacing: 2;
 }

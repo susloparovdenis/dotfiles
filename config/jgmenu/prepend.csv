@@ -1,12 +1,14 @@
 @icon,,5,10,48,48,0,left,top,,,/usr/share/icons/ArchLabs-Dark/48x48/places/distributor-logo-archlabs.png
 @rect,,58,14,130,40,3,left,top,#aaaaaa 15,#000000 0,content
 @search,,58,14,130,40,3,left,top,#aaaaaa 90,#222222 3,Type to search...
-
-Browser,chromium,chromium
-File manager,nemo,nemo
-Terminal,termite,utilities-terminal
-^sep()
-Dotfiles,code ~/.dotfiles/,code
-Saleor,pycharm,/home/denis/Source/Adam/saleor,nemo
-Terminal,termite,utilities-terminal
-^sep()
+Browser,chromium,chromium,,,,,,,,,
+File manager,nemo,nemo,,,,,,,,,
+Terminal,termite,utilities-terminal,,,,,,,,,
+^sep(),,,,,,,,,,,
+Dotfiles,code ~/.dotfiles/,code,,,,,,,,,
+Saleor,code ~/Source/Adam/saleor,code,,,,,,,,,
+Storefront,code ~/Source/Adam/saleor-storefront,code,,,,,,,,,
+infrastructure,code ~/.dotfiles/infrastructure,code,,,,,,,,,
+Saleor,pycharm,pycharm,,,,,,,,,
+Terminal,termite,utilities-terminal,,,,,,,,,
+^sep(),,,,,,,,,,,

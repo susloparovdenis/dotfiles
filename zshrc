@@ -10,6 +10,7 @@ SUDO_EDITOR='nvim'
 PATH+=:~/.gem/ruby/2.5.0/bin
 PATH+=:~/.local/bin
 PATH+=:~/.npm/packages/bin
+PATH+=:~/.npm/bin
 PATH+=:~/go/bin
 PATH+=:~/.dotnet/tools
 
@@ -57,6 +58,7 @@ antigen bundles <<EOBUNDLES
     changyuheng/fz
     zsh-users/zaw
     aperezdc/zsh-fzy
+    dotenv
 EOBUNDLES
 
 

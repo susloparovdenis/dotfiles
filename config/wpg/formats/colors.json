@@ -1,79 +1,28 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "wallpaper": "/home/denis/.config/wpg/wallpapers/Atlantis_Nebula__3_by_Starkiteckt_15200x9500.jpg",
+    "wallpaper": "/home/denis/.config/wpg/wallpapers/mountains_landscapes_nature_snow_night_lights_stars_valleys_Europe_Switzerland_3840x2400.jpg",
     "alpha": "100",
 
     "special": {
-        "background": "#04090F",
-        "foreground": "#d0ffff",
-        "cursor": "#d0ffff"
+        "background": "#04060D",
+        "foreground": "#9fb1b9",
+        "cursor": "#9fb1b9"
     },
     "colors": {
-        "color0": "#04090F",
-        "color1": "#4AA6E8",
-        "color2": "#576974",
-        "color3": "#2C6799",
-        "color4": "#357AC5",
-        "color5": "#3D88B4",
-        "color6": "#3A8CD4",
-        "color7": "#aae6f5",
-        "color8": "#0b1b2f",
-        "color9": "#4cdbff",
-        "color10": "#638ba3",
-        "color11": "#2c86d3",
-        "color12": "#349dff",
-        "color13": "#3fb4f9",
-        "color14": "#39b7ff",
-        "color15": "#d0ffff"
-=======
-    "wallpaper": "/home/denis/.config/wpg/wallpapers/trees_forest_4000x2656.jpg",
-=======
-    "wallpaper": "/home/denis/.config/wpg/wallpapers/Scenery_Mountains_Sky_Sunrises_and_sunsets_Grass_Fir_Nature_5600x4071.jpg",
->>>>>>> polybar
-    "alpha": "100",
-
-    "special": {
-        "background": "#14110e",
-        "foreground": "#d0fdff",
-        "cursor": "#d0fdff"
-    },
-    "colors": {
-<<<<<<< HEAD
-        "color0": "#0d0b05",
-        "color1": "#906A2B",
-        "color2": "#A49328",
-        "color3": "#D1B746",
-        "color4": "#62699B",
-        "color5": "#A7915D",
-        "color6": "#8E7451",
-        "color7": "#b2bdd1",
-        "color8": "#322a11",
-        "color9": "#c78c2b",
-        "color10": "#e2c826",
-        "color11": "#fff948",
-        "color12": "#6e7cd9",
-        "color13": "#e9c368",
-        "color14": "#c7985a",
-        "color15": "#e9f7ff"
->>>>>>> misc
-=======
-        "color0": "#14110e",
-        "color1": "#2E4FA2",
-        "color2": "#5B649F",
-        "color3": "#DF9763",
-        "color4": "#3168C8",
-        "color5": "#9C7495",
-        "color6": "#3D8EEB",
-        "color7": "#a0c3e8",
-        "color8": "#312a22",
-        "color9": "#2e60e0",
-        "color10": "#6676de",
-        "color11": "#ffc06b",
-        "color12": "#2f82ff",
-        "color13": "#dc85cd",
-        "color14": "#3bb7ff",
-        "color15": "#d0fdff"
->>>>>>> polybar
+        "color0": "#04060D",
+        "color1": "#2A455B",
+        "color2": "#315269",
+        "color3": "#3A6176",
+        "color4": "#4B6775",
+        "color5": "#818475",
+        "color6": "#3E6A81",
+        "color7": "#9fb1b9",
+        "color8": "#6f7b81",
+        "color9": "#2A455B",
+        "color10": "#315269",
+        "color11": "#3A6176",
+        "color12": "#4B6775",
+        "color13": "#818475",
+        "color14": "#3E6A81",
+        "color15": "#9fb1b9"
     }
 }

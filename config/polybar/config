@@ -4,12 +4,12 @@
 ;=====================================================
 
 [colors]
-background = #BB14110e
-foreground = #d0fdff
-active = #244cb3
-inactive = #19347a
-highlight = #5B649F
-error = #2e60e0
+background = #BB04060D
+foreground = #9fb1b9
+active = #274153
+inactive = #1b2d39
+highlight = #315269
+error = #2A455B
 
 moderate = #ebcb8b
 urgent = #bf616a
@@ -51,10 +51,10 @@ border-size = 0
 border-top-size = 0
 border-bottom-size = 1
 offset-x = 0
-offset-y = -1 
+offset-y = 0 
 radius = 0
 bottom = false
-line-size = 2
+line-size = 3
 
 ; monospace is an aliased font name, see ~/.config/fontconfig/fonts.conf
 font-0 = "DejaVuSansMono Nerd Font:size=20:antialias=false;2"
@@ -64,14 +64,28 @@ font-3 = "icomoon:size=20:antialias=false;2"
 font-4 = "Font Awesome 5 Brands:pixelsize=22;1"
 
 
-fixed-center = true
-border-color = ${colors.border}
-background = ${colors.background}
-foreground = ${colors.foreground}
-module-margin = 0
-padding-right = 0
+# offset-x = 0
+# offset-y = 0
+# fixed-center = true
+# border-color = ${colors.border}
+# background = ${colors.background}
+# foreground = ${colors.foreground}
+# module-margin = 0
+# padding-right = 0
+# padding-left = 0
+# separator = │
+
+background = #5a000000
+foreground = #eee
+
+underline-size = 3
+underline-color = #eee
+
+spacing = 1
 padding-left = 0
-separator = 
+padding-right = 0
+module-margin-left = 0 
+module-margin-right = 0
 
 ; shows which modules have click actions
 cursor-click = pointer
@@ -86,10 +100,10 @@ cursor-click = pointer
 double-click-middle = skippy-xd --activate-window-picker
 double-click-right = pavucontrol &
 
-tray-position = right
-tray-maxsize = 16tray-detached = false
+# tray-position = right
+# tray-maxsize = 16tray-detached = false
 
-tray-background = ${colors.background}
+# tray-background = ${colors.background}
 ;=====================================================
 ;     File Includes
 ;=====================================================
@@ -124,9 +138,9 @@ inherit = bar/master
 monitor = ${env:MONITOR:HDMI-0}
 
 modules-left   = jgmenu i3 window_switch
-modules-center = clock
+modules-center = clock xkill
 # modules-right  = ${env:POLYBAR_MODULES: battery keyboard redshift temperature memory pkg network volume}
-modules-right  =  keyboard redshift temperature memory pkg network volume-bar
+modules-right  =  keyboard redshift temperature memory pkg network volume-bar powermenu
 
 ;=====================================================
 ;     Bspwm Bars
@@ -155,3 +169,37 @@ monitor =
 modules-left   = workspaces menu
 modules-center = clock
 modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg network volume}
+
+
+
+[module/powermenu]
+type = custom/menu
+click-right = echo right %counter%
+label-open =   
+;label-open-background = #dd0000
+;label-open-foreground = #fff
+label-close = cancel
+;label-close-background = #dd0000
+;label-close-foreground = #fff
+label-open-padding = 4 
+label-close-padding = 3 
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+menu-0-0-padding = 3
+menu-0-1-padding = 3
+
+menu-1-0 = reboot?  
+menu-1-0-exec = sudo reboot
+menu-1-0-padding = 3
+
+menu-2-0 = power off?  
+menu-2-0-exec = sudo poweroff
+menu-2-0-padding = 3
+
+[module/xkill]
+type = custom/script
+exec = echo 
+click-left = xkill

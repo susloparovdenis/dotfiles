@@ -24,7 +24,7 @@ client.urgent           $coloru   $coloru   $color15 $coloru $coloru
 client.placeholder      $color0   $color8   $color15 $color0 $color8
 client.background       $color0
 # border & title.. Must be set to border pixel for gaps to work
-for_window [class="^.*"] border pixel 1, title_format "<b> %title </b>"
+for_window [class="^.*"] border pixel 0, title_format "<b> %title </b>"
 # for_window [class="^.*"] border normal, title_format "<span foreground='{color15}'>%class</span> <b><span foreground='{color5}'>%title</span></b>"
 # for_window [class="^.*"] border normal, title_format "<span foreground='{color0}'>0</span><span foreground='{color1}'>1</span><span foreground='{color2}'>2</span><span foreground='{color3}'>3</span><span foreground='{color4}'>4</span><span foreground='{color5}'>5</span><span foreground='{color6}'>6</span><span foreground='{color7}'>7</span><span foreground='{color8}'>8</span><span foreground='{color9}'>9</span><span foreground='{color10}'>10</span><span foreground='{color11}'>11</span><span foreground='{color12}'>12</span><span foreground='{color13}'>13</span><span foreground='{color14}'>14</span>"
 title_align left
@@ -163,7 +163,7 @@ bindsym $Super+Shift+Mod2+KP_Home move container to workspace $WS7; workspace $W
 bindsym $Super+Shift+Mod2+KP_Up move container to workspace $WS8; workspace $WS8
 
 
-bindsym $Super+w workspace next
+bindsym $Super+e workspace next
 bindsym $Super+q workspace prev
 ############################################################
 ##############     Reload configs           ################
@@ -172,7 +172,7 @@ bindsym $Super+q workspace prev
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $Super+Shift+r restart
 bindsym $Super+Shift+p exec --no-startup-id ~/.config/polybar/launch_polybar.sh
-bindsym $Super+Shift+w exec --no-startup-id wpg -s $(wpg -c)
+bindsym $Super+? exec --no-startup-id wpg -s $(wpg -c)
 bindsym $Super+Shift+m exec --no-startup-id wpg -m
 # reload the configuration file
 bindsym $Super+Shift+c reload
@@ -186,6 +186,11 @@ bindsym $Super+$down  focus down
 bindsym $Super+$up    focus up
 bindsym $Super+$right focus right
 
+bindsym $Super+a  focus left
+bindsym $Super+s  focus down
+bindsym $Super+w    focus up
+bindsym $Super+d focus right
+
 bindsym $Super+Left  focus left
 bindsym $Super+Down  focus down
 bindsym $Super+Up    focus up
@@ -197,10 +202,15 @@ bindsym $Super+Shift+$down  move down  10px
 bindsym $Super+Shift+$up    move up    10px
 bindsym $Super+Shift+$right move right 10px
 
-bindsym $Super+Shift+Up    move up    10px
-bindsym $Super+Shift+Down  move down  10px
 bindsym $Super+Shift+Left  move left  10px
+bindsym $Super+Shift+Down  move down  10px
+bindsym $Super+Shift+Up    move up    10px
 bindsym $Super+Shift+Right move right 10px
+
+bindsym $Super+Shift+a  move left  10px
+bindsym $Super+Shift+s  move down  10px
+bindsym $Super+Shift+w    move up    10px
+bindsym $Super+Shift+d move right 10px
 
 # Scratchpad, Floating
 bindsym $Super+Shift+space floating toggle
@@ -213,15 +223,10 @@ bindsym $Super+z scratchpad show
 bindsym $Super+Shift+v split h
 bindsym $Super+v split v
 
-bindsym $Super+a focus parent
 bindsym $Super+p focus parent
-# bindsym $Super+c focus child
-
 
 bindsym $Super+space focus mode_toggle
-bindsym $Super+s layout stacking
-bindsym $Super+shift+s layout tabbed
-bindsym $Super+o layout toggle split
+bindsym $Super+Tab layout toggle all
 
 
 
@@ -277,7 +282,7 @@ bindsym $Super+Control+Shift+minus gaps outer all minus 5
 ############    application settings   ############
 ###################################################
 
-for_window [class="(?i)(?:qt5ct|pinentry|Bluetooth)"] floating enable, focus
+for_window [class="(?i)(?:qt5ct|pinentry|Bluetooth|blueberry.py)"] floating enable, focus
 for_window [class="(?i)(?:termite|thunar)"] focus
 for_window [class="(?i)(?:geany|firefox)"] focus
 for_window [class="(?i)(?:bitwarden|telegram)"] floating enable
@@ -302,16 +307,17 @@ bindsym $Alt+F1 exec --no-startup-id rofi_run -r
 # Apps
 bindsym $Super+e exec --no-startup-id kitty -e ranger
 bindsym $Super+t exec exo-open --launch TerminalEmulator
-# bindsym $Super+w exec exo-open --launch WebBrowser
+bindsym $Super+g exec exo-open --launch WebBrowser 
 bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{{cmd}}'
 bindsym $alt+F2  exec rofi -show run
 bindsym $mod+Return   exec exo-open --launch TerminalEmulator
-bindsym $Super+d exec --no-startup-id "rofi -show drun -font \\"DejaVu 9\\" -run-shell-command '{{terminal}} -e \\" {{cmd}}; read -n 1 -s\\"'"
+# bindsym $Super+d exec --no-startup-id "rofi -show drun -font \\"DejaVu 9\\" -run-shell-command '{{terminal}} -e \\" {{cmd}}; read -n 1 -s\\"'" !!!
 bindsym Print exec flameshot gui
 # logout script
 bindsym $Super+x exec --no-startup-id rofi_run -l
 
 bindsym --release button2 kill
+bindsym --whole-window $mod+button2 kill
 
 
 exec i3-msg workspace $WS1

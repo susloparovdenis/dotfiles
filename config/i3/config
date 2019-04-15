@@ -1,31 +1,17 @@
  # ArchLabs i3 config
 set $mod Mod4
 set $alt Mod1
-<<<<<<< HEAD
-set $coloract "#3cafcb"
-set $colorin "#2a788c"
-set $color_border "#3cafcb"
+set $coloract "#274153"
+set $colorin "#1b2d39"
+set $color_border "#274153"
 
 
 set $terminal urxvtc
-set_from_resource $color15 i3wm.color15 "#d0ffff"
-set_from_resource $split i3wm.color10 "#638ba3"
-set_from_resource $coloru i3wm.color2 "#576974"
-set_from_resource $color0 i3wm.color0 "#04090F"
-set_from_resource $color8 i3wm.color8 "#0b1b2f"
-=======
-set $coloract "#244cb3"
-set $colorin "#19347a"
-set $color_border "#244cb3"
-
-
-set $terminal urxvtc
-set_from_resource $color15 i3wm.color15 "#d0fdff"
-set_from_resource $split i3wm.color10 "#6676de"
-set_from_resource $coloru i3wm.color2 "#5B649F"
-set_from_resource $color0 i3wm.color0 "#14110e"
-set_from_resource $color8 i3wm.color8 "#312a22"
->>>>>>> polybar
+set_from_resource $color15 i3wm.color15 "#9fb1b9"
+set_from_resource $split i3wm.color10 "#315269"
+set_from_resource $coloru i3wm.color2 "#315269"
+set_from_resource $color0 i3wm.color0 "#04060D"
+set_from_resource $color8 i3wm.color8 "#6f7b81"
 
 
 ######### COLORS ##########
@@ -38,14 +24,9 @@ client.urgent           $coloru   $coloru   $color15 $coloru $coloru
 client.placeholder      $color0   $color8   $color15 $color0 $color8
 client.background       $color0
 # border & title.. Must be set to border pixel for gaps to work
-for_window [class="^.*"] border pixel 1, title_format "<b> %title </b>"
-<<<<<<< HEAD
-# for_window [class="^.*"] border normal, title_format "<span foreground='#d0ffff'>%class</span> <b><span foreground='#3D88B4'>%title</span></b>"
-# for_window [class="^.*"] border normal, title_format "<span foreground='#04090F'>0</span><span foreground='#4AA6E8'>1</span><span foreground='#576974'>2</span><span foreground='#2C6799'>3</span><span foreground='#357AC5'>4</span><span foreground='#3D88B4'>5</span><span foreground='#3A8CD4'>6</span><span foreground='#aae6f5'>7</span><span foreground='#0b1b2f'>8</span><span foreground='#4cdbff'>9</span><span foreground='#638ba3'>10</span><span foreground='#2c86d3'>11</span><span foreground='#349dff'>12</span><span foreground='#3fb4f9'>13</span><span foreground='#39b7ff'>14</span>"
-=======
-# for_window [class="^.*"] border normal, title_format "<span foreground='#d0fdff'>%class</span> <b><span foreground='#9C7495'>%title</span></b>"
-# for_window [class="^.*"] border normal, title_format "<span foreground='#14110e'>0</span><span foreground='#2E4FA2'>1</span><span foreground='#5B649F'>2</span><span foreground='#DF9763'>3</span><span foreground='#3168C8'>4</span><span foreground='#9C7495'>5</span><span foreground='#3D8EEB'>6</span><span foreground='#a0c3e8'>7</span><span foreground='#312a22'>8</span><span foreground='#2e60e0'>9</span><span foreground='#6676de'>10</span><span foreground='#ffc06b'>11</span><span foreground='#2f82ff'>12</span><span foreground='#dc85cd'>13</span><span foreground='#3bb7ff'>14</span>"
->>>>>>> polybar
+for_window [class="^.*"] border pixel 0, title_format "<b> %title </b>"
+# for_window [class="^.*"] border normal, title_format "<span foreground='#9fb1b9'>%class</span> <b><span foreground='#818475'>%title</span></b>"
+# for_window [class="^.*"] border normal, title_format "<span foreground='#04060D'>0</span><span foreground='#2A455B'>1</span><span foreground='#315269'>2</span><span foreground='#3A6176'>3</span><span foreground='#4B6775'>4</span><span foreground='#818475'>5</span><span foreground='#3E6A81'>6</span><span foreground='#9fb1b9'>7</span><span foreground='#6f7b81'>8</span><span foreground='#2A455B'>9</span><span foreground='#315269'>10</span><span foreground='#3A6176'>11</span><span foreground='#4B6775'>12</span><span foreground='#818475'>13</span><span foreground='#3E6A81'>14</span>"
 title_align left
 
 # gaps
@@ -182,7 +163,7 @@ bindsym $Super+Shift+Mod2+KP_Home move container to workspace $WS7; workspace $W
 bindsym $Super+Shift+Mod2+KP_Up move container to workspace $WS8; workspace $WS8
 
 
-bindsym $Super+w workspace next
+bindsym $Super+e workspace next
 bindsym $Super+q workspace prev
 ############################################################
 ##############     Reload configs           ################
@@ -191,7 +172,7 @@ bindsym $Super+q workspace prev
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $Super+Shift+r restart
 bindsym $Super+Shift+p exec --no-startup-id ~/.config/polybar/launch_polybar.sh
-bindsym $Super+Shift+w exec --no-startup-id wpg -s $(wpg -c)
+bindsym $Super+? exec --no-startup-id wpg -s $(wpg -c)
 bindsym $Super+Shift+m exec --no-startup-id wpg -m
 # reload the configuration file
 bindsym $Super+Shift+c reload
@@ -205,6 +186,11 @@ bindsym $Super+$down  focus down
 bindsym $Super+$up    focus up
 bindsym $Super+$right focus right
 
+bindsym $Super+a  focus left
+bindsym $Super+s  focus down
+bindsym $Super+w    focus up
+bindsym $Super+d focus right
+
 bindsym $Super+Left  focus left
 bindsym $Super+Down  focus down
 bindsym $Super+Up    focus up
@@ -216,10 +202,15 @@ bindsym $Super+Shift+$down  move down  10px
 bindsym $Super+Shift+$up    move up    10px
 bindsym $Super+Shift+$right move right 10px
 
-bindsym $Super+Shift+Up    move up    10px
-bindsym $Super+Shift+Down  move down  10px
 bindsym $Super+Shift+Left  move left  10px
+bindsym $Super+Shift+Down  move down  10px
+bindsym $Super+Shift+Up    move up    10px
 bindsym $Super+Shift+Right move right 10px
+
+bindsym $Super+Shift+a  move left  10px
+bindsym $Super+Shift+s  move down  10px
+bindsym $Super+Shift+w    move up    10px
+bindsym $Super+Shift+d move right 10px
 
 # Scratchpad, Floating
 bindsym $Super+Shift+space floating toggle
@@ -232,15 +223,10 @@ bindsym $Super+z scratchpad show
 bindsym $Super+Shift+v split h
 bindsym $Super+v split v
 
-bindsym $Super+a focus parent
 bindsym $Super+p focus parent
-# bindsym $Super+c focus child
-
 
 bindsym $Super+space focus mode_toggle
-bindsym $Super+s layout stacking
-bindsym $Super+shift+s layout tabbed
-bindsym $Super+o layout toggle split
+bindsym $Super+Tab layout toggle all
 
 
 
@@ -296,7 +282,7 @@ bindsym $Super+Control+Shift+minus gaps outer all minus 5
 ############    application settings   ############
 ###################################################
 
-for_window [class="(?i)(?:qt5ct|pinentry|Bluetooth)"] floating enable, focus
+for_window [class="(?i)(?:qt5ct|pinentry|Bluetooth|blueberry.py)"] floating enable, focus
 for_window [class="(?i)(?:termite|thunar)"] focus
 for_window [class="(?i)(?:geany|firefox)"] focus
 for_window [class="(?i)(?:bitwarden|telegram)"] floating enable
@@ -321,16 +307,17 @@ bindsym $Alt+F1 exec --no-startup-id rofi_run -r
 # Apps
 bindsym $Super+e exec --no-startup-id kitty -e ranger
 bindsym $Super+t exec exo-open --launch TerminalEmulator
-# bindsym $Super+w exec exo-open --launch WebBrowser
+bindsym $Super+g exec exo-open --launch WebBrowser 
 bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $alt+F2  exec rofi -show run
 bindsym $mod+Return   exec exo-open --launch TerminalEmulator
-bindsym $Super+d exec --no-startup-id "rofi -show drun -font \\"DejaVu 9\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
+# bindsym $Super+d exec --no-startup-id "rofi -show drun -font \\"DejaVu 9\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'" !!!
 bindsym Print exec flameshot gui
 # logout script
 bindsym $Super+x exec --no-startup-id rofi_run -l
 
 bindsym --release button2 kill
+bindsym --whole-window $mod+button2 kill
 
 
 exec i3-msg workspace $WS1

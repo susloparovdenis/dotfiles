@@ -1,0 +1,2 @@
+#!/bin/bash
+mosquitto_pub -t cmnd/touch/power -m $1

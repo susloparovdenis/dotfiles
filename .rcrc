@@ -1,1 +1,2 @@
 EXCLUDES="excluded:*"
+UNDOTED="bin"
