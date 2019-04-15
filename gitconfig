@@ -2,7 +2,7 @@
 	name = Denis Susloparov
 	email = densus@gmail.com
 [credential]
-	helper = libsecret
+	helper = store
 [color]
 	ui = true
 [color "diff-highlight"]
@@ -23,3 +23,4 @@
 	autosetuprebase = always
 [pull]
 	rebase = true
+	askpass = /usr/bin/ksshaskpass
