@@ -1,14 +1,14 @@
 swipe:
   3: 
     left: 
-      command: 'xdotool key Super+q'
-    right: 
       command: 'xdotool key Super+e'
+    right: 
+      command: 'xdotool key Super+q'
     up: 
       command: 'xdotool key Super+z'
       threshold: 0.3
     down: 
-      command: 'xdotool key Super+Shift+z'
+      command: 'xdotool key Super+m'
       threshold: 0.3
   4:
     left: 
