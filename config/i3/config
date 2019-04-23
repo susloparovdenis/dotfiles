@@ -1,17 +1,17 @@
  # ArchLabs i3 config
 set $mod Mod4
 set $alt Mod1
-set $coloract "#274153"
-set $colorin "#1b2d39"
-set $color_border "#274153"
+set $coloract "#58a8cb"
+set $colorin "#3d738c"
+set $color_border "#58a8cb"
 
 
 set $terminal urxvtc
-set_from_resource $color15 i3wm.color15 "#9fb1b9"
-set_from_resource $split i3wm.color10 "#315269"
-set_from_resource $coloru i3wm.color2 "#315269"
-set_from_resource $color0 i3wm.color0 "#04060D"
-set_from_resource $color8 i3wm.color8 "#6f7b81"
+set_from_resource $color15 i3wm.color15 "#d3ffff"
+set_from_resource $split i3wm.color10 "#2979c7"
+set_from_resource $coloru i3wm.color2 "#295D90"
+set_from_resource $color0 i3wm.color0 "#080E13"
+set_from_resource $color8 i3wm.color8 "#13222f"
 
 
 ######### COLORS ##########
@@ -25,8 +25,8 @@ client.placeholder      $color0   $color8   $color15 $color0 $color8
 client.background       $color0
 # border & title.. Must be set to border pixel for gaps to work
 for_window [class="^.*"] border pixel 0, title_format "<b> %title </b>"
-# for_window [class="^.*"] border normal, title_format "<span foreground='#9fb1b9'>%class</span> <b><span foreground='#818475'>%title</span></b>"
-# for_window [class="^.*"] border normal, title_format "<span foreground='#04060D'>0</span><span foreground='#2A455B'>1</span><span foreground='#315269'>2</span><span foreground='#3A6176'>3</span><span foreground='#4B6775'>4</span><span foreground='#818475'>5</span><span foreground='#3E6A81'>6</span><span foreground='#9fb1b9'>7</span><span foreground='#6f7b81'>8</span><span foreground='#2A455B'>9</span><span foreground='#315269'>10</span><span foreground='#3A6176'>11</span><span foreground='#4B6775'>12</span><span foreground='#818475'>13</span><span foreground='#3E6A81'>14</span>"
+# for_window [class="^.*"] border normal, title_format "<span foreground='#d3ffff'>%class</span> <b><span foreground='#4F68AC'>%title</span></b>"
+# for_window [class="^.*"] border normal, title_format "<span foreground='#080E13'>0</span><span foreground='#AF7371'>1</span><span foreground='#295D90'>2</span><span foreground='#649EBD'>3</span><span foreground='#3071AD'>4</span><span foreground='#4F68AC'>5</span><span foreground='#3A8AD1'>6</span><span foreground='#a2c6e3'>7</span><span foreground='#13222f'>8</span><span foreground='#f68480'>9</span><span foreground='#2979c7'>10</span><span foreground='#6fd3ff'>11</span><span foreground='#2f93ef'>12</span><span foreground='#567fef'>13</span><span foreground='#39b4ff'>14</span>"
 title_align left
 
 # gaps
@@ -305,7 +305,7 @@ bindsym $Alt+space exec --no-startup-id rofi_run -r
 bindsym $Alt+F1 exec --no-startup-id rofi_run -r
 
 # Apps
-bindsym $Super+e exec --no-startup-id kitty -e ranger
+bindsym $Super+r exec --no-startup-id kitty -e ranger
 bindsym $Super+t exec exo-open --launch TerminalEmulator
 bindsym $Super+g exec exo-open --launch WebBrowser 
 bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'

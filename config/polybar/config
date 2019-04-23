@@ -4,12 +4,12 @@
 ;=====================================================
 
 [colors]
-background = #BB04060D
-foreground = #9fb1b9
-active = #274153
-inactive = #1b2d39
-highlight = #315269
-error = #2A455B
+background = #BB080E13
+foreground = #d3ffff
+active = #58a8cb
+inactive = #3d738c
+highlight = #295D90
+error = #f68480
 
 moderate = #ebcb8b
 urgent = #bf616a
@@ -140,7 +140,7 @@ monitor = ${env:MONITOR:HDMI-0}
 modules-left   = jgmenu i3 window_switch
 modules-center = clock xkill
 # modules-right  = ${env:POLYBAR_MODULES: battery keyboard redshift temperature memory pkg network volume}
-modules-right  =  keyboard redshift temperature memory pkg network volume-bar powermenu
+modules-right  =  light keyboard redshift temperature memory pkg network volume-bar powermenu
 
 ;=====================================================
 ;     Bspwm Bars
@@ -192,10 +192,10 @@ menu-0-0-padding = 3
 menu-0-1-padding = 3
 
 menu-1-0 = reboot?  
-menu-1-0-exec = sudo reboot
+menu-1-0-exec = sudo restring1
 menu-1-0-padding = 3
 
-menu-2-0 = power off?  
+menu-2-0 = power off?  string1
 menu-2-0-exec = sudo poweroff
 menu-2-0-padding = 3
 
@@ -203,3 +203,12 @@ menu-2-0-padding = 3
 type = custom/script
 exec = echo 
 click-left = xkill
+
+
+[module/light]
+type = custom/script
+tail = true
+exec = toggle.sh -r
+label = ﯦ
+click-left = .dotfiles/bin/light_t toggle
+click-right = .dotfiles/bin/slampher toggle

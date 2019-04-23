@@ -305,7 +305,7 @@ bindsym $Alt+space exec --no-startup-id rofi_run -r
 bindsym $Alt+F1 exec --no-startup-id rofi_run -r
 
 # Apps
-bindsym $Super+e exec --no-startup-id kitty -e ranger
+bindsym $Super+r exec --no-startup-id kitty -e ranger
 bindsym $Super+t exec exo-open --launch TerminalEmulator
 bindsym $Super+g exec exo-open --launch WebBrowser 
 bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{{cmd}}'

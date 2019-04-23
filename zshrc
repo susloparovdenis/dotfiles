@@ -13,7 +13,7 @@ PATH+=:~/.npm/packages/bin
 PATH+=:~/.npm/bin
 PATH+=:~/go/bin
 PATH+=:~/.dotnet/tools
-
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export FZF_BASE=/usr/share/fzf/
 antigen bundles <<EOBUNDLES
     adrieankhisbe/zsh-quiet-accept-line
