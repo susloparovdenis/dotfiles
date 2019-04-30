@@ -30,6 +30,17 @@ antigen bundles <<EOBUNDLES
     kubectl
     docker-compose
     git
+    common-aliases
+    compleat 
+    copyfile # Copies content of a file into clipboard 
+    django
+    fasd # z-like tools
+    gitfast
+    git-extras
+    httpie
+    npm
+    vi-mode
+    vscode
 
     Tarrasch/zsh-functional
     zsh-users/zsh-history-substring-search
@@ -59,6 +70,8 @@ antigen bundles <<EOBUNDLES
     zsh-users/zaw
     aperezdc/zsh-fzy
     dotenv
+    zsh-users/zsh-syntax-highlighting
+    lukechilds/zsh-nvm
 EOBUNDLES
 
 

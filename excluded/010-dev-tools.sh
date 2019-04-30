@@ -1,2 +1,2 @@
 #!/bin/bash
-yay -S pycharm
+yay -S pycharm httpie

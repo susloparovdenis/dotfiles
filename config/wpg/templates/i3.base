@@ -17,14 +17,14 @@ set_from_resource $color8 i3wm.color8 "{color8}"
 ######### COLORS ##########
 #
 # class                 border    backgr    text    indicator child_border
-client.focused          $coloract $coloract $color15 $split  $coloract
-client.focused_inactive $coloract $coloract $color15 $split  $colorin
-client.unfocused        $colorin  $colorin  $color15 $split  $colorin
-client.urgent           $coloru   $coloru   $color15 $coloru $coloru
-client.placeholder      $color0   $color8   $color15 $color0 $color8
-client.background       $color0
+client.focused          #00000000 $coloract $color15 $split  $coloract
+client.focused_inactive #00000000 $coloract $color15 $split  $colorin
+client.unfocused        #00000000  $colorin  $color15 $split  $colorin
+client.urgent           #00000000   $coloru   $color15 $coloru $coloru
+client.placeholder      #00000000   $color8   $color15 $color0 $color8
+client.background       #00000000
 # border & title.. Must be set to border pixel for gaps to work
-for_window [class="^.*"] border pixel 0, title_format "<b> %title </b>"
+for_window [class="^.*"] border pixel 4, title_format "<b> %title </b>"
 # for_window [class="^.*"] border normal, title_format "<span foreground='{color15}'>%class</span> <b><span foreground='{color5}'>%title</span></b>"
 # for_window [class="^.*"] border normal, title_format "<span foreground='{color0}'>0</span><span foreground='{color1}'>1</span><span foreground='{color2}'>2</span><span foreground='{color3}'>3</span><span foreground='{color4}'>4</span><span foreground='{color5}'>5</span><span foreground='{color6}'>6</span><span foreground='{color7}'>7</span><span foreground='{color8}'>8</span><span foreground='{color9}'>9</span><span foreground='{color10}'>10</span><span foreground='{color11}'>11</span><span foreground='{color12}'>12</span><span foreground='{color13}'>13</span><span foreground='{color14}'>14</span>"
 title_align left
@@ -282,7 +282,7 @@ bindsym $Super+Control+Shift+minus gaps outer all minus 5
 ############    application settings   ############
 ###################################################
 
-for_window [class="(?i)(?:qt5ct|pinentry|Bluetooth|blueberry.py)"] floating enable, focus
+for_window [class="(?i)(?:qt5ct|pinentry|Bluetooth|blueberry.py|pavucontrol)"] floating enable, focus
 for_window [class="(?i)(?:termite|thunar)"] focus
 for_window [class="(?i)(?:geany|firefox)"] focus
 for_window [class="(?i)(?:bitwarden|telegram)"] floating enable
