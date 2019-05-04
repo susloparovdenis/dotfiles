@@ -1,2 +1,4 @@
 Host *
-ServerAliveInterval 240
+  ServerAliveInterval 240
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_rsa
