@@ -1,33 +1,32 @@
  # ArchLabs i3 config
 set $mod Mod4
 set $alt Mod1
-set $coloract "#574142"
-set $colorin "#3b2d2d"
-set $color_border "#574142"
+set $coloract "#58a8cb"
+set $colorin "#3d738c"
+set $color_border "#58a8cb"
 
 
 set $terminal urxvtc
-set_from_resource $color15 i3wm.color15 "#b7b2bd"
-set_from_resource $split i3wm.color10 "#6D5253"
-set_from_resource $coloru i3wm.color2 "#6D5253"
-set_from_resource $color0 i3wm.color0 "#0b0c0d"
-set_from_resource $color8 i3wm.color8 "#807c84"
+set_from_resource $color15 i3wm.color15 "#d3ffff"
+set_from_resource $split i3wm.color10 "#2979c7"
+set_from_resource $coloru i3wm.color2 "#295D90"
+set_from_resource $color0 i3wm.color0 "#080E13"
+set_from_resource $color8 i3wm.color8 "#13222f"
 
 
 ######### COLORS ##########
 #
 # class                 border    backgr    text    indicator child_border
-client.focused          #00000000 $coloract $color15 $split  $coloract
-client.focused_inactive #00000000 $coloract $color15 $split  $colorin
-client.unfocused        #00000000  $colorin  $color15 $split  $colorin
-client.urgent           #00000000   $coloru   $color15 $coloru $coloru
-client.placeholder      #00000000   $color8   $color15 $color0 $color8
-client.background       #00000000
+client.focused          $coloract $coloract $color15 $split  $coloract
+client.focused_inactive $coloract $coloract $color15 $split  $colorin
+client.unfocused        $colorin  $colorin  $color15 $split  $colorin
+client.urgent           $coloru   $coloru   $color15 $coloru $coloru
+client.placeholder      $color0   $color8   $color15 $color0 $color8
+client.background       $color0
 # border & title.. Must be set to border pixel for gaps to work
-# for_window [class="^.*"] border pixel 4, title_format "<b> %title </b>"
-# for_window [class="^.*"] border normal, title_format "<span foreground='#b7b2bd'>%class</span> <b><span foreground='#956A66'>%title</span></b>"
-for_window [class="^.*"] border none
-# for_window [class="^.*"] border normal, title_format "<span foreground='#0b0c0d'>0</span><span foreground='#51484F'>1</span><span foreground='#6D5253'>2</span><span foreground='#6A5E68'>3</span><span foreground='#AB5E51'>4</span><span foreground='#956A66'>5</span><span foreground='#BB8C76'>6</span><span foreground='#b7b2bd'>7</span><span foreground='#807c84'>8</span><span foreground='#51484F'>9</span><span foreground='#6D5253'>10</span><span foreground='#6A5E68'>11</span><span foreground='#AB5E51'>12</span><span foreground='#956A66'>13</span><span foreground='#BB8C76'>14</span>"
+for_window [class="^.*"] border pixel 0, title_format "<b> %title </b>"
+# for_window [class="^.*"] border normal, title_format "<span foreground='#d3ffff'>%class</span> <b><span foreground='#4F68AC'>%title</span></b>"
+# for_window [class="^.*"] border normal, title_format "<span foreground='#080E13'>0</span><span foreground='#AF7371'>1</span><span foreground='#295D90'>2</span><span foreground='#649EBD'>3</span><span foreground='#3071AD'>4</span><span foreground='#4F68AC'>5</span><span foreground='#3A8AD1'>6</span><span foreground='#a2c6e3'>7</span><span foreground='#13222f'>8</span><span foreground='#f68480'>9</span><span foreground='#2979c7'>10</span><span foreground='#6fd3ff'>11</span><span foreground='#2f93ef'>12</span><span foreground='#567fef'>13</span><span foreground='#39b4ff'>14</span>"
 title_align left
 
 # gaps
@@ -125,9 +124,9 @@ workspace $WS1 output $Mon1
 workspace $WS2 output $Mon1
 workspace $WS3 output $Mon1
 workspace $WS4 output $Mon1
-workspace $WS5 output $Mon1
-workspace $WS6 output $Mon1
-workspace $WS7 output $Mon1
+workspace $WS5 output $Mon2
+workspace $WS6 output $Mon2
+workspace $WS7 output $Mon2
 workspace $WS8 output $Mon2
 workspace $WS9 output $Mon2
 # switch to workspace
@@ -169,8 +168,8 @@ bindsym $Super+q workspace prev
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $Super+Shift+r restart
-bindsym $Super+Shift+p exec --no-startup-id ~/.config/polybar/launch.sh
-bindsym $Super+r exec --no-startup-id wpg -s $(wpg -c)
+bindsym $Super+Shift+p exec --no-startup-id ~/.config/polybar/launch_polybar.sh
+bindsym $Super+? exec --no-startup-id wpg -s $(wpg -c)
 bindsym $Super+Shift+m exec --no-startup-id wpg -m
 # reload the configuration file
 bindsym $Super+Shift+c reload
@@ -282,7 +281,7 @@ bindsym $Super+Control+Shift+minus gaps outer all minus 5
 ############    application settings   ############
 ###################################################
 
-for_window [class="(?i)(?:qt5ct|pinentry|Bluetooth|blueberry.py|pavucontrol)"] floating enable, focus
+for_window [class="(?i)(?:qt5ct|pinentry|Bluetooth|blueberry.py)"] floating enable, focus
 for_window [class="(?i)(?:termite|thunar)"] focus
 for_window [class="(?i)(?:geany|firefox)"] focus
 for_window [class="(?i)(?:bitwarden|telegram)"] floating enable

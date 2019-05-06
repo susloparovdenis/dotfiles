@@ -1,6 +1,6 @@
 source /usr/share/zsh/share/antigen.zsh
 antigen use oh-my-zsh
-GOPATH=$HOME/.local/go
+
 DEFAULT_USER='denis'
 EDITOR='/usr/bin/nvim'
 VISUAL='code.exe'
@@ -11,7 +11,7 @@ PATH+=:~/.gem/ruby/2.5.0/bin
 PATH+=:~/.local/bin
 PATH+=:~/.npm/packages/bin
 PATH+=:~/.npm/bin
-PATH+=:~/.local/go/bin
+PATH+=:~/go/bin
 PATH+=:~/.dotnet/tools
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export FZF_BASE=/usr/share/fzf/
@@ -39,7 +39,7 @@ antigen bundles <<EOBUNDLES
     git-extras
     httpie
     npm
-    # vi-mode
+    vi-mode
     vscode
 
     Tarrasch/zsh-functional

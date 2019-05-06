@@ -17,8 +17,8 @@ nitrogen --restore &
 gnome-keyring-daemon --start --components=pkcs11 &
 
 # pressing super alone simulates Alt-F1
-#ksuperkey -e 'Super_L=Alt_L|F1' &
-#ksuperkey -e 'Super_R=Alt_L|F1' &
+ksuperkey -e 'Super_L=Alt_L|F1' &
+ksuperkey -e 'Super_R=Alt_L|F1' &
 
 # display timeout and sleep
 xset s 1200 4300
