@@ -71,7 +71,7 @@ set $Mon2 eDP1
 #####################################################
 
 # run with reload
-exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 # exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xrdb -load ~/.Xresources
 

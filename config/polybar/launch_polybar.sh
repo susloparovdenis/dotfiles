@@ -1,4 +1,1 @@
-[[ $(pidof polybar) ]] && pkill polybar
-for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-  MONITOR=$m polybar i3-bar &
-done
+/home/denis/.dotfiles/config/polybar/launch_polybar.sh

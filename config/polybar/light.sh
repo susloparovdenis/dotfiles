@@ -1,0 +1,1 @@
+/home/denis/.dotfiles/config/polybar/light.sh
