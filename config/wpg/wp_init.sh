@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-wpg -rs 'DNA_3_d_structure_molecule_pattern_abstraction_genetic_psychedelic_3000x2250.jpg' 'DNA_3_d_structure_molecule_pattern_abstraction_genetic_psychedelic_3000x2250.jpg'
+wpg -rs 'sunset_winter_railway_3840x2400.jpg' 'sunset_winter_railway_3840x2400.jpg'

@@ -171,7 +171,7 @@ bindsym $Super+q workspace prev
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $Super+Shift+r restart
-bindsym $Super+Shift+p exec --no-startup-id ~/.config/polybar/launch_polybar.sh
+bindsym $Super+Shift+p exec --no-startup-id ~/.config/polybar/launch.sh
 bindsym $Super+? exec --no-startup-id wpg -s $(wpg -c)
 bindsym $Super+Shift+m exec --no-startup-id wpg -m
 # reload the configuration file
@@ -213,113 +213,4 @@ bindsym $Super+Shift+w    move up    10px
 bindsym $Super+Shift+d move right 10px
 
 # Scratchpad, Floating
-bindsym $Super+Shift+space floating toggle
-floating_modifier  $Alt
-
-bindsym $Super+Shift+z move scratchpad
-bindsym $Super+z scratchpad show
-
-# Control
-bindsym $Super+Shift+v split h
-bindsym $Super+v split v
-
-bindsym $Super+p focus parent
-
-bindsym $Super+space focus mode_toggle
-bindsym $Super+Tab layout toggle all
-
-
-
-
-# Size
-bindsym $Alt+Up    resize shrink height 10 px or 1 ppt
-bindsym $Alt+Down  resize grow   height 10 px or 1 ppt
-bindsym $Alt+Left  resize shrink width  10 px or 1 ppt
-bindsym $Alt+Right resize grow   width  10 px or 1 ppt
-
-# layout toggle, keycode 23 is Tab
-bindsym $Alt+23 focus mode_toggle
-bindsym $Alt+Shift+23 workspace prev
-
-#bindcode $Super+23 exec skippy-xd
-bindsym $Super+f fullscreen toggle 
-
-
-
-
-# switch to w+shiftorkspace with urgent window
-for_window [urgent="latest"] focus
-focus_on_window_activation   focus
-
-
-######################################################
-###############      Border & Gaps     ###############
-######################################################
-
-# new_window normal 2px
-
-new_float normal
-hide_edge_borders none
-popup_during_fullscreen smart
-bindsym $Super+shift+b border toggle
-
-# changing border style
-bindsym $Super+n border normal
-bindsym $Super+y border 1pixel
-bindsym $Super+u border none
-
-# change gaps
-bindsym $Super+plus        gaps inner current plus  5
-bindsym $Super+minus       gaps inner current minus 5
-bindsym $Super+Shift+plus  gaps outer current plus  5
-bindsym $Super+Shift+minus gaps outer current minus 5
-bindsym $Super+Control+plus        gaps inner all plus  5
-bindsym $Super+Control+minus       gaps inner all minus 5
-bindsym $Super+Control+Shift+plus  gaps outer all plus  5
-bindsym $Super+Control+Shift+minus gaps outer all minus 5
-
-###################################################
-############    application settings   ############
-###################################################
-
-for_window [class="(?i)(?:qt5ct|pinentry|Bluetooth|blueberry.py|pavucontrol)"] floating enable, focus
-for_window [class="(?i)(?:termite|thunar)"] focus
-for_window [class="(?i)(?:geany|firefox)"] focus
-for_window [class="(?i)(?:bitwarden|telegram)"] floating enable
-
-# Assign Applications to specific workspace
-# get class with xprop
-assign [class="(?i)(?:firefox)"] → $WS1
-assign [class="(?i)(?:geany)"] → $WS2
-assign [class="(?i)(?:thunar)"] → $WS3
-
-# focus, floating, & sticky
-for_window [title="(?i)(?:copying|deleting|moving)"] floating enable
-for_window [window_role="(?i)(?:pop-up|setup)"] floating enable
-
-
-# launchers
-bindsym $Alt+space exec --no-startup-id rofi_run -r
-
-# this is needed for super key to launch rofi
-bindsym $Alt+F1 exec --no-startup-id rofi_run -r
-
-# Apps
-bindsym $Super+r exec --no-startup-id kitty -e ranger
-bindsym $Super+t exec exo-open --launch TerminalEmulator
-bindsym $Super+g exec exo-open --launch WebBrowser 
-bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{{cmd}}'
-bindsym $alt+F2  exec rofi -show run
-bindsym $mod+Return   exec exo-open --launch TerminalEmulator
-# bindsym $Super+d exec --no-startup-id "rofi -show drun -font \\"DejaVu 9\\" -run-shell-command '{{terminal}} -e \\" {{cmd}}; read -n 1 -s\\"'" !!!
-bindsym Print exec flameshot gui
-# logout script
-bindsym $Super+x exec --no-startup-id rofi_run -l
-
-bindsym --release button2 kill
-bindsym --whole-window $mod+button2 kill
-
-
-exec i3-msg workspace $WS1
-focus_follows_mouse no
-new_window normal
+bindsym $Super+Sh

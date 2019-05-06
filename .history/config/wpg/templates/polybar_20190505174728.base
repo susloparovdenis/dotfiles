@@ -140,7 +140,7 @@ monitor = ${{env:MONITOR:HDMI-0}}
 modules-left   = jgmenu i3 window_switch
 modules-center = clock 
 # modules-right  = ${{env:POLYBAR_MODULES: battery keyboard redshift temperature memory pkg network volume}}
-modules-right  =   xkill pkg keyboard memory  network light  redshift   volume-bar
+modules-right  =   xkill pkg keyboard memory  network light  redshift volume-bar
 ;=====================================================
 ;     Bspwm Bars
 ;=====================================================
@@ -170,6 +170,8 @@ modules-center = clock
 modules-right  = ${{env:POLYBAR_MODULES:coreuse temperature memory pkg network volume}}
 
 
+
+
 [module/xkill]
 type = custom/script
 exec = echo 
@@ -190,10 +192,10 @@ click-right = ~/.dotfiles/bin/slampher toggle
 [module/volume-bar]
 type = internal/alsa
 bar-volume-font = 2
-bar-volume-width = 10
+bar-volume-width = 5
 format-volume = <label-volume><bar-volume>
 label-volume = "  "
-label-muted = "   mute  "
+label-muted = "   mute"
 label-volume-foreground = #B6C2E7
 format-muted-foreground = #E76BB4
 bar-volume-foreground-0 = #92A3F7
@@ -208,15 +210,3 @@ bar-volume-indicator = |
 bar-volume-fill = •
 bar-volume-empty = ·
 bar-volume-empty-foreground = #666666
-
-
-;;;;;;;;;
-;; MEM ;;
-;;;;;;;;;
-[module/memory]
-type = internal/memory
-interval = 3
-format = <label>
-label-padding = 1
-label = %{A1:termite -e "htop -s PERCENT_MEM" & disown:} %percentage_used%%%{A}
-click-left = pavucontrolБ
