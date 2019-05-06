@@ -1,17 +1,17 @@
  # ArchLabs i3 config
 set $mod Mod4
 set $alt Mod1
-set $coloract "#1a6da2"
-set $colorin "#124b6f"
-set $color_border "#1a6da2"
+set $coloract "#574142"
+set $colorin "#3b2d2d"
+set $color_border "#574142"
 
 
 set $terminal urxvtc
-set_from_resource $color15 i3wm.color15 "#f8fdff"
-set_from_resource $split i3wm.color10 "#ffd769"
-set_from_resource $coloru i3wm.color2 "#E1A561"
-set_from_resource $color0 i3wm.color0 "#0e0d10"
-set_from_resource $color8 i3wm.color8 "#211e26"
+set_from_resource $color15 i3wm.color15 "#b7b2bd"
+set_from_resource $split i3wm.color10 "#6D5253"
+set_from_resource $coloru i3wm.color2 "#6D5253"
+set_from_resource $color0 i3wm.color0 "#0b0c0d"
+set_from_resource $color8 i3wm.color8 "#807c84"
 
 
 ######### COLORS ##########
@@ -24,9 +24,10 @@ client.urgent           #00000000   $coloru   $color15 $coloru $coloru
 client.placeholder      #00000000   $color8   $color15 $color0 $color8
 client.background       #00000000
 # border & title.. Must be set to border pixel for gaps to work
-for_window [class="^.*"] border pixel 4, title_format "<b> %title </b>"
-# for_window [class="^.*"] border normal, title_format "<span foreground='#f8fdff'>%class</span> <b><span foreground='#638C97'>%title</span></b>"
-# for_window [class="^.*"] border normal, title_format "<span foreground='#0e0d10'>0</span><span foreground='#A2A097'>1</span><span foreground='#E1A561'>2</span><span foreground='#236893'>3</span><span foreground='#EED0A5'>4</span><span foreground='#638C97'>5</span><span foreground='#D1B695'>6</span><span foreground='#d0d4db'>7</span><span foreground='#211e26'>8</span><span foreground='#e6dcb0'>9</span><span foreground='#ffd769'>10</span><span foreground='#2189cb'>11</span><span foreground='#ffffb7'>12</span><span foreground='#70bfd4'>13</span><span foreground='#ffeeaa'>14</span>"
+# for_window [class="^.*"] border pixel 4, title_format "<b> %title </b>"
+# for_window [class="^.*"] border normal, title_format "<span foreground='#b7b2bd'>%class</span> <b><span foreground='#956A66'>%title</span></b>"
+for_window [class="^.*"] border none
+# for_window [class="^.*"] border normal, title_format "<span foreground='#0b0c0d'>0</span><span foreground='#51484F'>1</span><span foreground='#6D5253'>2</span><span foreground='#6A5E68'>3</span><span foreground='#AB5E51'>4</span><span foreground='#956A66'>5</span><span foreground='#BB8C76'>6</span><span foreground='#b7b2bd'>7</span><span foreground='#807c84'>8</span><span foreground='#51484F'>9</span><span foreground='#6D5253'>10</span><span foreground='#6A5E68'>11</span><span foreground='#AB5E51'>12</span><span foreground='#956A66'>13</span><span foreground='#BB8C76'>14</span>"
 title_align left
 
 # gaps
@@ -35,7 +36,6 @@ gaps outer 15
 
 # font
 font pango:monospace 10 
-# new_window pixel 12
 
 
 # buttons
@@ -50,15 +50,15 @@ set $down j
 set $left h
 set $right l
 
-set $WS1 "1"
-set $WS2 "2"
-set $WS3 "3"
-set $WS4 "4"
-set $WS5 "5"
-set $WS6 "6"
-set $WS7 "7"
-set $WS8 "8"
-set $WS9 "9"
+set $WS1 "1:"
+set $WS2 "2:"
+set $WS3 "3:"
+set $WS4 "4:"
+set $WS5 "5:"
+set $WS6 "6:"
+set $WS7 "7:"
+set $WS8 "8:"
+set $WS9 "9:"
 # exec --no-startup-id ~/.config/work.sh
 
 
@@ -71,7 +71,6 @@ set $Mon2 eDP1
 #####################################################
 
 # run with reload
-# exec_always --no-startup-id al-polybar-session
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 # exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xrdb -load ~/.Xresources
@@ -92,14 +91,13 @@ exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11
 # pressing super key alone simulates pressing Alt-F1
 exec --no-startup-id ksuperkey -e 'Super_L=Alt_L|F1'
 exec --no-startup-id ksuperkey -e 'Super_R=Alt_L|F1'
-exec --no-startup-id  $HOME/.config/wpg/wp-init.sh
+exec --no-startup-id ~/.config/wpg/wp_init.sh
 ###########################################################
 #############         Bindings           ##################
 ###########################################################
 
 # kill focused window
 bindsym $Super+Shift+q kill
-
 bindsym $Alt+F4 kill
 
 # launchers
@@ -130,8 +128,8 @@ workspace $WS4 output $Mon1
 workspace $WS5 output $Mon1
 workspace $WS6 output $Mon1
 workspace $WS7 output $Mon1
-workspace $WS8 output $Mon1
-workspace $WS9 output $Mon1
+workspace $WS8 output $Mon2
+workspace $WS9 output $Mon2
 # switch to workspace
 bindsym $Super+1 workspace $WS1
 bindsym $Super+2 workspace $WS2
@@ -172,7 +170,7 @@ bindsym $Super+q workspace prev
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $Super+Shift+r restart
 bindsym $Super+Shift+p exec --no-startup-id ~/.config/polybar/launch.sh
-bindsym $Super+? exec --no-startup-id wpg -s $(wpg -c)
+bindsym $Super+r exec --no-startup-id wpg -s $(wpg -c)
 bindsym $Super+Shift+m exec --no-startup-id wpg -m
 # reload the configuration file
 bindsym $Super+Shift+c reload
@@ -255,12 +253,14 @@ focus_on_window_activation   focus
 ######################################################
 ###############      Border & Gaps     ###############
 ######################################################
-
-# new_window normal 2px
-
+workspace_auto_back_and_forth yes
+focus_follows_mouse no
+default_border none
+new_window none
 new_float normal
 hide_edge_borders none
-popup_during_fullscreen smart
+# popup_during_fullscreen smart
+popup_during_fullscreen leave_fullscreen
 bindsym $Super+shift+b border toggle
 
 # changing border style
@@ -321,5 +321,3 @@ bindsym --whole-window $mod+button2 kill
 
 
 exec i3-msg workspace $WS1
-focus_follows_mouse no
-new_window normal
