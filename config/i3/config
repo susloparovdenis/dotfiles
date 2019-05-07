@@ -1,17 +1,17 @@
  # ArchLabs i3 config
 set $mod Mod4
 set $alt Mod1
-set $coloract "#574142"
-set $colorin "#3b2d2d"
-set $color_border "#574142"
+set $coloract "#7c91a0"
+set $colorin "#55646e"
+set $color_border "#7c91a0"
 
 
 set $terminal urxvtc
-set_from_resource $color15 i3wm.color15 "#b7b2bd"
-set_from_resource $split i3wm.color10 "#6D5253"
-set_from_resource $coloru i3wm.color2 "#6D5253"
-set_from_resource $color0 i3wm.color0 "#0b0c0d"
-set_from_resource $color8 i3wm.color8 "#807c84"
+set_from_resource $color15 i3wm.color15 "#dfe3e7"
+set_from_resource $split i3wm.color10 "#6D90A8"
+set_from_resource $coloru i3wm.color2 "#6D90A8"
+set_from_resource $color0 i3wm.color0 "#000101"
+set_from_resource $color8 i3wm.color8 "#9c9ea1"
 
 
 ######### COLORS ##########
@@ -25,9 +25,9 @@ client.placeholder      #00000000   $color8   $color15 $color0 $color8
 client.background       #00000000
 # border & title.. Must be set to border pixel for gaps to work
 # for_window [class="^.*"] border pixel 4, title_format "<b> %title </b>"
-# for_window [class="^.*"] border normal, title_format "<span foreground='#b7b2bd'>%class</span> <b><span foreground='#956A66'>%title</span></b>"
+# for_window [class="^.*"] border normal, title_format "<span foreground='#dfe3e7'>%class</span> <b><span foreground='#9CB6C9'>%title</span></b>"
 for_window [class="^.*"] border none
-# for_window [class="^.*"] border normal, title_format "<span foreground='#0b0c0d'>0</span><span foreground='#51484F'>1</span><span foreground='#6D5253'>2</span><span foreground='#6A5E68'>3</span><span foreground='#AB5E51'>4</span><span foreground='#956A66'>5</span><span foreground='#BB8C76'>6</span><span foreground='#b7b2bd'>7</span><span foreground='#807c84'>8</span><span foreground='#51484F'>9</span><span foreground='#6D5253'>10</span><span foreground='#6A5E68'>11</span><span foreground='#AB5E51'>12</span><span foreground='#956A66'>13</span><span foreground='#BB8C76'>14</span>"
+# for_window [class="^.*"] border normal, title_format "<span foreground='#000101'>0</span><span foreground='#5C758C'>1</span><span foreground='#6D90A8'>2</span><span foreground='#76A9C4'>3</span><span foreground='#99A0A7'>4</span><span foreground='#9CB6C9'>5</span><span foreground='#B4C8D6'>6</span><span foreground='#dfe3e7'>7</span><span foreground='#9c9ea1'>8</span><span foreground='#5C758C'>9</span><span foreground='#6D90A8'>10</span><span foreground='#76A9C4'>11</span><span foreground='#99A0A7'>12</span><span foreground='#9CB6C9'>13</span><span foreground='#B4C8D6'>14</span>"
 title_align left
 
 # gaps
@@ -71,7 +71,7 @@ set $Mon2 eDP1
 #####################################################
 
 # run with reload
-exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 # exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xrdb -load ~/.Xresources
 
