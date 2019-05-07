@@ -1,0 +1,4 @@
+systemctl --user start pulseaudio-bluetooth-autoconnect.service 
+systemctl --user enable pulseaudio-bluetooth-autoconnect.service 
+systemctl start bluetooth-autoconnect
+systemctl enable bluetooth-autoconnect

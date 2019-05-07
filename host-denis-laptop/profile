@@ -1,0 +1,2 @@
+export MONITOR=HDMI-2
+export MONITOR2=eDP1
