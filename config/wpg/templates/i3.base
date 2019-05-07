@@ -169,13 +169,8 @@ bindsym $Super+q workspace prev
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $Super+Shift+r restart
-<<<<<<< HEAD
-bindsym $Super+Shift+p exec --no-startup-id ~/.config/polybar/launch.sh
-bindsym $Super+r exec --no-startup-id wpg -s $(wpg -c)
-=======
 bindsym $Super+Shift+p exec --no-startup-id ~/.config/polybar/launch_polybar.sh
 bindsym $Super+? exec --no-startup-id wpg -s $(wpg -c)
->>>>>>> Revert "s"
 bindsym $Super+Shift+m exec --no-startup-id wpg -m
 # reload the configuration file
 bindsym $Super+Shift+c reload
@@ -258,23 +253,12 @@ focus_on_window_activation   focus
 ######################################################
 ###############      Border & Gaps     ###############
 ######################################################
-<<<<<<< HEAD
-workspace_auto_back_and_forth yes
-focus_follows_mouse no
-default_border none
-new_window none
-new_float normal
-hide_edge_borders none
-# popup_during_fullscreen smart
-popup_during_fullscreen leave_fullscreen
-=======
 
 # new_window normal 2px
 
 new_float normal
 hide_edge_borders none
 popup_during_fullscreen smart
->>>>>>> Revert "s"
 bindsym $Super+shift+b border toggle
 
 # changing border style
@@ -335,8 +319,5 @@ bindsym --whole-window $mod+button2 kill
 
 
 exec i3-msg workspace $WS1
-<<<<<<< HEAD
-=======
 focus_follows_mouse no
 new_window normal
->>>>>>> Revert "s"
