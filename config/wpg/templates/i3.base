@@ -283,7 +283,7 @@ bindsym $Super+Control+Shift+minus gaps outer all minus 5
 for_window [class="(?i)(?:qt5ct|pinentry|Bluetooth|blueberry.py|pavucontrol)"] floating enable, focus
 for_window [class="(?i)(?:termite|thunar)"] focus
 for_window [class="(?i)(?:geany|firefox)"] focus
-for_window [class="(?i)(?:bitwarden|telegram)"] floating enable
+for_window [class="(?i)(?:bitwarden)"] floating enable
 
 # Assign Applications to specific workspace
 # get class with xprop
@@ -304,7 +304,7 @@ bindsym $Alt+F1 exec --no-startup-id rofi_run -r
 
 # Apps
 bindsym $Super+r exec --no-startup-id kitty -e ranger
-bindsym $Super+t exec exo-open --launch TerminalEmulator
+bindsym $Super+t exec kitty
 bindsym $Super+g exec exo-open --launch WebBrowser 
 bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{{cmd}}'
 bindsym $alt+F2  exec rofi -show run
