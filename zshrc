@@ -39,7 +39,6 @@ antigen bundles <<EOBUNDLES
     git-extras
     httpie
     npm
-    vi-mode
     vscode
 
     Tarrasch/zsh-functional

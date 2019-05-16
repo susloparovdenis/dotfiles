@@ -11,10 +11,10 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # restore the background
 # nitrogen --restore &
-source .profile
 # keyring and polkit daemons
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 gnome-keyring-daemon --start --components=pkcs11 &
+setxkbmap -model pc105 -layout us,ru -variant euro, -option  grp:shift_caps_switch grp:alt_shift_toggle numpad:microsoft eurosign:5 terminate:ctrl_alt_bksp grp:shift_caps_toggle caps:escape 
 
 # pressing super alone simulates Alt-F1
 ksuperkey -e 'Super_L=Alt_L|F1' &
@@ -28,4 +28,6 @@ xset dpms 1200 1300 1400
 xset r rate 350 60
 export EDITOR=/usr/bin/nvim
 [ -f /usr/bin/bat ] && export PAGER=bat
-setxkbmap -model pc105 -layout us,ru -variant euro, -option  grp:shift_caps_switch grp:alt_shift_toggle numpad:microsoft eurosign:5 terminate:ctrl_alt_bksp grp:shift_caps_toggle caps:escape 
+[ -f .profile ] && . .profile
+ 
+

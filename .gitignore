@@ -6,3 +6,5 @@ config/wpg/formats/**/*
 config/i3/config
 config/wpg/wp_init.sh
 config/i3/config
+config/polybar/config
+config/wpg/wp_init.sh
