@@ -3,8 +3,5 @@ config/polybar/config
 config/wpg/templates/i3
 config/i3/config
 config/wpg/formats/**/*
-config/i3/config
 config/wpg/wp_init.sh
-config/i3/config
-config/polybar/config
-config/wpg/wp_init.sh
+Xresources

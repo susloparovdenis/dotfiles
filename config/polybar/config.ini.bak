@@ -75,10 +75,10 @@ offset-x = 1%
 # offset-y = 2%:+3
 
 ; Background ARGB color (e.g. #f00, #ff992a, #ddff1023)
-background = ${{color.bg}}
+background = ${color.bg}
 
 ; Foreground ARGB color (e.g. #f00, #ff992a, #ddff1023)
-foreground = ${{color.fg}}
+foreground = ${color.fg}
 
 ; Background gradient (vertical steps)
 ;   background-[0-9]+ = #aarrggbb
@@ -88,21 +88,21 @@ foreground = ${{color.fg}}
 ; Note: This shouldn't be used together with border-size because the border 
 ; doesn't get rounded
 ; Individual top/bottom values can be defined using:
-;   radius-{{top,bottom}}
+;   radius-{top,bottom}
 radius-top = 0.0
 radius-bottom = 0.0
 
 ; Under-/overline pixel size and argb color
 ; Individual values can be defined using:
-;   {{overline,underline}}-size
-;   {{overline,underline}}-color
+;   {overline,underline}-size
+;   {overline,underline}-color
 underline-size = 4
-underline-color = ${{color.ac}}
+underline-color = ${color.ac}
 
 ; Values applied to all borders
 ; Individual side values can be defined using:
-;   border-{{left,top,right,bottom}}-size
-;   border-{{left,top,right,bottom}}-color
+;   border-{left,top,right,bottom}-size
+;   border-{left,top,right,bottom}-color
 ; The top and bottom borders are added to the bar height, so the effective
 ; window height is:
 ;   height + border-top-size + border-bottom-size
@@ -111,16 +111,16 @@ underline-color = ${{color.ac}}
 ; following horizontal space on the bar:
 ;   width - border-right-size - border-left-size
 border-bottom-size = 0
-border-color = ${{color.ac}}
+border-color = ${color.ac}
 
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
-;   padding-{{left,right}}
+;   padding-{left,right}
 padding = 0
 
 ; Number of spaces to add before/after each module
 ; Individual side values can be defined using:
-;   module-margin-{{left,right}}
+;   module-margin-{left,right}
 module-margin-left = 2
 module-margin-right = 2
 
@@ -216,7 +216,7 @@ tray-transparent = false
 ; ARGB color (e.g. #f00, #ff992a, #ddff1023)
 ; By default the tray container will use the bar
 ; background color.
-tray-background = ${{color.bg}}
+tray-background = ${color.bg}
 
 ; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 tray-offset-x = 0
