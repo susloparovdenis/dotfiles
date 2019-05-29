@@ -148,7 +148,7 @@ font-6 = "Font Awesome 5 Brands:pixelsize=16;1"
 ;   modules-right = ipc clock
 
 ;; Available modules
-;;
+;;th
 ;alsa backlight battery
 ;bspwm cpu date
 ;filesystem github i3

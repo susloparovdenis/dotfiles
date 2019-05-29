@@ -59,7 +59,6 @@ set $WS6 "6:"
 set $WS7 "7:"
 set $WS8 "8:"
 set $WS9 "9:"
-# exec --no-startup-id ~/.config/work.sh
 
 
 # monitors
@@ -72,6 +71,7 @@ set $Mon2 eDP-1-1
 
 # run with reload
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.screenlayout/default.sh
 # exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xrdb -load ~/.Xresources
 
@@ -79,7 +79,6 @@ exec_always --no-startup-id xrdb -load ~/.Xresources
 exec_always --no-startup-id numlockx on
 
 # run once
-exec ~/.screenlayout/work.sh
 exec --no-startup-id xfsettingsd
 exec --no-startup-id al-compositor --start
 exec --no-startup-id greenclip daemon
@@ -88,6 +87,8 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 # keyring for storing saved passwords
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11
+exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11
+exec --no-startup-id setxkbmap -model pc105 -layout us,ru -variant euro -option grp:alt_shift_toggle terminate:ctrl_alt_bksp numpad:microsoft eurosign:5 caps:escape
 # pressing super key alone simulates pressing Alt-F1
 exec --no-startup-id ksuperkey -e 'Super_L=Alt_L|F1'
 exec --no-startup-id ksuperkey -e 'Super_R=Alt_L|F1'
@@ -173,7 +174,6 @@ bindsym $Super+Shift+r restart
 bindsym $Super+Shift+m exec --no-startup-id wpg -m
 bindsym $Super+Shift+p exec --no-startup-id ~/.config/polybar/launch.sh
 #bindsym $Super+r exec --no-startup-id wpg -s $(wpg -c)
-bindsym $Super+Shift+m exec --no-startup-id wpg -m$
 # reload the configuration file
 bindsym $Super+Shift+c reload
 
