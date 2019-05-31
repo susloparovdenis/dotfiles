@@ -261,7 +261,7 @@ default_border none
 new_window none
 new_float normal
 hide_edge_borders none
-popup_during_fullscreen smart
+popup_during_fullscreen leave_fullscreen
 bindsym $Super+shift+b border toggle
 
 # changing border style
