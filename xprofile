@@ -13,6 +13,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # keyring and polkit daemons
 #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #gnome-keyring-daemon --start --components=pkcs11 &
+setxkbmap -model pc105 -layout us,ru -variant euro, -option  grp:alt_shift_toggle numpad:microsoft eurosign:5 terminate:ctrl_alt_bksp  caps:escape 
 
 # pressing super alone simulates Alt-F1
 ksuperkey -e 'Super_L=Alt_L|F1'
