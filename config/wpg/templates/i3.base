@@ -17,16 +17,16 @@ set_from_resource $color8 i3wm.color8 "{color8}"
 ######### COLORS ##########
 #
 # class                 border    backgr    text    indicator child_border
-client.focused          #00000000 $coloract $color15 $split  $coloract
-client.focused_inactive #00000000 $coloract $color15 $split  $colorin
-client.unfocused        #00000000  $colorin  $color15 $split  $colorin
+client.focused          #FF000000 $coloract $color15 $split  $FF000000
+client.focused_inactive #FF000000 $coloract $color15 $split  $FF000000
+client.unfocused        #FF000000  $colorin  $color15 $split  $colorin
 client.urgent           #00000000   $coloru   $color15 $coloru $coloru
 client.placeholder      #00000000   $color8   $color15 $color0 $color8
 client.background       #00000000
 # border & title.. Must be set to border pixel for gaps to work
 # for_window [class="^.*"] border pixel 4, title_format "<b> %title </b>"
 # for_window [class="^.*"] border normal, title_format "<span foreground='{color15}'>%class</span> <b><span foreground='{color5}'>%title</span></b>"
-for_window [class="^.*"] border none
+for_window [class="^.*"] border pixel 2
 # for_window [class="^.*"] border normal, title_format "<span foreground='{color0}'>0</span><span foreground='{color1}'>1</span><span foreground='{color2}'>2</span><span foreground='{color3}'>3</span><span foreground='{color4}'>4</span><span foreground='{color5}'>5</span><span foreground='{color6}'>6</span><span foreground='{color7}'>7</span><span foreground='{color8}'>8</span><span foreground='{color9}'>9</span><span foreground='{color10}'>10</span><span foreground='{color11}'>11</span><span foreground='{color12}'>12</span><span foreground='{color13}'>13</span><span foreground='{color14}'>14</span>"
 title_align left
 
@@ -226,8 +226,9 @@ bindsym $Super+v split v
 bindsym $Super+p focus parent
 
 bindsym $Super+space focus mode_toggle
-bindsym $Super+Tab layout toggle all
+bindsym $Super+Tab layout toggle tabbed stacking
 
+bindsym $Super+b layout toggle
 
 
 
@@ -260,13 +261,13 @@ focus_follows_mouse no
 default_border none
 new_window none
 new_float normal
-hide_edge_borders none
+hide_edge_borders smart
 popup_during_fullscreen leave_fullscreen
 bindsym $Super+shift+b border toggle
 
 # changing border style
 bindsym $Super+n border normal
-bindsym $Super+y border 1pixel
+bindsym $Super+y border pixel 15
 bindsym $Super+u border none
 
 # change gaps
