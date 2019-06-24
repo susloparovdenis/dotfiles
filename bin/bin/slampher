@@ -1,0 +1,1 @@
+mosquitto_pub -t sonoff/slampher/cmnd/power -m toggle
