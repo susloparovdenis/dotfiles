@@ -256,7 +256,7 @@ focus_on_window_activation   focus
 ######################################################
 ###############      Border & Gaps     ###############
 ######################################################
-# workspace_auto_back_and_forth yes
+workspace_auto_back_and_forth yes
 focus_follows_mouse no
 default_border none
 new_window none
@@ -311,6 +311,12 @@ bindsym $Alt+F1 exec --no-startup-id rofi_run -r
 bindsym $Super+r exec --no-startup-id kitty -e ranger
 bindsym $Super+t exec kitty
 bindsym $Super+g exec exo-open --launch WebBrowser 
+bindsym $Super+Shift+w exec exo-open --launch WebBrowser 
+bindsym $Super+Shift+t exec kitty
+bindsym $Super+Shift+e exec nemo
+bindsym $Super+Shift+f exec kitty ranger
+
+
 bindsym $Super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{{cmd}}'
 bindsym $alt+F2  exec rofi -show run
 bindsym $mod+Return   exec exo-open --launch TerminalEmulator
