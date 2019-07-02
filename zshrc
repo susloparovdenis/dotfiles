@@ -6,6 +6,8 @@ EDITOR='/usr/bin/nvim'
 VISUAL='code.exe'
 SUDO_EDITOR='nvim'
 
+setxkbmap -model pc105 -layout us,ru -variant euro, -option  grp:shift_caps_switch grp:alt_space_toggle numpad:microsoft eurosign:5 terminate:ctrl_alt_bksp grp:shift_caps_toggle caps:escape 
+
 
 PATH+=:~/.gem/ruby/2.5.0/bin
 PATH+=:~/.local/bin
