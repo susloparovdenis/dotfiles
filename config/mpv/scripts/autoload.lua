@@ -146,7 +146,7 @@ function find_and_add_entries()
     msg.trace("current file position in files: "..current)
 
     local append = {[-1] = {}, [1] = {}}
-    for direction = -1, 1, 2 do -- 2 iterations, with direction = -1 and +1
+    for direction = -1, 1, 1 do -- 2 iterations, with direction = -1 and +1
         for i = 1, MAXENTRIES do
             local file = files[current + i * direction]
             local pl_e = pl[pl_current + i * direction]
