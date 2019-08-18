@@ -1,6 +1,4 @@
 #!/bin/sh
-# ~/.xprofile
-
 # sourced at boot by xinit and display managers like lightdm
 
 #export XDG_CONFIG_HOME="$HOME/.config"

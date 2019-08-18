@@ -1,2 +1,2 @@
-#export MONITOR=HDMI-0
-#export MONITOR2=HDMI-0
+export MONITOR=HDMI-0
+export MONITOR2=HDMI-0
